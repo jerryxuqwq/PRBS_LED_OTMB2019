@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.7
-# Date: Wed Feb 26 06:26:29 2025
+# Date: Thu Feb 27 01:46:22 2025
 #
 ##############################################################
 #
@@ -22,7 +22,7 @@ SET asysymbol = true
 SET busformat = BusFormatAngleBracketNotRipped
 SET createndf = false
 SET designentry = Verilog
-SET device = xc6vlx195t
+SET device = xc6vlx240t
 SET devicefamily = virtex6
 SET flowvendor = Other
 SET formalverification = false
@@ -223,7 +223,7 @@ CSET rx_refclk_x0_y6=REFCLK1_Q1
 CSET rx_refclk_x0_y7=REFCLK1_Q1
 CSET rx_refclk_x0_y8=REFCLK1_Q2
 CSET rx_refclk_x0_y9=REFCLK1_Q2
-CSET rx_reference_clock=125.00
+CSET rx_reference_clock=160.00
 CSET rx_slide_mode=OFF
 CSET rx_termination_voltage=MGTAVTT
 CSET rxlossofsyncport=false
@@ -255,14 +255,14 @@ CSET tx_refclk_x0_y0=use_rx_pll
 CSET tx_refclk_x0_y1=use_rx_pll
 CSET tx_refclk_x0_y10=use_rx_pll
 CSET tx_refclk_x0_y11=use_rx_pll
-CSET tx_refclk_x0_y12=REFCLK0_Q3
+CSET tx_refclk_x0_y12=use_rx_pll
 CSET tx_refclk_x0_y13=use_rx_pll
 CSET tx_refclk_x0_y14=use_rx_pll
-CSET tx_refclk_x0_y15=REFCLK0_Q3
+CSET tx_refclk_x0_y15=use_rx_pll
 CSET tx_refclk_x0_y16=use_rx_pll
-CSET tx_refclk_x0_y17=REFCLK0_Q3
+CSET tx_refclk_x0_y17=use_rx_pll
 CSET tx_refclk_x0_y18=use_rx_pll
-CSET tx_refclk_x0_y19=REFCLK0_Q3
+CSET tx_refclk_x0_y19=use_rx_pll
 CSET tx_refclk_x0_y2=use_rx_pll
 CSET tx_refclk_x0_y20=use_rx_pll
 CSET tx_refclk_x0_y21=use_rx_pll
@@ -287,7 +287,7 @@ CSET tx_refclk_x0_y6=use_rx_pll
 CSET tx_refclk_x0_y7=use_rx_pll
 CSET tx_refclk_x0_y8=use_rx_pll
 CSET tx_refclk_x0_y9=use_rx_pll
-CSET tx_reference_clock=125.00
+CSET tx_reference_clock=160.00
 CSET tx_tdcc_cfg=11
 CSET txoutclk_source=AUTO
 CSET txpll_sata=00
@@ -395,7 +395,7 @@ CSET use_rx_oob=false
 CSET use_rx_oversampling=false
 CSET use_rxbuffer=true
 CSET use_rxpllrefclk=false
-CSET use_rxprbserr_loopback=true
+CSET use_rxprbserr_loopback=false
 CSET use_turbo_mode=false
 CSET use_two_cb_sequences=false
 CSET use_two_cc_sequences=false
@@ -408,4 +408,4 @@ CSET wideband_highpass_mix=Use_RXEQMIX_Port
 MISC pkg_timestamp=2011-04-08T05:24:23Z
 # END Extra information
 GENERATE
-# CRC: d936a2cc
+# CRC: b6e96611

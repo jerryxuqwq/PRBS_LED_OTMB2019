@@ -68,20 +68,20 @@
  
 
 ##--------------------------TX PLL----------------------------
-INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i TX_CLK_SOURCE                          = "TXPLL";
+INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i TX_CLK_SOURCE                          = "RXPLL";
 INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i TX_OVERSAMPLE_MODE                     = "FALSE";
 INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i TXPLL_COM_CFG                          = 24'h21680a;
-INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i TXPLL_CP_CFG                           = 8'h0D;
-INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i TXPLL_DIVSEL_FB                        = 4;
+INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i TXPLL_CP_CFG                           = 8'h07;
+INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i TXPLL_DIVSEL_FB                        = 5;
 INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i TXPLL_DIVSEL_OUT                       = 1;
-INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i TXPLL_DIVSEL_REF                       = 1;
-INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i TXPLL_DIVSEL45_FB                      = 4;
+INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i TXPLL_DIVSEL_REF                       = 2;
+INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i TXPLL_DIVSEL45_FB                      = 5;
 INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i TXPLL_LKDET_CFG                        = 3'b111;
-INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i TX_CLK25_DIVIDER                       = 5;
+INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i TX_CLK25_DIVIDER                       = 7;
 INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i TXPLL_SATA                             = 2'b00;
 INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i TX_TDCC_CFG                            = 2'b11;
 INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i PMA_CAS_CLK_EN                         = "FALSE";
-INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i POWER_SAVE                             = 10'b0000110000;
+INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i POWER_SAVE                             = 10'b0000110100;
 
 ##-----------------------TX Interface-------------------------
 INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i GEN_TXUSRCLK                           = "TRUE";
@@ -133,13 +133,13 @@ INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i TX_MARGIN_LOW_4                     
 ##--------------------------RX PLL----------------------------
 INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i RX_OVERSAMPLE_MODE                     = "FALSE";
 INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i RXPLL_COM_CFG                          = 24'h21680a;
-INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i RXPLL_CP_CFG                           = 8'h0D;
-INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i RXPLL_DIVSEL_FB                        = 4;
+INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i RXPLL_CP_CFG                           = 8'h07;
+INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i RXPLL_DIVSEL_FB                        = 5;
 INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i RXPLL_DIVSEL_OUT                       = 1;
-INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i RXPLL_DIVSEL_REF                       = 1;
-INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i RXPLL_DIVSEL45_FB                      = 4;
+INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i RXPLL_DIVSEL_REF                       = 2;
+INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i RXPLL_DIVSEL45_FB                      = 5;
 INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i RXPLL_LKDET_CFG                        = 3'b111;
-INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i RX_CLK25_DIVIDER                       = 5;
+INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i RX_CLK25_DIVIDER                       = 7;
 
 ##-----------------------RX Interface-------------------------
 INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i GEN_RXUSRCLK                           = "TRUE";
@@ -176,7 +176,7 @@ INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i RX_EYE_OFFSET                       
 INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i RX_EYE_SCANMODE                        = 2'b00;
 
 ##-----------------------PRBS Detection-----------------------
-INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i RXPRBSERR_LOOPBACK                     = 1'b1;
+INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i RXPRBSERR_LOOPBACK                     = 1'b0;
 
 ##----------------Comma Detection and Alignment---------------
 INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i ALIGN_COMMA_WORD                       = 1;
@@ -265,12 +265,12 @@ INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i SAS_MAX_COMSAS                      
 INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i SAS_MIN_COMSAS                         = 40;
 INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i SATA_BURST_VAL                         = 3'b100;
 INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i SATA_IDLE_VAL                          = 3'b100;
-INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i SATA_MAX_BURST                         = 9;
-INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i SATA_MAX_INIT                          = 27;
-INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i SATA_MAX_WAKE                          = 9;
-INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i SATA_MIN_BURST                         = 5;
-INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i SATA_MIN_INIT                          = 15;
-INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i SATA_MIN_WAKE                          = 5;
+INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i SATA_MAX_BURST                         = 8;
+INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i SATA_MAX_INIT                          = 23;
+INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i SATA_MAX_WAKE                          = 8;
+INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i SATA_MIN_BURST                         = 4;
+INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i SATA_MIN_INIT                          = 13;
+INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i SATA_MIN_WAKE                          = 4;
 INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i TRANS_TIME_FROM_P2                     = 12'h03c;
 INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i TRANS_TIME_NON_P2                      = 8'h19;
 INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i TRANS_TIME_RATE                        = 8'hff;
@@ -281,20 +281,20 @@ INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i TRANS_TIME_TO_P2                    
  
 
 ##--------------------------TX PLL----------------------------
-INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i TX_CLK_SOURCE                          = "TXPLL";
+INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i TX_CLK_SOURCE                          = "RXPLL";
 INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i TX_OVERSAMPLE_MODE                     = "FALSE";
 INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i TXPLL_COM_CFG                          = 24'h21680a;
-INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i TXPLL_CP_CFG                           = 8'h0D;
-INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i TXPLL_DIVSEL_FB                        = 4;
+INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i TXPLL_CP_CFG                           = 8'h07;
+INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i TXPLL_DIVSEL_FB                        = 5;
 INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i TXPLL_DIVSEL_OUT                       = 1;
-INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i TXPLL_DIVSEL_REF                       = 1;
-INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i TXPLL_DIVSEL45_FB                      = 4;
+INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i TXPLL_DIVSEL_REF                       = 2;
+INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i TXPLL_DIVSEL45_FB                      = 5;
 INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i TXPLL_LKDET_CFG                        = 3'b111;
-INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i TX_CLK25_DIVIDER                       = 5;
+INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i TX_CLK25_DIVIDER                       = 7;
 INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i TXPLL_SATA                             = 2'b00;
 INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i TX_TDCC_CFG                            = 2'b11;
 INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i PMA_CAS_CLK_EN                         = "FALSE";
-INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i POWER_SAVE                             = 10'b0000110000;
+INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i POWER_SAVE                             = 10'b0000110100;
 
 ##-----------------------TX Interface-------------------------
 INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i GEN_TXUSRCLK                           = "TRUE";
@@ -346,13 +346,13 @@ INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i TX_MARGIN_LOW_4                     
 ##--------------------------RX PLL----------------------------
 INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i RX_OVERSAMPLE_MODE                     = "FALSE";
 INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i RXPLL_COM_CFG                          = 24'h21680a;
-INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i RXPLL_CP_CFG                           = 8'h0D;
-INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i RXPLL_DIVSEL_FB                        = 4;
+INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i RXPLL_CP_CFG                           = 8'h07;
+INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i RXPLL_DIVSEL_FB                        = 5;
 INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i RXPLL_DIVSEL_OUT                       = 1;
-INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i RXPLL_DIVSEL_REF                       = 1;
-INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i RXPLL_DIVSEL45_FB                      = 4;
+INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i RXPLL_DIVSEL_REF                       = 2;
+INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i RXPLL_DIVSEL45_FB                      = 5;
 INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i RXPLL_LKDET_CFG                        = 3'b111;
-INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i RX_CLK25_DIVIDER                       = 5;
+INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i RX_CLK25_DIVIDER                       = 7;
 
 ##-----------------------RX Interface-------------------------
 INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i GEN_RXUSRCLK                           = "TRUE";
@@ -389,7 +389,7 @@ INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i RX_EYE_OFFSET                       
 INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i RX_EYE_SCANMODE                        = 2'b00;
 
 ##-----------------------PRBS Detection-----------------------
-INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i RXPRBSERR_LOOPBACK                     = 1'b1;
+INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i RXPRBSERR_LOOPBACK                     = 1'b0;
 
 ##----------------Comma Detection and Alignment---------------
 INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i ALIGN_COMMA_WORD                       = 1;
@@ -478,12 +478,12 @@ INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i SAS_MAX_COMSAS                      
 INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i SAS_MIN_COMSAS                         = 40;
 INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i SATA_BURST_VAL                         = 3'b100;
 INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i SATA_IDLE_VAL                          = 3'b100;
-INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i SATA_MAX_BURST                         = 9;
-INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i SATA_MAX_INIT                          = 27;
-INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i SATA_MAX_WAKE                          = 9;
-INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i SATA_MIN_BURST                         = 5;
-INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i SATA_MIN_INIT                          = 15;
-INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i SATA_MIN_WAKE                          = 5;
+INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i SATA_MAX_BURST                         = 8;
+INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i SATA_MAX_INIT                          = 23;
+INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i SATA_MAX_WAKE                          = 8;
+INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i SATA_MIN_BURST                         = 4;
+INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i SATA_MIN_INIT                          = 13;
+INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i SATA_MIN_WAKE                          = 4;
 INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i TRANS_TIME_FROM_P2                     = 12'h03c;
 INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i TRANS_TIME_NON_P2                      = 8'h19;
 INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i TRANS_TIME_RATE                        = 8'hff;
@@ -494,20 +494,20 @@ INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i TRANS_TIME_TO_P2                    
  
 
 ##--------------------------TX PLL----------------------------
-INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i TX_CLK_SOURCE                          = "TXPLL";
+INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i TX_CLK_SOURCE                          = "RXPLL";
 INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i TX_OVERSAMPLE_MODE                     = "FALSE";
 INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i TXPLL_COM_CFG                          = 24'h21680a;
-INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i TXPLL_CP_CFG                           = 8'h0D;
-INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i TXPLL_DIVSEL_FB                        = 4;
+INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i TXPLL_CP_CFG                           = 8'h07;
+INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i TXPLL_DIVSEL_FB                        = 5;
 INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i TXPLL_DIVSEL_OUT                       = 1;
-INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i TXPLL_DIVSEL_REF                       = 1;
-INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i TXPLL_DIVSEL45_FB                      = 4;
+INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i TXPLL_DIVSEL_REF                       = 2;
+INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i TXPLL_DIVSEL45_FB                      = 5;
 INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i TXPLL_LKDET_CFG                        = 3'b111;
-INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i TX_CLK25_DIVIDER                       = 5;
+INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i TX_CLK25_DIVIDER                       = 7;
 INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i TXPLL_SATA                             = 2'b00;
 INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i TX_TDCC_CFG                            = 2'b11;
 INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i PMA_CAS_CLK_EN                         = "FALSE";
-INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i POWER_SAVE                             = 10'b0000110000;
+INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i POWER_SAVE                             = 10'b0000110100;
 
 ##-----------------------TX Interface-------------------------
 INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i GEN_TXUSRCLK                           = "TRUE";
@@ -559,13 +559,13 @@ INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i TX_MARGIN_LOW_4                     
 ##--------------------------RX PLL----------------------------
 INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i RX_OVERSAMPLE_MODE                     = "FALSE";
 INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i RXPLL_COM_CFG                          = 24'h21680a;
-INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i RXPLL_CP_CFG                           = 8'h0D;
-INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i RXPLL_DIVSEL_FB                        = 4;
+INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i RXPLL_CP_CFG                           = 8'h07;
+INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i RXPLL_DIVSEL_FB                        = 5;
 INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i RXPLL_DIVSEL_OUT                       = 1;
-INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i RXPLL_DIVSEL_REF                       = 1;
-INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i RXPLL_DIVSEL45_FB                      = 4;
+INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i RXPLL_DIVSEL_REF                       = 2;
+INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i RXPLL_DIVSEL45_FB                      = 5;
 INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i RXPLL_LKDET_CFG                        = 3'b111;
-INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i RX_CLK25_DIVIDER                       = 5;
+INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i RX_CLK25_DIVIDER                       = 7;
 
 ##-----------------------RX Interface-------------------------
 INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i GEN_RXUSRCLK                           = "TRUE";
@@ -602,7 +602,7 @@ INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i RX_EYE_OFFSET                       
 INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i RX_EYE_SCANMODE                        = 2'b00;
 
 ##-----------------------PRBS Detection-----------------------
-INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i RXPRBSERR_LOOPBACK                     = 1'b1;
+INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i RXPRBSERR_LOOPBACK                     = 1'b0;
 
 ##----------------Comma Detection and Alignment---------------
 INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i ALIGN_COMMA_WORD                       = 1;
@@ -691,12 +691,12 @@ INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i SAS_MAX_COMSAS                      
 INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i SAS_MIN_COMSAS                         = 40;
 INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i SATA_BURST_VAL                         = 3'b100;
 INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i SATA_IDLE_VAL                          = 3'b100;
-INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i SATA_MAX_BURST                         = 9;
-INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i SATA_MAX_INIT                          = 27;
-INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i SATA_MAX_WAKE                          = 9;
-INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i SATA_MIN_BURST                         = 5;
-INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i SATA_MIN_INIT                          = 15;
-INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i SATA_MIN_WAKE                          = 5;
+INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i SATA_MAX_BURST                         = 8;
+INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i SATA_MAX_INIT                          = 23;
+INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i SATA_MAX_WAKE                          = 8;
+INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i SATA_MIN_BURST                         = 4;
+INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i SATA_MIN_INIT                          = 13;
+INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i SATA_MIN_WAKE                          = 4;
 INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i TRANS_TIME_FROM_P2                     = 12'h03c;
 INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i TRANS_TIME_NON_P2                      = 8'h19;
 INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i TRANS_TIME_RATE                        = 8'hff;
@@ -707,20 +707,20 @@ INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i TRANS_TIME_TO_P2                    
  
 
 ##--------------------------TX PLL----------------------------
-INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i TX_CLK_SOURCE                          = "TXPLL";
+INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i TX_CLK_SOURCE                          = "RXPLL";
 INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i TX_OVERSAMPLE_MODE                     = "FALSE";
 INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i TXPLL_COM_CFG                          = 24'h21680a;
-INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i TXPLL_CP_CFG                           = 8'h0D;
-INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i TXPLL_DIVSEL_FB                        = 4;
+INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i TXPLL_CP_CFG                           = 8'h07;
+INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i TXPLL_DIVSEL_FB                        = 5;
 INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i TXPLL_DIVSEL_OUT                       = 1;
-INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i TXPLL_DIVSEL_REF                       = 1;
-INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i TXPLL_DIVSEL45_FB                      = 4;
+INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i TXPLL_DIVSEL_REF                       = 2;
+INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i TXPLL_DIVSEL45_FB                      = 5;
 INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i TXPLL_LKDET_CFG                        = 3'b111;
-INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i TX_CLK25_DIVIDER                       = 5;
+INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i TX_CLK25_DIVIDER                       = 7;
 INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i TXPLL_SATA                             = 2'b00;
 INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i TX_TDCC_CFG                            = 2'b11;
 INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i PMA_CAS_CLK_EN                         = "FALSE";
-INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i POWER_SAVE                             = 10'b0000110000;
+INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i POWER_SAVE                             = 10'b0000110100;
 
 ##-----------------------TX Interface-------------------------
 INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i GEN_TXUSRCLK                           = "TRUE";
@@ -772,13 +772,13 @@ INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i TX_MARGIN_LOW_4                     
 ##--------------------------RX PLL----------------------------
 INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i RX_OVERSAMPLE_MODE                     = "FALSE";
 INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i RXPLL_COM_CFG                          = 24'h21680a;
-INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i RXPLL_CP_CFG                           = 8'h0D;
-INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i RXPLL_DIVSEL_FB                        = 4;
+INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i RXPLL_CP_CFG                           = 8'h07;
+INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i RXPLL_DIVSEL_FB                        = 5;
 INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i RXPLL_DIVSEL_OUT                       = 1;
-INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i RXPLL_DIVSEL_REF                       = 1;
-INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i RXPLL_DIVSEL45_FB                      = 4;
+INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i RXPLL_DIVSEL_REF                       = 2;
+INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i RXPLL_DIVSEL45_FB                      = 5;
 INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i RXPLL_LKDET_CFG                        = 3'b111;
-INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i RX_CLK25_DIVIDER                       = 5;
+INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i RX_CLK25_DIVIDER                       = 7;
 
 ##-----------------------RX Interface-------------------------
 INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i GEN_RXUSRCLK                           = "TRUE";
@@ -815,7 +815,7 @@ INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i RX_EYE_OFFSET                       
 INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i RX_EYE_SCANMODE                        = 2'b00;
 
 ##-----------------------PRBS Detection-----------------------
-INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i RXPRBSERR_LOOPBACK                     = 1'b1;
+INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i RXPRBSERR_LOOPBACK                     = 1'b0;
 
 ##----------------Comma Detection and Alignment---------------
 INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i ALIGN_COMMA_WORD                       = 1;
@@ -904,12 +904,12 @@ INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i SAS_MAX_COMSAS                      
 INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i SAS_MIN_COMSAS                         = 40;
 INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i SATA_BURST_VAL                         = 3'b100;
 INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i SATA_IDLE_VAL                          = 3'b100;
-INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i SATA_MAX_BURST                         = 9;
-INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i SATA_MAX_INIT                          = 27;
-INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i SATA_MAX_WAKE                          = 9;
-INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i SATA_MIN_BURST                         = 5;
-INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i SATA_MIN_INIT                          = 15;
-INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i SATA_MIN_WAKE                          = 5;
+INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i SATA_MAX_BURST                         = 8;
+INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i SATA_MAX_INIT                          = 23;
+INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i SATA_MAX_WAKE                          = 8;
+INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i SATA_MIN_BURST                         = 4;
+INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i SATA_MIN_INIT                          = 13;
+INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i SATA_MIN_WAKE                          = 4;
 INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i TRANS_TIME_FROM_P2                     = 12'h03c;
 INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i TRANS_TIME_NON_P2                      = 8'h19;
 INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i TRANS_TIME_RATE                        = 8'hff;
@@ -933,7 +933,7 @@ INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i TRANS_TIME_TO_P2                    
 ## USER CONSTRAINTS FILE FOR MGT WRAPPER EXAMPLE DESIGN
 ## Generated by Xilinx Virtex-6 FPGA GTX Transceiver Wizard
 ##
-## Device:  xc6vlx195t
+## Device:  xc6vlx240t
 ## Package: ff1156
 ##
 ## (c) Copyright 2009-2011 Xilinx, Inc. All rights reserved.
@@ -985,7 +985,7 @@ INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i TRANS_TIME_TO_P2                    
 ################################## Clock Constraints ##########################
 
 NET "q3_clk0_refclk_i" TNM_NET = "q3_clk0_refclk_i";
-TIMESPEC "TS_q3_clk0_refclk_i" = PERIOD "q3_clk0_refclk_i" 8.0;
+TIMESPEC "TS_q3_clk0_refclk_i" = PERIOD "q3_clk0_refclk_i" 6.25;
 
 
 # DRP Clock Constraint

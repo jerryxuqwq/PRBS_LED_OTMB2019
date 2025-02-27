@@ -23,8 +23,7 @@
 `define DLY #1
 module Top(
 	input wire tmb_clock0,
-	input wire  GTXTXRESET_IN,
-    input wire  GTXRXRESET_IN,
+
     input wire  Q3_CLK0_MGTREFCLK_PAD_N_IN,
     input wire  Q3_CLK0_MGTREFCLK_PAD_P_IN,
     input  wire [3:0]   RXN_IN,
@@ -32,8 +31,6 @@ module Top(
     output wire [3:0]   TXN_OUT,
     output wire [3:0]   TXP_OUT
     );
-	
-
 	
 	// chipscope wire
 	wire [35:0] CONTROL0;
@@ -421,19 +418,18 @@ module Top(
 
 	
 	// Project related singal
-	wire   [2:0] prbs_mode;
-	assign prbs_mode =3'b001;
-	
-	// If Chipscope is not being used, drive GTX reset signal
-    // from the top level ports
-    assign  gtx0_gtxrxreset_i = GTXRXRESET_IN;
-    assign  gtx0_gtxtxreset_i = GTXTXRESET_IN;
-    assign  gtx1_gtxrxreset_i = GTXRXRESET_IN;
-    assign  gtx1_gtxtxreset_i = GTXTXRESET_IN;
-    assign  gtx2_gtxrxreset_i = GTXRXRESET_IN;
-    assign  gtx2_gtxtxreset_i = GTXTXRESET_IN;
-    assign  gtx3_gtxrxreset_i = GTXRXRESET_IN;
-    assign  gtx3_gtxtxreset_i = GTXTXRESET_IN;
+	 reg   [2:0] rx_prbs_mode;
+	 reg   [2:0] tx_prbs_mode;
+	 
+	 assign  gtx0_gtxrxreset_i = gtxrxreset_i || gtxtxreset_i;
+    assign  gtx0_gtxtxreset_i = gtxrxreset_i || gtxtxreset_i;
+    assign  gtx1_gtxrxreset_i = gtxrxreset_i || gtxtxreset_i;
+    assign  gtx1_gtxtxreset_i = gtxrxreset_i || gtxtxreset_i;
+    assign  gtx2_gtxrxreset_i = gtxrxreset_i || gtxtxreset_i;
+    assign  gtx2_gtxtxreset_i = gtxrxreset_i || gtxtxreset_i;
+    assign  gtx3_gtxrxreset_i = gtxrxreset_i || gtxtxreset_i;
+    assign  gtx3_gtxtxreset_i = gtxrxreset_i || gtxtxreset_i;
+
 
     // assign resets for frame_gen modules
     assign  gtx0_tx_system_reset_c = !gtx0_txresetdone_r2;
@@ -447,8 +443,7 @@ module Top(
     assign  gtx2_rx_system_reset_c = !gtx2_rxresetdone_r3;
     assign  gtx3_rx_system_reset_c = !gtx3_rxresetdone_r3;
 
-    assign  gtxtxreset_i                         =  tied_to_ground_i;
-    assign  gtxrxreset_i                         =  tied_to_ground_i;
+
     assign  user_tx_reset_i                      =  tied_to_ground_i;
     assign  user_rx_reset_i                      =  tied_to_ground_i;
     assign  mux_sel_i                            =  tied_to_ground_vec_i[1:0];
@@ -457,41 +452,41 @@ module Top(
     assign  gtx0_txdiffctrl_i                    =  4'b1010;
     assign  gtx0_txpreemphasis_i                 =  tied_to_ground_vec_i[3:0];
     assign  gtx0_txpostemphasis_i                =  tied_to_ground_vec_i[4:0];
-    assign  gtx0_txenprbstst_i                   =  prbs_mode;
+    assign  gtx0_txenprbstst_i                   =  tx_prbs_mode;
     assign  gtx0_pllrxreset_i                    =  tied_to_ground_i;
     assign  gtx0_rxeqmix_i                       =  tied_to_ground_vec_i[2:0];
     assign  gtx0_prbscntreset_i                  =  tied_to_ground_i;
-    assign  gtx0_rxenprbstst_i                   =  prbs_mode;
+    assign  gtx0_rxenprbstst_i                   =  rx_prbs_mode;
     assign  gtx1_plltxreset_i                    =  tied_to_ground_i;
     assign  gtx1_loopback_i                      =  tied_to_ground_vec_i[2:0];
     assign  gtx1_txdiffctrl_i                    =  4'b1010;
     assign  gtx1_txpreemphasis_i                 =  tied_to_ground_vec_i[3:0];
     assign  gtx1_txpostemphasis_i                =  tied_to_ground_vec_i[4:0];
-    assign  gtx1_txenprbstst_i                   =  prbs_mode;
+    assign  gtx1_txenprbstst_i                   =  tx_prbs_mode;
     assign  gtx1_pllrxreset_i                    =  tied_to_ground_i;
     assign  gtx1_rxeqmix_i                       =  tied_to_ground_vec_i[2:0];
     assign  gtx1_prbscntreset_i                  =  tied_to_ground_i;
-    assign  gtx1_rxenprbstst_i                   =  prbs_mode;
+    assign  gtx1_rxenprbstst_i                   =  rx_prbs_mode;
     assign  gtx2_plltxreset_i                    =  tied_to_ground_i;
     assign  gtx2_loopback_i                      =  tied_to_ground_vec_i[2:0];
     assign  gtx2_txdiffctrl_i                    =  4'b1010;
     assign  gtx2_txpreemphasis_i                 =  tied_to_ground_vec_i[3:0];
     assign  gtx2_txpostemphasis_i                =  tied_to_ground_vec_i[4:0];
-    assign  gtx2_txenprbstst_i                   =  prbs_mode;
+    assign  gtx2_txenprbstst_i                   =  tx_prbs_mode;
     assign  gtx2_pllrxreset_i                    =  tied_to_ground_i;
     assign  gtx2_rxeqmix_i                       =  tied_to_ground_vec_i[2:0];
     assign  gtx2_prbscntreset_i                  =  tied_to_ground_i;
-    assign  gtx2_rxenprbstst_i                   =  prbs_mode;
+    assign  gtx2_rxenprbstst_i                   =  rx_prbs_mode;
     assign  gtx3_plltxreset_i                    =  tied_to_ground_i;
     assign  gtx3_loopback_i                      =  tied_to_ground_vec_i[2:0];
     assign  gtx3_txdiffctrl_i                    =  4'b1010;
     assign  gtx3_txpreemphasis_i                 =  tied_to_ground_vec_i[3:0];
     assign  gtx3_txpostemphasis_i                =  tied_to_ground_vec_i[4:0];
-    assign  gtx3_txenprbstst_i                   =  prbs_mode;
+    assign  gtx3_txenprbstst_i                   =  tx_prbs_mode;
     assign  gtx3_pllrxreset_i                    =  tied_to_ground_i;
     assign  gtx3_rxeqmix_i                       =  tied_to_ground_vec_i[2:0];
     assign  gtx3_prbscntreset_i                  =  tied_to_ground_i;
-    assign  gtx3_rxenprbstst_i                   =  prbs_mode;
+    assign  gtx3_rxenprbstst_i                   =  rx_prbs_mode;
 	
 	//---------------------------- DRP Clock ----------------------------------
     // The DRP interface requires an independent clock which can run up to about ___ MHz.
@@ -574,9 +569,6 @@ module Top(
         .GTX0_TXPREEMPHASIS_IN          (gtx0_txpreemphasis_i),
         //--------------------- Transmit Ports - TX PLL Ports ----------------------
         .GTX0_GTXTXRESET_IN             (gtx0_gtxtxreset_i),
-        .GTX0_MGTREFCLKTX_IN            (q3_clk0_refclk_i),
-        .GTX0_PLLTXRESET_IN             (gtx0_plltxreset_i),
-        .GTX0_TXPLLLKDET_OUT            (gtx0_txplllkdet_i),
         .GTX0_TXRESETDONE_OUT           (gtx0_txresetdone_i),
         //------------------- Transmit Ports - TX PRBS Generator -------------------
         .GTX0_TXENPRBSTST_IN            (gtx0_txenprbstst_i),
@@ -629,9 +621,6 @@ module Top(
         .GTX1_TXPREEMPHASIS_IN          (gtx1_txpreemphasis_i),
         //--------------------- Transmit Ports - TX PLL Ports ----------------------
         .GTX1_GTXTXRESET_IN             (gtx1_gtxtxreset_i),
-        .GTX1_MGTREFCLKTX_IN            (q3_clk0_refclk_i),
-        .GTX1_PLLTXRESET_IN             (gtx1_plltxreset_i),
-        .GTX1_TXPLLLKDET_OUT            (gtx1_txplllkdet_i),
         .GTX1_TXRESETDONE_OUT           (gtx1_txresetdone_i),
         //------------------- Transmit Ports - TX PRBS Generator -------------------
         .GTX1_TXENPRBSTST_IN            (gtx1_txenprbstst_i),
@@ -684,9 +673,6 @@ module Top(
         .GTX2_TXPREEMPHASIS_IN          (gtx2_txpreemphasis_i),
         //--------------------- Transmit Ports - TX PLL Ports ----------------------
         .GTX2_GTXTXRESET_IN             (gtx2_gtxtxreset_i),
-        .GTX2_MGTREFCLKTX_IN            (q3_clk0_refclk_i),
-        .GTX2_PLLTXRESET_IN             (gtx2_plltxreset_i),
-        .GTX2_TXPLLLKDET_OUT            (gtx2_txplllkdet_i),
         .GTX2_TXRESETDONE_OUT           (gtx2_txresetdone_i),
         //------------------- Transmit Ports - TX PRBS Generator -------------------
         .GTX2_TXENPRBSTST_IN            (gtx2_txenprbstst_i),
@@ -739,9 +725,6 @@ module Top(
         .GTX3_TXPREEMPHASIS_IN          (gtx3_txpreemphasis_i),
         //--------------------- Transmit Ports - TX PLL Ports ----------------------
         .GTX3_GTXTXRESET_IN             (gtx3_gtxtxreset_i),
-        .GTX3_MGTREFCLKTX_IN            (q3_clk0_refclk_i),
-        .GTX3_PLLTXRESET_IN             (gtx3_plltxreset_i),
-        .GTX3_TXPLLLKDET_OUT            (gtx3_txplllkdet_i),
         .GTX3_TXRESETDONE_OUT           (gtx3_txresetdone_i),
         //------------------- Transmit Ports - TX PRBS Generator -------------------
         .GTX3_TXENPRBSTST_IN            (gtx3_txenprbstst_i),
@@ -749,6 +732,7 @@ module Top(
 
 
     );
+
 
 	
 	// Reset management
@@ -899,14 +883,45 @@ module Top(
             gtx3_txresetdone_r2   <=   `DLY gtx3_txresetdone_r;
         end
     end
+	 wire alldone;
+	 assign alldone = gtx0_rxresetdone_r2 && 
+		   gtx1_rxresetdone_r2 && 
+			gtx2_rxresetdone_r2 && 
+			gtx3_rxresetdone_r2 &&
+			gtx0_txresetdone_r2 && 
+		   gtx1_txresetdone_r2 && 
+			gtx2_txresetdone_r2 && 
+			gtx3_txresetdone_r2;
+	 always@(posedge gtx0_txusrclk2_i)
+	 begin
+		
+		if(alldone) begin
+			rx_prbs_mode <= 3'b001;
+			tx_prbs_mode <= 3'b001;
+		end
+		
+		else begin
+			rx_prbs_mode <= 3'b000;
+			tx_prbs_mode <= 3'b000;
+		end
+		
+
+	 end
+	 
 	wire data_valid;
 	// Chipscope
-	// assign GTXRXRESET_IN = v_button[0];
-	// assign GTXTXRESET_IN = v_button[1];
+   assign  gtxtxreset_i   =  v_button[0];
+   assign  gtxrxreset_i   =  v_button[1];
 	assign gtx0_txprbsforceerr_i =  v_button[2];
 	assign gtx1_txprbsforceerr_i =  v_button[3];
 	assign gtx2_txprbsforceerr_i =  v_button[4];
 	assign gtx3_txprbsforceerr_i =  v_button[5];
+	assign v_led[0] = gtx0_rxprbserr_i;
+	assign v_led[1] = gtx1_rxprbserr_i;
+	assign v_led[2] = gtx2_rxprbserr_i;
+	assign v_led[3] = gtx3_rxprbserr_i;
+	assign v_led[4] = drp_clk_in_i;
+	
 	ICON_2p ICON_debug (
     .CONTROL0(CONTROL0), // INOUT BUS [35:0]
     .CONTROL1(CONTROL1) // INOUT BUS [35:0]
@@ -914,8 +929,7 @@ module Top(
 	ILA_error ILA_error (
     .CONTROL(CONTROL0), // INOUT BUS [35:0]
     .CLK(drp_clk_in_i), // IN
-    .TRIG0(data_valid),
-	.DATA(ila_i)
+    .TRIG0({data_valid,ila_i})
 	);
 	VIO_fp VIO_fp (
     .CONTROL(CONTROL1), // INOUT BUS [35:0]
@@ -925,8 +939,8 @@ module Top(
 
 RDP rdp_read(
     .clk			(drp_clk_in_i),        // DRP Clock
-    .rst			(user_rx_reset_i),        // Reset signal
-	.read_addr		(8'h82),  // Address of reading data
+    .rst			(!alldone),        // Reset signal
+	 .read_addr		(8'h82),  // Address of reading data
     .drp_rdy		(gtx0_daddr_i),    // DRP Ready signal
     .drp_en			(gtx0_den_i),     // DRP Enable signal
     .drp_we			(gtx0_dwe_i),     // DRP Write Enable (should be 0 for read)

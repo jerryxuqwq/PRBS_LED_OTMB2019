@@ -108,7 +108,7 @@ view wave
 do wave_mti.do
 
 ##Run simulation
-run 64 us
+run 61 us
 
 
 

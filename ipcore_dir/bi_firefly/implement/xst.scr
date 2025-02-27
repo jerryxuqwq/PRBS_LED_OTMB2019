@@ -65,7 +65,7 @@ run
 -ifmt mixed 
 -ofn bi_firefly_top.ngc 
 -ofmt NGC
--p xc6vlx195t-1ff1156
+-p xc6vlx240t-1ff1156
 -top bi_firefly_top
 -opt_mode Speed
 -opt_level 1

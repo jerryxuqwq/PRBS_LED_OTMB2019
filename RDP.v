@@ -64,6 +64,7 @@ module RDP (
                         data_valid <= 1'b1;
                         state      <= DONE;
                     end
+
                 end
 
                 DONE: begin

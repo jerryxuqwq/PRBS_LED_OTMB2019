@@ -117,9 +117,6 @@
     input   [3:0]   GTX0_TXPREEMPHASIS_IN,
     //--------------------- Transmit Ports - TX PLL Ports ----------------------
     input           GTX0_GTXTXRESET_IN,
-    input           GTX0_MGTREFCLKTX_IN,
-    input           GTX0_PLLTXRESET_IN,
-    output          GTX0_TXPLLLKDET_OUT,
     output          GTX0_TXRESETDONE_OUT,
     //------------------- Transmit Ports - TX PRBS Generator -------------------
     input   [2:0]   GTX0_TXENPRBSTST_IN,
@@ -171,9 +168,6 @@
     input   [3:0]   GTX1_TXPREEMPHASIS_IN,
     //--------------------- Transmit Ports - TX PLL Ports ----------------------
     input           GTX1_GTXTXRESET_IN,
-    input           GTX1_MGTREFCLKTX_IN,
-    input           GTX1_PLLTXRESET_IN,
-    output          GTX1_TXPLLLKDET_OUT,
     output          GTX1_TXRESETDONE_OUT,
     //------------------- Transmit Ports - TX PRBS Generator -------------------
     input   [2:0]   GTX1_TXENPRBSTST_IN,
@@ -225,9 +219,6 @@
     input   [3:0]   GTX2_TXPREEMPHASIS_IN,
     //--------------------- Transmit Ports - TX PLL Ports ----------------------
     input           GTX2_GTXTXRESET_IN,
-    input           GTX2_MGTREFCLKTX_IN,
-    input           GTX2_PLLTXRESET_IN,
-    output          GTX2_TXPLLLKDET_OUT,
     output          GTX2_TXRESETDONE_OUT,
     //------------------- Transmit Ports - TX PRBS Generator -------------------
     input   [2:0]   GTX2_TXENPRBSTST_IN,
@@ -279,9 +270,6 @@
     input   [3:0]   GTX3_TXPREEMPHASIS_IN,
     //--------------------- Transmit Ports - TX PLL Ports ----------------------
     input           GTX3_GTXTXRESET_IN,
-    input           GTX3_MGTREFCLKTX_IN,
-    input           GTX3_PLLTXRESET_IN,
-    output          GTX3_TXPLLLKDET_OUT,
     output          GTX3_TXRESETDONE_OUT,
     //------------------- Transmit Ports - TX PRBS Generator -------------------
     input   [2:0]   GTX3_TXENPRBSTST_IN,
@@ -320,9 +308,9 @@
         .GTX_SIM_GTXRESET_SPEEDUP   (WRAPPER_SIM_GTXRESET_SPEEDUP),
         
         // Share RX PLL parameter
-        .GTX_TX_CLK_SOURCE           ("TXPLL"),
+        .GTX_TX_CLK_SOURCE           ("RXPLL"),
         // Save power parameter
-        .GTX_POWER_SAVE              (10'b0000110000)
+        .GTX_POWER_SAVE              (10'b0000110100)
     )
     gtx0_bi_firefly_i
     (
@@ -366,9 +354,9 @@
         .TXPREEMPHASIS_IN               (GTX0_TXPREEMPHASIS_IN),
         //--------------------- Transmit Ports - TX PLL Ports ----------------------
         .GTXTXRESET_IN                  (GTX0_GTXTXRESET_IN),
-        .MGTREFCLKTX_IN                 ({tied_to_ground_i , GTX0_MGTREFCLKTX_IN}),
-        .PLLTXRESET_IN                  (GTX0_PLLTXRESET_IN),
-        .TXPLLLKDET_OUT                 (GTX0_TXPLLLKDET_OUT),
+        .MGTREFCLKTX_IN                 ({tied_to_ground_i , GTX0_MGTREFCLKRX_IN}),
+        .PLLTXRESET_IN                  (tied_to_ground_i),
+        .TXPLLLKDET_OUT                 (),
         .TXRESETDONE_OUT                (GTX0_TXRESETDONE_OUT),
         //------------------- Transmit Ports - TX PRBS Generator -------------------
         .TXENPRBSTST_IN                 (GTX0_TXENPRBSTST_IN),
@@ -388,9 +376,9 @@
         .GTX_SIM_GTXRESET_SPEEDUP   (WRAPPER_SIM_GTXRESET_SPEEDUP),
         
         // Share RX PLL parameter
-        .GTX_TX_CLK_SOURCE           ("TXPLL"),
+        .GTX_TX_CLK_SOURCE           ("RXPLL"),
         // Save power parameter
-        .GTX_POWER_SAVE              (10'b0000110000)
+        .GTX_POWER_SAVE              (10'b0000110100)
     )
     gtx1_bi_firefly_i
     (
@@ -434,9 +422,9 @@
         .TXPREEMPHASIS_IN               (GTX1_TXPREEMPHASIS_IN),
         //--------------------- Transmit Ports - TX PLL Ports ----------------------
         .GTXTXRESET_IN                  (GTX1_GTXTXRESET_IN),
-        .MGTREFCLKTX_IN                 ({tied_to_ground_i , GTX1_MGTREFCLKTX_IN}),
-        .PLLTXRESET_IN                  (GTX1_PLLTXRESET_IN),
-        .TXPLLLKDET_OUT                 (GTX1_TXPLLLKDET_OUT),
+        .MGTREFCLKTX_IN                 ({tied_to_ground_i , GTX1_MGTREFCLKRX_IN}),
+        .PLLTXRESET_IN                  (tied_to_ground_i),
+        .TXPLLLKDET_OUT                 (),
         .TXRESETDONE_OUT                (GTX1_TXRESETDONE_OUT),
         //------------------- Transmit Ports - TX PRBS Generator -------------------
         .TXENPRBSTST_IN                 (GTX1_TXENPRBSTST_IN),
@@ -456,9 +444,9 @@
         .GTX_SIM_GTXRESET_SPEEDUP   (WRAPPER_SIM_GTXRESET_SPEEDUP),
         
         // Share RX PLL parameter
-        .GTX_TX_CLK_SOURCE           ("TXPLL"),
+        .GTX_TX_CLK_SOURCE           ("RXPLL"),
         // Save power parameter
-        .GTX_POWER_SAVE              (10'b0000110000)
+        .GTX_POWER_SAVE              (10'b0000110100)
     )
     gtx2_bi_firefly_i
     (
@@ -502,9 +490,9 @@
         .TXPREEMPHASIS_IN               (GTX2_TXPREEMPHASIS_IN),
         //--------------------- Transmit Ports - TX PLL Ports ----------------------
         .GTXTXRESET_IN                  (GTX2_GTXTXRESET_IN),
-        .MGTREFCLKTX_IN                 ({tied_to_ground_i , GTX2_MGTREFCLKTX_IN}),
-        .PLLTXRESET_IN                  (GTX2_PLLTXRESET_IN),
-        .TXPLLLKDET_OUT                 (GTX2_TXPLLLKDET_OUT),
+        .MGTREFCLKTX_IN                 ({tied_to_ground_i , GTX2_MGTREFCLKRX_IN}),
+        .PLLTXRESET_IN                  (tied_to_ground_i),
+        .TXPLLLKDET_OUT                 (),
         .TXRESETDONE_OUT                (GTX2_TXRESETDONE_OUT),
         //------------------- Transmit Ports - TX PRBS Generator -------------------
         .TXENPRBSTST_IN                 (GTX2_TXENPRBSTST_IN),
@@ -524,9 +512,9 @@
         .GTX_SIM_GTXRESET_SPEEDUP   (WRAPPER_SIM_GTXRESET_SPEEDUP),
         
         // Share RX PLL parameter
-        .GTX_TX_CLK_SOURCE           ("TXPLL"),
+        .GTX_TX_CLK_SOURCE           ("RXPLL"),
         // Save power parameter
-        .GTX_POWER_SAVE              (10'b0000110000)
+        .GTX_POWER_SAVE              (10'b0000110100)
     )
     gtx3_bi_firefly_i
     (
@@ -570,9 +558,9 @@
         .TXPREEMPHASIS_IN               (GTX3_TXPREEMPHASIS_IN),
         //--------------------- Transmit Ports - TX PLL Ports ----------------------
         .GTXTXRESET_IN                  (GTX3_GTXTXRESET_IN),
-        .MGTREFCLKTX_IN                 ({tied_to_ground_i , GTX3_MGTREFCLKTX_IN}),
-        .PLLTXRESET_IN                  (GTX3_PLLTXRESET_IN),
-        .TXPLLLKDET_OUT                 (GTX3_TXPLLLKDET_OUT),
+        .MGTREFCLKTX_IN                 ({tied_to_ground_i , GTX3_MGTREFCLKRX_IN}),
+        .PLLTXRESET_IN                  (tied_to_ground_i),
+        .TXPLLLKDET_OUT                 (),
         .TXRESETDONE_OUT                (GTX3_TXRESETDONE_OUT),
         //------------------- Transmit Ports - TX PRBS Generator -------------------
         .TXENPRBSTST_IN                 (GTX3_TXENPRBSTST_IN),

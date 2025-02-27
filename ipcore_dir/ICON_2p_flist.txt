@@ -1,7 +1,7 @@
 # Output products list for <ICON_2p>
 ICON_2p.asy
-ICON_2p.constraints\ICON_2p.ucf
-ICON_2p.constraints\ICON_2p.xdc
+ICON_2p.constraints/ICON_2p.ucf
+ICON_2p.constraints/ICON_2p.xdc
 ICON_2p.gise
 ICON_2p.ngc
 ICON_2p.sym
@@ -14,3 +14,4 @@ ICON_2p.xise
 ICON_2p_flist.txt
 ICON_2p_readme.txt
 ICON_2p_xmdf.tcl
+_xmsgs/pn_parser.xmsgs

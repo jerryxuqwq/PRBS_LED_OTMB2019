@@ -67,7 +67,7 @@
 set projDir  [file dirname [info script]]
 set projName bi_firefly
 set topName  bi_firefly_top
-set device   xc6vlx195t-ff1156-1
+set device   xc6vlx240t-ff1156-1
 
 ## if the project directory exists, delete it and create a new clean one
 if {[file exists $projDir/$projName]} {

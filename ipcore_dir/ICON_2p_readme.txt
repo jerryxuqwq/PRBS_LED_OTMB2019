@@ -1,5 +1,5 @@
 The following files were generated for 'ICON_2p' in directory
-C:\Users\Jerry\Documents\PRBS_LED_OTMB2019\PRBS_LED_OTMB2019\ipcore_dir\
+/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/ipcore_dir/
 
 XCO file generator:
    Generate an XCO file for compatibility with legacy flows.
@@ -33,6 +33,7 @@ Generate ISE subproject:
 
    * ICON_2p.gise
    * ICON_2p.xise
+   * _xmsgs/pn_parser.xmsgs
 
 Deliver Readme:
    Readme file for the IP.

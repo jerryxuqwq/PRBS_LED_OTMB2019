@@ -1,8 +1,8 @@
 # Output products list for <ILA_error>
 ILA_error.asy
 ILA_error.cdc
-ILA_error.constraints\ILA_error.ucf
-ILA_error.constraints\ILA_error.xdc
+ILA_error.constraints/ILA_error.ucf
+ILA_error.constraints/ILA_error.xdc
 ILA_error.gise
 ILA_error.ncf
 ILA_error.ngc
@@ -16,4 +16,4 @@ ILA_error.xise
 ILA_error_flist.txt
 ILA_error_readme.txt
 ILA_error_xmdf.tcl
-_xmsgs\pn_parser.xmsgs
+_xmsgs/pn_parser.xmsgs

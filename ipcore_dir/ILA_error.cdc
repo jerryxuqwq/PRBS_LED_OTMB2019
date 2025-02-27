@@ -1,28 +1,33 @@
 #ChipScope Core Generator Project File Version 3.0
-#Wed Feb 26 01:24:03 Central America Standard Time 2025
+#Wed Feb 26 17:34:49 CST 2025
+SignalExport.bus<0000>.channelList=0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+SignalExport.bus<0000>.name=TRIG0
+SignalExport.bus<0000>.offset=0.0
+SignalExport.bus<0000>.precision=0
+SignalExport.bus<0000>.radix=Bin
+SignalExport.bus<0000>.scaleFactor=1.0
 SignalExport.clockChannel=CLK
-SignalExport.dataChannel<0000>=DATA[0]
-SignalExport.dataChannel<0001>=DATA[1]
-SignalExport.dataChannel<0002>=DATA[2]
-SignalExport.dataChannel<0003>=DATA[3]
-SignalExport.dataChannel<0004>=DATA[4]
-SignalExport.dataChannel<0005>=DATA[5]
-SignalExport.dataChannel<0006>=DATA[6]
-SignalExport.dataChannel<0007>=DATA[7]
-SignalExport.dataChannel<0008>=DATA[8]
-SignalExport.dataChannel<0009>=DATA[9]
-SignalExport.dataChannel<0010>=DATA[10]
-SignalExport.dataChannel<0011>=DATA[11]
-SignalExport.dataChannel<0012>=DATA[12]
-SignalExport.dataChannel<0013>=DATA[13]
-SignalExport.dataChannel<0014>=DATA[14]
-SignalExport.dataChannel<0015>=DATA[15]
-SignalExport.dataEqualsTrigger=false
-SignalExport.dataPortWidth=16
+SignalExport.dataEqualsTrigger=true
 SignalExport.triggerChannel<0000><0000>=TRIG0[0]
+SignalExport.triggerChannel<0000><0001>=TRIG0[1]
+SignalExport.triggerChannel<0000><0002>=TRIG0[2]
+SignalExport.triggerChannel<0000><0003>=TRIG0[3]
+SignalExport.triggerChannel<0000><0004>=TRIG0[4]
+SignalExport.triggerChannel<0000><0005>=TRIG0[5]
+SignalExport.triggerChannel<0000><0006>=TRIG0[6]
+SignalExport.triggerChannel<0000><0007>=TRIG0[7]
+SignalExport.triggerChannel<0000><0008>=TRIG0[8]
+SignalExport.triggerChannel<0000><0009>=TRIG0[9]
+SignalExport.triggerChannel<0000><0010>=TRIG0[10]
+SignalExport.triggerChannel<0000><0011>=TRIG0[11]
+SignalExport.triggerChannel<0000><0012>=TRIG0[12]
+SignalExport.triggerChannel<0000><0013>=TRIG0[13]
+SignalExport.triggerChannel<0000><0014>=TRIG0[14]
+SignalExport.triggerChannel<0000><0015>=TRIG0[15]
+SignalExport.triggerChannel<0000><0016>=TRIG0[16]
 SignalExport.triggerPort<0000>.name=TRIG0
 SignalExport.triggerPortCount=1
-SignalExport.triggerPortIsData<0000>=false
-SignalExport.triggerPortWidth<0000>=1
+SignalExport.triggerPortIsData<0000>=true
+SignalExport.triggerPortWidth<0000>=17
 SignalExport.type=ila
 

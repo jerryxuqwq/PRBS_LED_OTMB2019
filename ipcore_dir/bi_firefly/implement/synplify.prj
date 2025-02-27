@@ -71,7 +71,7 @@ add_file -constraint "../example_design/bi_firefly_top.sdc"
 project -result_file "bi_firefly_top.edf"
 set_option -top_module bi_firefly_top
 set_option -technology virtex6
-set_option -part xc6vlx195t
+set_option -part xc6vlx240t
 set_option -package ff1156
 set_option -speed_grade -1
 

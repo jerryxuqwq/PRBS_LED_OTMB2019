@@ -119,9 +119,6 @@
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.TXPREEMPHASIS_IN
   waveform  add  -label Transmit_Ports_-_TX_PLL_Ports  -comment  Transmit_Ports_-_TX_PLL_Ports
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.GTXTXRESET_IN
-  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.MGTREFCLKTX_IN
-  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.PLLTXRESET_IN
-  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.TXPLLLKDET_OUT
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.TXRESETDONE_OUT
   waveform  add  -label Transmit_Ports_-_TX_PRBS_Generator  -comment  Transmit_Ports_-_TX_PRBS_Generator
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.TXENPRBSTST_IN
@@ -168,9 +165,6 @@
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.TXPREEMPHASIS_IN
   waveform  add  -label Transmit_Ports_-_TX_PLL_Ports  -comment  Transmit_Ports_-_TX_PLL_Ports
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.GTXTXRESET_IN
-  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.MGTREFCLKTX_IN
-  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.PLLTXRESET_IN
-  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.TXPLLLKDET_OUT
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.TXRESETDONE_OUT
   waveform  add  -label Transmit_Ports_-_TX_PRBS_Generator  -comment  Transmit_Ports_-_TX_PRBS_Generator
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.TXENPRBSTST_IN
@@ -217,9 +211,6 @@
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.TXPREEMPHASIS_IN
   waveform  add  -label Transmit_Ports_-_TX_PLL_Ports  -comment  Transmit_Ports_-_TX_PLL_Ports
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.GTXTXRESET_IN
-  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.MGTREFCLKTX_IN
-  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.PLLTXRESET_IN
-  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.TXPLLLKDET_OUT
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.TXRESETDONE_OUT
   waveform  add  -label Transmit_Ports_-_TX_PRBS_Generator  -comment  Transmit_Ports_-_TX_PRBS_Generator
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.TXENPRBSTST_IN
@@ -266,13 +257,10 @@
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.TXPREEMPHASIS_IN
   waveform  add  -label Transmit_Ports_-_TX_PLL_Ports  -comment  Transmit_Ports_-_TX_PLL_Ports
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.GTXTXRESET_IN
-  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.MGTREFCLKTX_IN
-  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.PLLTXRESET_IN
-  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.TXPLLLKDET_OUT
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.TXRESETDONE_OUT
   waveform  add  -label Transmit_Ports_-_TX_PRBS_Generator  -comment  Transmit_Ports_-_TX_PRBS_Generator
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.TXENPRBSTST_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.TXPRBSFORCEERR_IN
 
-  console submit -using simulator -wait no "run 64 us"
+  console submit -using simulator -wait no "run 61 us"
 

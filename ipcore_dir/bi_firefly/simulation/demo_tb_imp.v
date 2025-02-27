@@ -67,8 +67,8 @@ module DEMO_TB_IMP;
 
 //*************************Parameter Declarations******************************
 
-    parameter   TX_REFCLK_PERIOD   =   8.0;
-    parameter   RX_REFCLK_PERIOD   =   8.0;
+    parameter   TX_REFCLK_PERIOD   =   6.25;
+    parameter   RX_REFCLK_PERIOD   =   6.25;
     parameter   DCLK_PERIOD     =   20.0;
   
 //************************Internal Register Declarations***********************
@@ -169,7 +169,7 @@ module DEMO_TB_IMP;
     //----------------------------- Track Data ---------------------------------
     initial
     begin
-        #63000;
+        #60000;
         $display("------- TEST COMPLETED -------");
         $stop;
     end
@@ -180,8 +180,8 @@ module DEMO_TB_IMP;
     bi_firefly_top 
     bi_firefly_top_i
     (
-        .Q3_CLK0_MGTREFCLK_PAD_N_IN          (tx_refclk_n_r), 
-        .Q3_CLK0_MGTREFCLK_PAD_P_IN          (tx_refclk_p_r),
+        .Q3_CLK0_MGTREFCLK_PAD_N_IN          (rx_refclk_n_r), 
+        .Q3_CLK0_MGTREFCLK_PAD_P_IN          (rx_refclk_p_r),
         .DRP_CLK_IN                          (drp_clk_r),
         .GTXTXRESET_IN                       (reset_i),
         .GTXRXRESET_IN                       (reset_i),

@@ -119,9 +119,6 @@
         .GTX0_TXPREEMPHASIS_IN          (),
         //--------------------- Transmit Ports - TX PLL Ports ----------------------
         .GTX0_GTXTXRESET_IN             (),
-        .GTX0_MGTREFCLKTX_IN            (),
-        .GTX0_PLLTXRESET_IN             (),
-        .GTX0_TXPLLLKDET_OUT            (),
         .GTX0_TXRESETDONE_OUT           (),
         //------------------- Transmit Ports - TX PRBS Generator -------------------
         .GTX0_TXENPRBSTST_IN            (),
@@ -172,9 +169,6 @@
         .GTX1_TXPREEMPHASIS_IN          (),
         //--------------------- Transmit Ports - TX PLL Ports ----------------------
         .GTX1_GTXTXRESET_IN             (),
-        .GTX1_MGTREFCLKTX_IN            (),
-        .GTX1_PLLTXRESET_IN             (),
-        .GTX1_TXPLLLKDET_OUT            (),
         .GTX1_TXRESETDONE_OUT           (),
         //------------------- Transmit Ports - TX PRBS Generator -------------------
         .GTX1_TXENPRBSTST_IN            (),
@@ -225,9 +219,6 @@
         .GTX2_TXPREEMPHASIS_IN          (),
         //--------------------- Transmit Ports - TX PLL Ports ----------------------
         .GTX2_GTXTXRESET_IN             (),
-        .GTX2_MGTREFCLKTX_IN            (),
-        .GTX2_PLLTXRESET_IN             (),
-        .GTX2_TXPLLLKDET_OUT            (),
         .GTX2_TXRESETDONE_OUT           (),
         //------------------- Transmit Ports - TX PRBS Generator -------------------
         .GTX2_TXENPRBSTST_IN            (),
@@ -278,9 +269,6 @@
         .GTX3_TXPREEMPHASIS_IN          (),
         //--------------------- Transmit Ports - TX PLL Ports ----------------------
         .GTX3_GTXTXRESET_IN             (),
-        .GTX3_MGTREFCLKTX_IN            (),
-        .GTX3_PLLTXRESET_IN             (),
-        .GTX3_TXPLLLKDET_OUT            (),
         .GTX3_TXRESETDONE_OUT           (),
         //------------------- Transmit Ports - TX PRBS Generator -------------------
         .GTX3_TXENPRBSTST_IN            (),

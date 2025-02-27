@@ -22,7 +22,7 @@ proc findRtfPath { relativePath } {
 
 source [ findRtfPath "data/projnav/scripts/dpm_cgUtils.tcl" ]
 
-set result [ run_cg_edit "bi_firefly" xc6vlx240t-1ff1156 Verilog ]
+set result [ run_cg_edit "ILA_error" xc6vlx240t-1ff1156 Verilog ]
 
 if { $result == 0 } {
    puts "Core Generator edit command completed successfully."

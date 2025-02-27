@@ -134,9 +134,6 @@
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.TXPREEMPHASIS_IN}
   gui_sg_addsignal -group bi_firefly_Group {{Transmit Ports - TX PLL Ports}} -divider
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.GTXTXRESET_IN}
-  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.MGTREFCLKTX_IN}
-  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.PLLTXRESET_IN}
-  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.TXPLLLKDET_OUT}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.TXRESETDONE_OUT}
   gui_sg_addsignal -group bi_firefly_Group {{Transmit Ports - TX PRBS Generator}} -divider
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.TXENPRBSTST_IN}
@@ -183,9 +180,6 @@
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.TXPREEMPHASIS_IN}
   gui_sg_addsignal -group bi_firefly_Group {{Transmit Ports - TX PLL Ports}} -divider
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.GTXTXRESET_IN}
-  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.MGTREFCLKTX_IN}
-  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.PLLTXRESET_IN}
-  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.TXPLLLKDET_OUT}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.TXRESETDONE_OUT}
   gui_sg_addsignal -group bi_firefly_Group {{Transmit Ports - TX PRBS Generator}} -divider
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.TXENPRBSTST_IN}
@@ -232,9 +226,6 @@
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.TXPREEMPHASIS_IN}
   gui_sg_addsignal -group bi_firefly_Group {{Transmit Ports - TX PLL Ports}} -divider
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.GTXTXRESET_IN}
-  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.MGTREFCLKTX_IN}
-  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.PLLTXRESET_IN}
-  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.TXPLLLKDET_OUT}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.TXRESETDONE_OUT}
   gui_sg_addsignal -group bi_firefly_Group {{Transmit Ports - TX PRBS Generator}} -divider
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.TXENPRBSTST_IN}
@@ -281,9 +272,6 @@
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.TXPREEMPHASIS_IN}
   gui_sg_addsignal -group bi_firefly_Group {{Transmit Ports - TX PLL Ports}} -divider
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.GTXTXRESET_IN}
-  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.MGTREFCLKTX_IN}
-  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.PLLTXRESET_IN}
-  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.TXPLLLKDET_OUT}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.TXRESETDONE_OUT}
   gui_sg_addsignal -group bi_firefly_Group {{Transmit Ports - TX PRBS Generator}} -divider
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.TXENPRBSTST_IN}

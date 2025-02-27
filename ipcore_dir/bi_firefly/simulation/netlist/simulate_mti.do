@@ -92,7 +92,7 @@ vlog -work work   ../demo_tb_imp.v;
 vsim -t 1ps -L SECUREIP -L SIMPRIMS_VER -voptargs="+acc" -sdfmax DEMO_TB_IMP/bi_firefly_top_i=../../implement/results/routed.sdf +notimingchecks work.DEMO_TB_IMP work.glbl
 
 ##Run simulation
-run 64 us
+run 61 us
 
 
 

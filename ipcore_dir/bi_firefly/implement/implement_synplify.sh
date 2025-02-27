@@ -87,14 +87,14 @@ cd ./results
 ##-------------------------------Run ngdbuild---------------------------------------
 
 echo 'Running ngdbuild'
-ngdbuild -uc ../../example_design/bi_firefly_top.ucf -p xc6vlx195t-ff1156-1 bi_firefly_top.edf bi_firefly_top.ngd
+ngdbuild -uc ../../example_design/bi_firefly_top.ucf -p xc6vlx240t-ff1156-1 bi_firefly_top.edf bi_firefly_top.ngd
 
 #end run ngdbuild section
 
 ##-------------------------------Run map-------------------------------------------
 
 echo 'Running map'
-map -p xc6vlx195t-ff1156-1 -o mapped.ncd bi_firefly_top.ngd
+map -p xc6vlx240t-ff1156-1 -o mapped.ncd bi_firefly_top.ngd
 
 ##-------------------------------Run par-------------------------------------------
 

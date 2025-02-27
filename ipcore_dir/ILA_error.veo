@@ -8,7 +8,7 @@
 // \   \   \/     Version    : 14.7
 //  \   \         Application: Xilinx CORE Generator
 //  /   /         Filename   : ILA_error.veo
-// /___/   /\     Timestamp  : Wed Feb 26 01:24:03 Central America Standard Time 2025
+// /___/   /\     Timestamp  : Wed Feb 26 17:34:49 CST 2025
 // \   \  /  \
 //  \___\/\___\
 //
@@ -23,8 +23,7 @@
 ILA_error YourInstanceName (
     .CONTROL(CONTROL), // INOUT BUS [35:0]
     .CLK(CLK), // IN
-    .DATA(DATA), // IN BUS [15:0]
-    .TRIG0(TRIG0) // IN BUS [0:0]
+    .TRIG0(TRIG0) // IN BUS [16:0]
 );
 
 // INST_TAG_END ------ End INSTANTIATION Template ---------

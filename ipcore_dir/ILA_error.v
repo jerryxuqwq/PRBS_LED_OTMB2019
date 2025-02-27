@@ -8,7 +8,7 @@
 // \   \   \/     Version    : 14.7
 //  \   \         Application: Xilinx CORE Generator
 //  /   /         Filename   : ILA_error.v
-// /___/   /\     Timestamp  : Wed Feb 26 01:24:03 Central America Standard Time 2025
+// /___/   /\     Timestamp  : Wed Feb 26 17:34:49 CST 2025
 // \   \  /  \
 //  \___\/\___\
 //
@@ -21,13 +21,11 @@
 module ILA_error(
     CONTROL,
     CLK,
-    DATA,
     TRIG0) /* synthesis syn_black_box syn_noprune=1 */;
 
 
 inout [35 : 0] CONTROL;
 input CLK;
-input [15 : 0] DATA;
-input [0 : 0] TRIG0;
+input [16 : 0] TRIG0;
 
 endmodule
