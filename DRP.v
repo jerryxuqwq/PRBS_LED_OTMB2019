@@ -36,7 +36,7 @@ module DRP (
     reg [1:0] state;
     reg [7:0] timeout_counter; // 8-bit timeout counter
     localparam IDLE = 2'b00, START = 2'b01, WAIT_RDY = 2'b10, DONE = 2'b11;
-    localparam TIMEOUT_COUNT = 8'd50; // Example timeout value (adjust as needed)
+    localparam TIMEOUT_COUNT = 8'd1000; // Example timeout value (adjust as needed)
 
     always @(posedge clk or posedge rst) begin
         if (rst) begin
@@ -71,10 +71,10 @@ module DRP (
                         data_valid <= 1'b1;
                         state      <= DONE;
                     end 
-                    // else if (timeout_counter >= TIMEOUT_COUNT) begin
-                    //     timeout  <= 1'b1; // Set timeout flag
-                    //     state    <= IDLE; // Reset to idle state
-                    // end 
+                     else if (timeout_counter >= TIMEOUT_COUNT) begin
+                        timeout  <= 1'b1; // Set timeout flag
+                        state    <= IDLE; // Reset to idle state
+                     end 
                     else begin
                         timeout_counter <= timeout_counter + 1; // Increment timeout counter
                     end

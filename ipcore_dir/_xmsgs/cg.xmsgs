@@ -5,7 +5,43 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="sim" num="172" delta="new" >Generating IP...
+<msg type="info" file="sim" num="172" delta="old" >Generating IP...
+</msg>
+
+<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Component v6_gtxwizard_v1_12 does not have a valid model name for Verilog synthesis</arg>
+</msg>
+
+<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Overwriting existing file C:/Users/Jerry/Documents/PRBS_LED_OTMB2019/ipcore_dir/tmp/_cg/Gem_firefly/doc/ug516_v6_gtxwizard.pdf with file from view xilinx_documentation</arg>
+</msg>
+
+<msg type="info" file="sim" num="993" delta="new" >The selected IP does not support an ASY schematic symbol.
+</msg>
+
+<msg type="info" file="sim" num="949" delta="new" >Finished generation of ASY schematic symbol.
+</msg>
+
+<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">The chosen IP does not support an SYM schematic symbol.</arg>
+</msg>
+
+<msg type="warning" file="coreutil" num="0" delta="new" >WARNING:ProjectMgmt - The file
+   &quot;C:/Users/Jerry/Documents/PRBS_LED_OTMB2019/ipcore_dir/tmp/_cg/Gem_firefly/im
+   plement/data_vio.ngc&quot; device information, xc6vlx75t-ff784-2, does not match
+   the current project device, xc6vlx240tff1156-1.
+Adding C:/Users/Jerry/Documents/PRBS_LED_OTMB2019/ipcore_dir/tmp/_cg/Gem_firefly/implement/icon.ngc -view all -origin_type created
+</msg>
+
+<msg type="warning" file="coreutil" num="0" delta="new" >WARNING:ProjectMgmt - Failed to confirm that part information for the file
+   &quot;C:/Users/Jerry/Documents/PRBS_LED_OTMB2019/ipcore_dir/tmp/_cg/Gem_firefly/im
+   plement/ila.ngc&quot; matches the current project settings.
+</msg>
+
+<msg type="warning" file="coreutil" num="0" delta="new" >WARNING: This core does not have a top level called &quot;/Gem_firefly&quot;
+</msg>
+
+<msg type="warning" file="coreutil" num="0" delta="new" >WARNING: Top level has been set to &quot;/Gem_firefly_top&quot;
+</msg>
+
+<msg type="info" file="sim" num="948" delta="new" >Finished FLIST file generation.
 </msg>
 
 </messages>

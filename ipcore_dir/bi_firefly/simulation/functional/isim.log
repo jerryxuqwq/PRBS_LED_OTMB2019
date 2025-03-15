@@ -1,0 +1,235 @@
+ISim log file
+Running: ./demo_tb.exe -gui -tclbatch wave_isim.tcl -wdb wave_isim 
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+INFO:Security:61 - The XILINXD_LICENSE_FILE environment variable is not set.
+INFO:Security:63 - The LM_LICENSE_FILE environment variable is not set.
+INFO:Security:68 - For more information or for assistance in obtaining 
+ a license, please run the Xilinx License Configuration Manager
+       (xlcm or "Manage Xilinx Licenses".)
+INFO:Security:68a - user is ise, on host localhost.localdomain.
+INFO:Security:15 - A feature for ISIM was found but is for the wrong hostid.
+ERROR:Security:14 - No feature was available for 'ISIM'.
+
+Invalid host.
+ The hostid of this system does not match the hostid
+ specified in the license file.
+Feature:       ISIM
+Hostid:        08002768c935
+License path:  /home/ise/.Xilinx/Xilinx.lic:/opt/Xilinx/14.7/ISE_DS/ISE//data/*.lic:/opt/Xilinx/14.7/ISE_DS/ISE//coregen/core_licenses/Xilinx.lic:/opt/Xilinx/14.7/ISE_DS/ISE//coregen/core_licenses/XilinxFree.lic:/opt/Xilinx/14.7/ISE_DS/EDK/data/core_licenses/Xilinx.lic:
+FLEXnet Licensing error:-9,57
+For further information, refer to the FLEXnet Licensing documentation,
+available at "www.flexerasoftware.com".
+----------------------------------------------------------------------
+WARNING: A full ISim License cannot be checked out due to the issues listed above. Please use Xilinx License Configuration Manager to fix these issues in order to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# wcfg new
+# wave add /DEMO_TB/bi_firefly_top_i/gtx0_frame_check/begin_r
+# wave add /DEMO_TB/bi_firefly_top_i/gtx0_frame_check/track_data_r
+# wave add /DEMO_TB/bi_firefly_top_i/gtx0_frame_check/data_error_detected_r
+# wave add /DEMO_TB/bi_firefly_top_i/gtx0_frame_check/start_of_packet_detected_r
+# wave add /DEMO_TB/bi_firefly_top_i/gtx0_frame_check/RX_DATA
+# wave add /DEMO_TB/bi_firefly_top_i/gtx0_frame_check/ERROR_COUNT
+# wave add /DEMO_TB/bi_firefly_top_i/gtx1_frame_check/begin_r
+# wave add /DEMO_TB/bi_firefly_top_i/gtx1_frame_check/track_data_r
+# wave add /DEMO_TB/bi_firefly_top_i/gtx1_frame_check/data_error_detected_r
+# wave add /DEMO_TB/bi_firefly_top_i/gtx1_frame_check/start_of_packet_detected_r
+# wave add /DEMO_TB/bi_firefly_top_i/gtx1_frame_check/RX_DATA
+# wave add /DEMO_TB/bi_firefly_top_i/gtx1_frame_check/ERROR_COUNT
+# wave add /DEMO_TB/bi_firefly_top_i/gtx2_frame_check/begin_r
+# wave add /DEMO_TB/bi_firefly_top_i/gtx2_frame_check/track_data_r
+# wave add /DEMO_TB/bi_firefly_top_i/gtx2_frame_check/data_error_detected_r
+# wave add /DEMO_TB/bi_firefly_top_i/gtx2_frame_check/start_of_packet_detected_r
+# wave add /DEMO_TB/bi_firefly_top_i/gtx2_frame_check/RX_DATA
+# wave add /DEMO_TB/bi_firefly_top_i/gtx2_frame_check/ERROR_COUNT
+# wave add /DEMO_TB/bi_firefly_top_i/gtx3_frame_check/begin_r
+# wave add /DEMO_TB/bi_firefly_top_i/gtx3_frame_check/track_data_r
+# wave add /DEMO_TB/bi_firefly_top_i/gtx3_frame_check/data_error_detected_r
+# wave add /DEMO_TB/bi_firefly_top_i/gtx3_frame_check/start_of_packet_detected_r
+# wave add /DEMO_TB/bi_firefly_top_i/gtx3_frame_check/RX_DATA
+# wave add /DEMO_TB/bi_firefly_top_i/gtx3_frame_check/ERROR_COUNT
+# divider add Loopback and Powerdown Ports
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/LOOPBACK_IN
+# divider add Receive Ports - PRBS Detection
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/PRBSCNTRESET_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/RXENPRBSTST_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/RXPRBSERR_OUT
+# divider add Receive Ports - RX Data Path interface
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/RXDATA_OUT
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/RXUSRCLK2_IN
+# divider add Receive Ports - RX Driver,OOB signalling,Coupling and Eq.,CDR
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/RXEQMIX_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/RXN_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/RXP_IN
+# divider add Receive Ports - RX PLL Ports
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/GTXRXRESET_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/MGTREFCLKRX_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/PLLRXRESET_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/RXPLLLKDET_OUT
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/RXRESETDONE_OUT
+# divider add Shared Ports - Dynamic Reconfiguration Port (DRP)
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/DADDR_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/DCLK_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/DEN_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/DI_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/DRDY_OUT
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/DRPDO_OUT
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/DWE_IN
+# divider add Transmit Ports - TX Data Path interface
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/TXDATA_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/TXOUTCLK_OUT
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/TXUSRCLK2_IN
+# divider add Transmit Ports - TX Driver and OOB signaling
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/TXDIFFCTRL_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/TXN_OUT
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/TXP_OUT
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/TXPOSTEMPHASIS_IN
+# divider add Transmit Ports - TX Driver and OOB signalling
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/TXPREEMPHASIS_IN
+# divider add Transmit Ports - TX PLL Ports
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/GTXTXRESET_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/TXRESETDONE_OUT
+# divider add Transmit Ports - TX PRBS Generator
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/TXENPRBSTST_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx0_bi_firefly_i/TXPRBSFORCEERR_IN
+# divider add Loopback and Powerdown Ports
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/LOOPBACK_IN
+# divider add Receive Ports - PRBS Detection
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/PRBSCNTRESET_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/RXENPRBSTST_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/RXPRBSERR_OUT
+# divider add Receive Ports - RX Data Path interface
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/RXDATA_OUT
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/RXUSRCLK2_IN
+# divider add Receive Ports - RX Driver,OOB signalling,Coupling and Eq.,CDR
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/RXEQMIX_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/RXN_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/RXP_IN
+# divider add Receive Ports - RX PLL Ports
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/GTXRXRESET_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/MGTREFCLKRX_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/PLLRXRESET_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/RXPLLLKDET_OUT
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/RXRESETDONE_OUT
+# divider add Shared Ports - Dynamic Reconfiguration Port (DRP)
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/DADDR_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/DCLK_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/DEN_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/DI_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/DRDY_OUT
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/DRPDO_OUT
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/DWE_IN
+# divider add Transmit Ports - TX Data Path interface
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/TXDATA_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/TXOUTCLK_OUT
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/TXUSRCLK2_IN
+# divider add Transmit Ports - TX Driver and OOB signaling
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/TXDIFFCTRL_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/TXN_OUT
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/TXP_OUT
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/TXPOSTEMPHASIS_IN
+# divider add Transmit Ports - TX Driver and OOB signalling
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/TXPREEMPHASIS_IN
+# divider add Transmit Ports - TX PLL Ports
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/GTXTXRESET_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/TXRESETDONE_OUT
+# divider add Transmit Ports - TX PRBS Generator
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/TXENPRBSTST_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx1_bi_firefly_i/TXPRBSFORCEERR_IN
+# divider add Loopback and Powerdown Ports
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/LOOPBACK_IN
+# divider add Receive Ports - PRBS Detection
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/PRBSCNTRESET_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/RXENPRBSTST_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/RXPRBSERR_OUT
+# divider add Receive Ports - RX Data Path interface
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/RXDATA_OUT
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/RXUSRCLK2_IN
+# divider add Receive Ports - RX Driver,OOB signalling,Coupling and Eq.,CDR
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/RXEQMIX_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/RXN_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/RXP_IN
+# divider add Receive Ports - RX PLL Ports
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/GTXRXRESET_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/MGTREFCLKRX_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/PLLRXRESET_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/RXPLLLKDET_OUT
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/RXRESETDONE_OUT
+# divider add Shared Ports - Dynamic Reconfiguration Port (DRP)
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/DADDR_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/DCLK_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/DEN_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/DI_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/DRDY_OUT
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/DRPDO_OUT
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/DWE_IN
+# divider add Transmit Ports - TX Data Path interface
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/TXDATA_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/TXOUTCLK_OUT
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/TXUSRCLK2_IN
+# divider add Transmit Ports - TX Driver and OOB signaling
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/TXDIFFCTRL_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/TXN_OUT
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/TXP_OUT
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/TXPOSTEMPHASIS_IN
+# divider add Transmit Ports - TX Driver and OOB signalling
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/TXPREEMPHASIS_IN
+# divider add Transmit Ports - TX PLL Ports
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/GTXTXRESET_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/TXRESETDONE_OUT
+# divider add Transmit Ports - TX PRBS Generator
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/TXENPRBSTST_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx2_bi_firefly_i/TXPRBSFORCEERR_IN
+# divider add Loopback and Powerdown Ports
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/LOOPBACK_IN
+# divider add Receive Ports - PRBS Detection
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/PRBSCNTRESET_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/RXENPRBSTST_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/RXPRBSERR_OUT
+# divider add Receive Ports - RX Data Path interface
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/RXDATA_OUT
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/RXUSRCLK2_IN
+# divider add Receive Ports - RX Driver,OOB signalling,Coupling and Eq.,CDR
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/RXEQMIX_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/RXN_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/RXP_IN
+# divider add Receive Ports - RX PLL Ports
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/GTXRXRESET_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/MGTREFCLKRX_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/PLLRXRESET_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/RXPLLLKDET_OUT
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/RXRESETDONE_OUT
+# divider add Shared Ports - Dynamic Reconfiguration Port (DRP)
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/DADDR_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/DCLK_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/DEN_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/DI_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/DRDY_OUT
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/DRPDO_OUT
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/DWE_IN
+# divider add Transmit Ports - TX Data Path interface
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/TXDATA_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/TXOUTCLK_OUT
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/TXUSRCLK2_IN
+# divider add Transmit Ports - TX Driver and OOB signaling
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/TXDIFFCTRL_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/TXN_OUT
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/TXP_OUT
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/TXPOSTEMPHASIS_IN
+# divider add Transmit Ports - TX Driver and OOB signalling
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/TXPREEMPHASIS_IN
+# divider add Transmit Ports - TX PLL Ports
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/GTXTXRESET_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/TXRESETDONE_OUT
+# divider add Transmit Ports - TX PRBS Generator
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/TXENPRBSTST_IN
+# wave add /DEMO_TB/bi_firefly_top_i/bi_firefly_i/gtx3_bi_firefly_i/TXPRBSFORCEERR_IN
+# run 61 us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+WARNING: This is a limited version of the ISim. The current design has exceeded the design size limit for this version and the performance of the simulation will be derated. Please contact your nearest sales office at http://www.xilinx.com/company/contact.htm or visit the Xilinx on-line store at http://www.xilinx.com/onlinestore/design_resources.htm if interested in purchasing the full, unlimited version of this simulator.
+Stopped at time : 131882 ps : File "/build/xfndry/isimco/hipsBuilds/P_hips_v23.0/rst/hips/gtxe1/B_GTXE1_enc.v" Line 20408
+# quit
+# exit 0

@@ -21,13 +21,17 @@
 
 `timescale 1ns / 1ps
 `define DLY #1
-module Top(
+module Top#(
+    parameter EXAMPLE_SIM_GTXRESET_SPEEDUP              =   0    // simulation setting for GTX SecureIP model)
+	)(
     input wire tmb_clock0,
+	 input wire reset,
 
     input wire  Q3_CLK0_MGTREFCLK_PAD_N_IN,
     input wire  Q3_CLK0_MGTREFCLK_PAD_P_IN,
-    input  wire [3:0]   RXN_IN,
-    input  wire [3:0]   RXP_IN,
+    input wire [3:0]   RXN_IN,
+    input wire [3:0]   RXP_IN,
+	output wire [7:0] led_fp,
     output wire [3:0]   TXN_OUT,
     output wire [3:0]   TXP_OUT
   );
@@ -895,7 +899,7 @@ module Top(
          gtx3_txresetdone_r2;
   always@(posedge gtx0_txusrclk2_i)
   begin
-    if(alldone)
+    if(alldone_r)
     begin
       rx_prbs_mode <= 3'b001;
       tx_prbs_mode <= 3'b001;
@@ -909,7 +913,8 @@ module Top(
     end
   end
   
-  wire alldone_r; // cross clock domain sync
+  reg alldone_r; // cross clock domain sync
+  
   always @(posedge drp_clk_in_i)
   begin
     if (!alldone)
@@ -924,8 +929,10 @@ module Top(
 
   wire data_valid;
   // Chipscope
-  assign  gtxtxreset_i   =  v_button[0];
-  assign  gtxrxreset_i   =  v_button[1];
+  //assign  gtxtxreset_i   =  v_button[0]|reset;
+ // assign  gtxrxreset_i   =  v_button[1];
+ assign  gtxtxreset_i = reset;
+ assign  gtxrxreset_i = reset;
   assign gtx0_txprbsforceerr_i =  v_button[2];
   assign gtx1_txprbsforceerr_i =  v_button[3];
   assign gtx2_txprbsforceerr_i =  v_button[4];
@@ -935,7 +942,8 @@ module Top(
   assign v_led[2] = gtx2_rxprbserr_i;
   assign v_led[3] = gtx3_rxprbserr_i;
   assign v_led[4] = drp_clk_in_i;
-
+  
+  assign led_fp = v_led;
   ICON_2p ICON_debug (
             .CONTROL0(CONTROL0), // INOUT BUS [35:0]
             .CONTROL1(CONTROL1) // INOUT BUS [35:0]
@@ -953,9 +961,9 @@ module Top(
 
   DRP DRP_read(
         .clk			(drp_clk_in_i), // DRP Clock
-        .rst			(!alldone_r),     // Reset signal
+        .rst			(!alldone),     // Reset signal
         .addr		    (8'h82),  		// Address of reading data
-        .drp_rdy		(gtx0_daddr_i), // DRP Ready signal
+        .drp_rdy		(gtx0_drdy_i), // DRP Ready signal
         .drp_en			(gtx0_den_i),   // DRP Enable signal
         .drp_we			(gtx0_dwe_i),   // DRP Write Enable (should be 0 for read)
         .drp_addr		(gtx0_daddr_i), // DRP Address

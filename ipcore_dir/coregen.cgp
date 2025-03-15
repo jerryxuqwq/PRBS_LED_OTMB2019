@@ -1,6 +1,6 @@
 SET busformat = BusFormatAngleBracketNotRipped
 SET designentry = Verilog
-SET device = xc6vlx195t
+SET device = xc6vlx240t
 SET devicefamily = virtex6
 SET flowvendor = Other
 SET package = ff1156
