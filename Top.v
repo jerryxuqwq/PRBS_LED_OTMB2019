@@ -31,7 +31,7 @@ module Top#(
     input wire  Q3_CLK0_MGTREFCLK_PAD_P_IN,
     input wire [3:0]   RXN_IN,
     input wire [3:0]   RXP_IN,
-	output wire [7:0] led_fp,
+	 output wire [7:0] led_fp,
     output wire [3:0]   TXN_OUT,
     output wire [3:0]   TXP_OUT
   );
@@ -40,7 +40,7 @@ module Top#(
   wire [35:0] CONTROL0;
   wire [35:0] CONTROL1;
   wire [15:0] ila_i;
-  wire [7:0] v_led;
+  reg [7:0] v_led;
   wire [7:0] v_button;
 
   //************************** Register Declarations ****************************
@@ -926,22 +926,21 @@ module Top#(
       alldone_r    <=   alldone;
     end
   end
-
-  wire data_valid;
+  
   // Chipscope
   //assign  gtxtxreset_i   =  v_button[0]|reset;
- // assign  gtxrxreset_i   =  v_button[1];
- assign  gtxtxreset_i = reset;
- assign  gtxrxreset_i = reset;
+  // assign  gtxrxreset_i   =  v_button[1];
+  assign  gtxtxreset_i = reset;
+  assign  gtxrxreset_i  = reset;
   assign gtx0_txprbsforceerr_i =  v_button[2];
   assign gtx1_txprbsforceerr_i =  v_button[3];
   assign gtx2_txprbsforceerr_i =  v_button[4];
   assign gtx3_txprbsforceerr_i =  v_button[5];
-  assign v_led[0] = gtx0_rxprbserr_i;
-  assign v_led[1] = gtx1_rxprbserr_i;
-  assign v_led[2] = gtx2_rxprbserr_i;
-  assign v_led[3] = gtx3_rxprbserr_i;
-  assign v_led[4] = drp_clk_in_i;
+  //assign v_led[0] = gtx0_rxprbserr_i;
+  //assign v_led[1] = gtx1_rxprbserr_i;
+  //assign v_led[2] = gtx2_rxprbserr_i;
+  //assign v_led[3] = gtx3_rxprbserr_i;
+  //assign v_led[4] = drp_clk_in_i;
   
   assign led_fp = v_led;
   ICON_2p ICON_debug (
@@ -958,8 +957,35 @@ module Top#(
            .ASYNC_IN(v_led), // IN BUS [7:0]
            .ASYNC_OUT(v_button) // OUT BUS [7:0]
          );
+   wire [15:0] gtx_0_data_out;
+   wire        gtx_0_data_valid;
+   wire [15:0] gtx_1_data_out;
+   wire        gtx_1_data_valid;
+   wire [15:0] gtx_2_data_out;
+   wire        gtx_2_data_valid;
+   wire [15:0] gtx_3_data_out;
+   wire        gtx_3_data_valid;
+   reg        blink;
+   localparam integer DIVISOR = 40_000_000 / (2 * 3); // Toggle every (40M / 6) cycles
+   reg [22:0] counter;
+    
+    always @(posedge tmb_clock0 or posedge reset) begin
+        if (reset)
+            counter <= 0;
+        else if (counter >= DIVISOR - 1)
+            counter <= 0;
+        else
+            counter <= counter + 1;
+    end
 
-  DRP DRP_read(
+    always @(posedge tmb_clock0 or posedge reset) begin
+        if (reset)
+            blink <= 0;
+        else if (counter == 0)
+            blink <= ~blink;
+    end
+   
+   DRP DRP_read_0(
         .clk			(drp_clk_in_i), // DRP Clock
         .rst			(!alldone),     // Reset signal
         .addr		    (8'h82),  		// Address of reading data
@@ -969,7 +995,64 @@ module Top#(
         .drp_addr		(gtx0_daddr_i), // DRP Address
         .drp_di			(gtx0_di_i),    // DRP Data Input (not used in read)
         .drp_do			(gtx0_drpdo_i), // DRP Data Output (data read)
-        .data_out		(ila_i),        // Output data
-        .data_valid		(data_valid)    // Data valid flag
+        .data_out		(gtx_0_data_out),        // Output data
+        .data_valid		(gtx_0_data_valid)    // Data valid flag
       );
+   always @(posedge gtx_0_data_valid)
+   begin
+    if (gtx_0_data_out > 0 && gtx_0_data_out <= 1)
+      begin
+	 v_led[0] <= 1'b1;
+      end
+    else if(gtx_0_data_out >=2 )
+      begin
+	 v_led[0] <= blink;    
+      end
+    else
+      begin
+	 v_led[0] <= 1'b0;
+      end
+   end
+   
+     DRP DRP_read_1(
+        .clk			(drp_clk_in_i), // DRP Clock
+        .rst			(!alldone),     // Reset signal
+        .addr		    (8'h82),  		// Address of reading data
+        .drp_rdy		(gtx1_drdy_i), // DRP Ready signal
+        .drp_en			(gtx1_den_i),   // DRP Enable signal
+        .drp_we			(gtx1_dwe_i),   // DRP Write Enable (should be 0 for read)
+        .drp_addr		(gtx1_daddr_i), // DRP Address
+        .drp_di			(gtx1_di_i),    // DRP Data Input (not used in read)
+        .drp_do			(gtx1_drpdo_i), // DRP Data Output (data read)
+        .data_out		(gtx_1_data_out),        // Output data
+        .data_valid		(gtx_1_data_valid)    // Data valid flag
+      );
+     DRP DRP_read_2(
+        .clk			(drp_clk_in_i), // DRP Clock
+        .rst			(!alldone),     // Reset signal
+        .addr		    (8'h82),  		// Address of reading data
+        .drp_rdy		(gtx2_drdy_i), // DRP Ready signal
+        .drp_en			(gtx2_den_i),   // DRP Enable signal
+        .drp_we			(gtx2_dwe_i),   // DRP Write Enable (should be 0 for read)
+        .drp_addr		(gtx2_daddr_i), // DRP Address
+        .drp_di			(gtx2_di_i),    // DRP Data Input (not used in read)
+        .drp_do			(gtx2_drpdo_i), // DRP Data Output (data read)
+        .data_out		(gtx_2_data_out),        // Output data
+        .data_valid		(gtx_2_data_valid)    // Data valid flag
+      );
+     DRP DRP_read_3(
+        .clk			(drp_clk_in_i), // DRP Clock
+        .rst			(!alldone),     // Reset signal
+        .addr		    (8'h82),  		// Address of reading data
+        .drp_rdy		(gtx3_drdy_i), // DRP Ready signal
+        .drp_en			(gtx3_den_i),   // DRP Enable signal
+        .drp_we			(gtx3_dwe_i),   // DRP Write Enable (should be 0 for read)
+        .drp_addr		(gtx3_daddr_i), // DRP Address
+        .drp_di			(gtx3_di_i),    // DRP Data Input (not used in read)
+        .drp_do			(gtx3_drpdo_i), // DRP Data Output (data read)
+        .data_out		(gtx_3_data_out),        // Output data
+        .data_valid		(gtx_3_data_valid)    // Data valid flag
+      );
+
+   
 endmodule
