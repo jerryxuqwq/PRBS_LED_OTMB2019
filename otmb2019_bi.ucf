@@ -9,6 +9,8 @@ NET "led_fp<5>"		LOC = "H25";	# I/O_526	** Dual use output: BPI Flash PROM Data 
 NET "led_fp<6>"		LOC = "P24";	# I/O_527	** Dual use output: BPI Flash PROM Data D06
 NET "led_fp<7>"		LOC = "R24";	# I/O_528	** Dual use output: BPI Flash PROM Data D07
 
+NET "reset"		LOC = "U25";
+#NET "set_sw<8>"		LOC = "U26";
 
 ################################## Clock Constraints ##########################
 
@@ -28,8 +30,8 @@ NET "tmb_clock0"	TNM_NET = "tmb_clock0";	# TMB main Clock  JRG: this is really t
 TIMESPEC "TS_tmb_clock0" = PERIOD "tmb_clock0"  25.0 ns HIGH 50%;
 
 # DRP Clock Constraint
-NET "drp_clk_in_i" TNM_NET = "drp_clk_in_i";
-TIMESPEC "TS_drp_clk_in_i" = PERIOD "drp_clk_in_i" 25.0;
+#NET "drp_clk_in_i" TNM_NET = "drp_clk_in_i";
+#TIMESPEC "TS_drp_clk_in_i" = PERIOD "drp_clk_in_i" 25.0;
 ################################# mgt wrapper constraints #####################
 
 ##---------- Set placement for gtx0_gtx_wrapper_i/GTX_DUAL ------

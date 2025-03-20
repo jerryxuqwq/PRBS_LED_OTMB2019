@@ -40,7 +40,7 @@ module Top#(
   wire [35:0] CONTROL0;
   wire [35:0] CONTROL1;
   wire [15:0] ila_i;
-  reg [7:0] v_led;
+  wire [7:0] v_led;
   wire [7:0] v_button;
 
   //************************** Register Declarations ****************************
@@ -936,27 +936,16 @@ module Top#(
   assign gtx1_txprbsforceerr_i =  v_button[3];
   assign gtx2_txprbsforceerr_i =  v_button[4];
   assign gtx3_txprbsforceerr_i =  v_button[5];
-  //assign v_led[0] = gtx0_rxprbserr_i;
-  //assign v_led[1] = gtx1_rxprbserr_i;
-  //assign v_led[2] = gtx2_rxprbserr_i;
-  //assign v_led[3] = gtx3_rxprbserr_i;
-  //assign v_led[4] = drp_clk_in_i;
+  assign v_led[0] = gtx0_rxprbserr_i;
+  assign v_led[1] = gtx1_rxprbserr_i;
+  assign v_led[2] = gtx2_rxprbserr_i;
+  assign v_led[3] = gtx3_rxprbserr_i;
+  assign v_led[4] = drp_clk_in_i;
+  assign v_led[5] = alldone;
+  assign v_led[7] = blink;
   
   assign led_fp = v_led;
-  ICON_2p ICON_debug (
-            .CONTROL0(CONTROL0), // INOUT BUS [35:0]
-            .CONTROL1(CONTROL1) // INOUT BUS [35:0]
-          );
-  ILA_error ILA_error (
-              .CONTROL(CONTROL0), // INOUT BUS [35:0]
-              .CLK(drp_clk_in_i), // IN
-              .TRIG0({data_valid,ila_i})
-            );
-  VIO_fp VIO_fp (
-           .CONTROL(CONTROL1), // INOUT BUS [35:0]
-           .ASYNC_IN(v_led), // IN BUS [7:0]
-           .ASYNC_OUT(v_button) // OUT BUS [7:0]
-         );
+
    wire [15:0] gtx_0_data_out;
    wire        gtx_0_data_valid;
    wire [15:0] gtx_1_data_out;
@@ -984,6 +973,22 @@ module Top#(
         else if (counter == 0)
             blink <= ~blink;
     end
+//	 always @(posedge tmb_clock0 or posedge reset) begin
+//        if (reset) 
+//			begin
+//         v_led[1] <= gtx1_rxprbserr_i;
+//			v_led[2] <= gtx2_rxprbserr_i;
+//			v_led[3] <= gtx3_rxprbserr_i;
+//			v_led[4] <= drp_clk_in_i;
+//			end
+//        else begin
+//         v_led[1] <= gtx1_rxprbserr_i;
+//			v_led[2] <= gtx2_rxprbserr_i;
+//			v_led[3] <= gtx3_rxprbserr_i;
+//			v_led[4] <= drp_clk_in_i;
+//			end
+//    end
+	 
    
    DRP DRP_read_0(
         .clk			(drp_clk_in_i), // DRP Clock
@@ -998,22 +1003,22 @@ module Top#(
         .data_out		(gtx_0_data_out),        // Output data
         .data_valid		(gtx_0_data_valid)    // Data valid flag
       );
-   always @(posedge gtx_0_data_valid)
-   begin
-    if (gtx_0_data_out > 0 && gtx_0_data_out <= 1)
-      begin
-	 v_led[0] <= 1'b1;
-      end
-    else if(gtx_0_data_out >=2 )
-      begin
-	 v_led[0] <= blink;    
-      end
-    else
-      begin
-	 v_led[0] <= 1'b0;
-      end
-   end
-   
+//   always @(posedge gtx_0_data_valid)
+//   begin
+//    if (gtx_0_data_out > 0 && gtx_0_data_out <= 1)
+//      begin
+//	 v_led[0] <= 1'b1;
+//      end
+//    else if(gtx_0_data_out >=2 )
+//      begin
+//	 v_led[0] <= blink;    
+//      end
+//    else
+//      begin
+//	 v_led[0] <= 1'b0;
+//      end
+//   end
+//   
      DRP DRP_read_1(
         .clk			(drp_clk_in_i), // DRP Clock
         .rst			(!alldone),     // Reset signal
@@ -1053,6 +1058,19 @@ module Top#(
         .data_out		(gtx_3_data_out),        // Output data
         .data_valid		(gtx_3_data_valid)    // Data valid flag
       );
-
+  ICON_2p ICON_debug (
+            .CONTROL0(CONTROL0), // INOUT BUS [35:0]
+            .CONTROL1(CONTROL1) // INOUT BUS [35:0]
+          );
+  ILA_error ILA_error (
+              .CONTROL(CONTROL0), // INOUT BUS [35:0]
+              .CLK(drp_clk_in_i), // IN
+              .TRIG0({gtx_0_data_valid,gtx_0_data_out})
+            );
+  VIO_fp VIO_fp (
+           .CONTROL(CONTROL1), // INOUT BUS [35:0]
+           .ASYNC_IN(v_led), // IN BUS [7:0]
+           .ASYNC_OUT(v_button) // OUT BUS [7:0]
+         );
    
 endmodule
