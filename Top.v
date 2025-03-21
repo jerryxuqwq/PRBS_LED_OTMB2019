@@ -23,15 +23,15 @@
 `define DLY #1
 module Top#(
     parameter EXAMPLE_SIM_GTXRESET_SPEEDUP              =   0    // simulation setting for GTX SecureIP model)
-	)(
+  )(
     input wire tmb_clock0,
-	 input wire reset,
+    input wire reset,
 
     input wire  Q3_CLK0_MGTREFCLK_PAD_N_IN,
     input wire  Q3_CLK0_MGTREFCLK_PAD_P_IN,
     input wire [3:0]   RXN_IN,
     input wire [3:0]   RXP_IN,
-	 output wire [7:0] led_fp,
+    output wire [7:0] led_fp,
     output wire [3:0]   TXN_OUT,
     output wire [3:0]   TXP_OUT
   );
@@ -40,8 +40,9 @@ module Top#(
   wire [35:0] CONTROL0;
   wire [35:0] CONTROL1;
   wire [15:0] ila_i;
-  wire [7:0] v_led;
+  reg [7:0] v_led;
   wire [7:0] v_button;
+  wire [7:0] v_button_sync;
 
   //************************** Register Declarations ****************************
 
@@ -888,6 +889,9 @@ module Top#(
       gtx3_txresetdone_r2   <=   `DLY gtx3_txresetdone_r;
     end
   end
+
+
+
   wire alldone;
   assign alldone =  gtx0_rxresetdone_r2 &&
          gtx1_rxresetdone_r2 &&
@@ -897,24 +901,12 @@ module Top#(
          gtx1_txresetdone_r2 &&
          gtx2_txresetdone_r2 &&
          gtx3_txresetdone_r2;
-  always@(posedge gtx0_txusrclk2_i)
-  begin
-    if(alldone_r)
-    begin
-      rx_prbs_mode <= 3'b001;
-      tx_prbs_mode <= 3'b001;
-      prbscntreset <= 1'b0;
-    end
-    else
-    begin
-      rx_prbs_mode <= 3'b000;
-      tx_prbs_mode <= 3'b000;
-      prbscntreset <= 1'b1;
-    end
-  end
-  
+  wire allreset;
+  assign allreset =
+         !(gtx_0_data_out ||gtx_1_data_out ||gtx_2_data_out||gtx_3_data_out);
+
   reg alldone_r; // cross clock domain sync
-  
+
   always @(posedge drp_clk_in_i)
   begin
     if (!alldone)
@@ -926,71 +918,138 @@ module Top#(
       alldone_r    <=   alldone;
     end
   end
-  
-  // Chipscope
-  //assign  gtxtxreset_i   =  v_button[0]|reset;
-  // assign  gtxrxreset_i   =  v_button[1];
-  assign  gtxtxreset_i = reset;
+
+  // State encoding
+  parameter START   = 2'b00;
+  parameter RESET  = 2'b01;
+  parameter ACTIVE = 2'b10;
+  parameter DEFAULT = 2'b11;
+
+  reg [1:0] current_state, next_state;
+
+  // Sequential Block: State Register
+  always @(posedge gtx0_txusrclk2_i)
+  begin
+    if (reset)
+      current_state <= DEFAULT;
+    else
+      current_state <= next_state;
+  end
+
+  // Combinational Block: Next-State and Output Logic
+  always @(*)
+  begin
+
+    case (current_state)
+    DEFAULT:
+      begin
+        rx_prbs_mode <= 3'b000;
+        tx_prbs_mode <= 3'b000;
+        prbscntreset <= 1'b0;
+        next_state <= START;
+      end
+
+      START:
+      begin
+        rx_prbs_mode <= 3'b000;
+        tx_prbs_mode <= 3'b000;
+        prbscntreset <= 1'b0;
+        if (alldone_r)
+          next_state <= RESET;
+      end
+
+      RESET:
+      begin
+        rx_prbs_mode <= 3'b001;
+        tx_prbs_mode <= 3'b001;
+        prbscntreset <= 1'b1;
+        if (allreset)
+          next_state <= ACTIVE;
+      end
+
+      ACTIVE:
+      begin
+        rx_prbs_mode <= 3'b001;
+        tx_prbs_mode <= 3'b001;
+        prbscntreset <= 1'b0;
+        next_state <= ACTIVE;
+      end
+    endcase
+  end
+
+
+  assign  gtxtxreset_i = reset ||  v_button[7];
   assign  gtxrxreset_i  = reset;
-  assign gtx0_txprbsforceerr_i =  v_button[2];
-  assign gtx1_txprbsforceerr_i =  v_button[3];
-  assign gtx2_txprbsforceerr_i =  v_button[4];
-  assign gtx3_txprbsforceerr_i =  v_button[5];
-  assign v_led[0] = gtx0_rxprbserr_i;
-  assign v_led[1] = gtx1_rxprbserr_i;
-  assign v_led[2] = gtx2_rxprbserr_i;
-  assign v_led[3] = gtx3_rxprbserr_i;
-  assign v_led[4] = drp_clk_in_i;
-  assign v_led[5] = alldone;
-  assign v_led[7] = blink;
-  
+  assign gtx0_txprbsforceerr_i =  v_button_sync[0];
+  assign gtx1_txprbsforceerr_i =  v_button_sync[1];
+  assign gtx2_txprbsforceerr_i =  v_button_sync[2];
+  assign gtx3_txprbsforceerr_i =  v_button_sync[3];
+  // assign v_led[0] = gtx0_rxprbserr_i;
+  // assign v_led[1] = gtx1_rxprbserr_i;
+  // assign v_led[2] = gtx2_rxprbserr_i;
+  // assign v_led[3] = gtx3_rxprbserr_i;
+  // assign v_led[4] = drp_clk_in_i;
+  // assign v_led[5] = alldone;
+  // assign v_led[7] = blink;
+
   assign led_fp = v_led;
 
-   wire [15:0] gtx_0_data_out;
-   wire        gtx_0_data_valid;
-   wire [15:0] gtx_1_data_out;
-   wire        gtx_1_data_valid;
-   wire [15:0] gtx_2_data_out;
-   wire        gtx_2_data_valid;
-   wire [15:0] gtx_3_data_out;
-   wire        gtx_3_data_valid;
-   reg        blink;
-   localparam integer DIVISOR = 40_000_000 / (2 * 3); // Toggle every (40M / 6) cycles
-   reg [22:0] counter;
-    
-    always @(posedge tmb_clock0 or posedge reset) begin
-        if (reset)
-            counter <= 0;
-        else if (counter >= DIVISOR - 1)
-            counter <= 0;
-        else
-            counter <= counter + 1;
-    end
+  wire [15:0] gtx_0_data_out;
+  wire        gtx_0_data_valid;
+  wire [15:0] gtx_1_data_out;
+  wire        gtx_1_data_valid;
+  wire [15:0] gtx_2_data_out;
+  wire        gtx_2_data_valid;
+  wire [15:0] gtx_3_data_out;
+  wire        gtx_3_data_valid;
 
-    always @(posedge tmb_clock0 or posedge reset) begin
-        if (reset)
-            blink <= 0;
-        else if (counter == 0)
-            blink <= ~blink;
+  reg        blink;
+  reg        gtx_0_checker_status;
+  reg        gtx_1_checker_status;
+  reg        gtx_2_checker_status;
+  reg        gtx_3_checker_status;
+
+  localparam integer DIVISOR = 40_000_000 / (2 * 3); // Toggle every (40M / 6) cycles
+  reg [22:0] counter;
+
+  always @(posedge tmb_clock0 or posedge reset)
+  begin
+    if (reset)
+      counter <= 0;
+    else if (counter >= DIVISOR - 1)
+      counter <= 0;
+    else
+      counter <= counter + 1;
+  end
+
+  always @(posedge tmb_clock0 or posedge reset)
+  begin
+    if (reset)
+      blink <= 0;
+    else if (counter == 0)
+      blink <= ~blink;
+  end
+  always @(posedge gtx0_txusrclk2_i or posedge reset)
+  begin
+    if (reset)
+    begin
+      v_led[7:0] <= 8'b0000_0000;
     end
-//	 always @(posedge tmb_clock0 or posedge reset) begin
-//        if (reset) 
-//			begin
-//         v_led[1] <= gtx1_rxprbserr_i;
-//			v_led[2] <= gtx2_rxprbserr_i;
-//			v_led[3] <= gtx3_rxprbserr_i;
-//			v_led[4] <= drp_clk_in_i;
-//			end
-//        else begin
-//         v_led[1] <= gtx1_rxprbserr_i;
-//			v_led[2] <= gtx2_rxprbserr_i;
-//			v_led[3] <= gtx3_rxprbserr_i;
-//			v_led[4] <= drp_clk_in_i;
-//			end
-//    end
-	 
-   
-   DRP DRP_read_0(
+    else
+    begin
+      v_led[0] <= gtx0_rxprbserr_i;
+      v_led[1] <= gtx_0_checker_status;
+      v_led[2] <= gtx1_rxprbserr_i;
+      v_led[3] <= gtx_1_checker_status;
+      v_led[4] <= drp_clk_in_i;
+      v_led[5] <= alldone_r;
+      v_led[6] <= allreset;
+      v_led[7] <= prbscntreset;
+    end
+  end
+
+
+  DRP DRP_read_0(
         .clk			(drp_clk_in_i), // DRP Clock
         .rst			(!alldone),     // Reset signal
         .addr		    (8'h82),  		// Address of reading data
@@ -1003,23 +1062,8 @@ module Top#(
         .data_out		(gtx_0_data_out),        // Output data
         .data_valid		(gtx_0_data_valid)    // Data valid flag
       );
-//   always @(posedge gtx_0_data_valid)
-//   begin
-//    if (gtx_0_data_out > 0 && gtx_0_data_out <= 1)
-//      begin
-//	 v_led[0] <= 1'b1;
-//      end
-//    else if(gtx_0_data_out >=2 )
-//      begin
-//	 v_led[0] <= blink;    
-//      end
-//    else
-//      begin
-//	 v_led[0] <= 1'b0;
-//      end
-//   end
-//   
-     DRP DRP_read_1(
+
+  DRP DRP_read_1(
         .clk			(drp_clk_in_i), // DRP Clock
         .rst			(!alldone),     // Reset signal
         .addr		    (8'h82),  		// Address of reading data
@@ -1032,7 +1076,7 @@ module Top#(
         .data_out		(gtx_1_data_out),        // Output data
         .data_valid		(gtx_1_data_valid)    // Data valid flag
       );
-     DRP DRP_read_2(
+  DRP DRP_read_2(
         .clk			(drp_clk_in_i), // DRP Clock
         .rst			(!alldone),     // Reset signal
         .addr		    (8'h82),  		// Address of reading data
@@ -1045,7 +1089,7 @@ module Top#(
         .data_out		(gtx_2_data_out),        // Output data
         .data_valid		(gtx_2_data_valid)    // Data valid flag
       );
-     DRP DRP_read_3(
+  DRP DRP_read_3(
         .clk			(drp_clk_in_i), // DRP Clock
         .rst			(!alldone),     // Reset signal
         .addr		    (8'h82),  		// Address of reading data
@@ -1058,6 +1102,105 @@ module Top#(
         .data_out		(gtx_3_data_out),        // Output data
         .data_valid		(gtx_3_data_valid)    // Data valid flag
       );
+  always @(posedge drp_clk_in_i)
+  begin
+    if (gtx_0_data_valid)
+    begin
+      if (gtx_0_data_out == 1) // Only exact match to 1
+        gtx_0_checker_status <= 1'b1;
+      else if (gtx_0_data_out >= 2) // Covers 2 and above
+        gtx_0_checker_status <= blink;
+      else // Covers gtx_0_data_out == 0 or negative values if signed
+        gtx_0_checker_status <= 1'b0;
+    end
+    else
+      gtx_0_checker_status <= 1'b0;
+  end
+
+  always @(posedge drp_clk_in_i)
+  begin
+    if (gtx_0_data_valid)
+    begin
+      if (gtx_0_data_out == 1) // Only exact match to 1
+        gtx_0_checker_status <= 1'b1;
+      else if (gtx_0_data_out >= 2) // Covers 2 and above
+        gtx_0_checker_status <= blink;
+      else // Covers gtx_0_data_out == 0 or negative values if signed
+        gtx_0_checker_status <= 1'b0;
+    end
+    else
+      gtx_0_checker_status <= 1'b0;
+  end
+
+  always @(posedge drp_clk_in_i)
+  begin
+    if (gtx_1_data_valid)
+    begin
+      if (gtx_1_data_out == 1) // Only exact match to 1
+        gtx_1_checker_status <= 1'b1;
+      else if (gtx_1_data_out >= 2) // Covers 2 and above
+        gtx_1_checker_status <= blink;
+      else // Covers gtx_0_data_out == 0 or negative values if signed
+        gtx_1_checker_status <= 1'b0;
+    end
+    else
+      gtx_1_checker_status <= 1'b0;
+  end
+
+  always @(posedge drp_clk_in_i)
+  begin
+    if (gtx_2_data_valid)
+    begin
+      if (gtx_2_data_out == 1) // Only exact match to 1
+        gtx_2_checker_status <= 1'b1;
+      else if (gtx_2_data_out >= 2) // Covers 2 and above
+        gtx_2_checker_status <= blink;
+      else // Covers gtx_0_data_out == 0 or negative values if signed
+        gtx_2_checker_status <= 1'b0;
+    end
+    else
+      gtx_2_checker_status <= 1'b0;
+  end
+
+  always @(posedge drp_clk_in_i)
+  begin
+    if (gtx_3_data_valid)
+    begin
+      if (gtx_3_data_out == 1) // Only exact match to 1
+        gtx_3_checker_status <= 1'b1;
+      else if (gtx_3_data_out >= 2) // Covers 2 and above
+        gtx_3_checker_status <= blink;
+      else // Covers gtx_0_data_out == 0 or negative values if signed
+        gtx_3_checker_status <= 1'b0;
+    end
+    else
+      gtx_3_checker_status <= 1'b0;
+  end
+
+  one_shot button_one_shot_0
+  (gtx0_txusrclk2_i,
+   reset,
+   v_button[0],
+   v_button_sync[0]);
+   one_shot button_one_shot_1
+   (gtx0_txusrclk2_i,
+    reset,
+    v_button[1],
+    v_button_sync[1]);
+    one_shot button_one_shot_2
+    (gtx0_txusrclk2_i,
+     reset,
+     v_button[2],
+     v_button_sync[2]);
+     one_shot button_one_shot_3
+     (gtx0_txusrclk2_i,
+      reset,
+      v_button[3],
+      v_button_sync[3]);
+
+   
+
+
   ICON_2p ICON_debug (
             .CONTROL0(CONTROL0), // INOUT BUS [35:0]
             .CONTROL1(CONTROL1) // INOUT BUS [35:0]
@@ -1072,5 +1215,5 @@ module Top#(
            .ASYNC_IN(v_led), // IN BUS [7:0]
            .ASYNC_OUT(v_button) // OUT BUS [7:0]
          );
-   
+
 endmodule
