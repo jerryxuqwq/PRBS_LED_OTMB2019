@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2025-03-21T01:34:10</DateModified>
+  <DateModified>2025-03-25T12:46:49</DateModified>
   <ModuleName>Top</ModuleName>
-  <SummaryTimeStamp>2025-03-21T01:31:27</SummaryTimeStamp>
+  <SummaryTimeStamp>2025-03-24T18:35:09</SummaryTimeStamp>
   <SavedFilePath>/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/iseconfig/Top.xreport</SavedFilePath>
   <ImplementationReportsDirectory>/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/</ImplementationReportsDirectory>
   <DateInitialized>2025-02-26T01:43:03</DateInitialized>

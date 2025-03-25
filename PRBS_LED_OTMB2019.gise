@@ -32,11 +32,6 @@
     <file xil_pn:fileType="FILE_VEO" xil_pn:name="ipcore_dir/bi_firefly.veo" xil_pn:origination="imported"/>
   </files>
 
-  <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1742518919" xil_pn:in_ck="-7860981082163515266" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1742518919">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-  </transforms>
+  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
 
 </generated_project>

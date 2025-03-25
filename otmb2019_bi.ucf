@@ -9,7 +9,7 @@ NET "led_fp<5>"		LOC = "H25";	# I/O_526	** Dual use output: BPI Flash PROM Data 
 NET "led_fp<6>"		LOC = "P24";	# I/O_527	** Dual use output: BPI Flash PROM Data D06
 NET "led_fp<7>"		LOC = "R24";	# I/O_528	** Dual use output: BPI Flash PROM Data D07
 
-NET "reset"		LOC = "U25";
+NET "reset_btn"		LOC = "U25";
 #NET "set_sw<8>"		LOC = "U26";
 
 ################################## Clock Constraints ##########################

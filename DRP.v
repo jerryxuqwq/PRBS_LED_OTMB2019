@@ -71,10 +71,10 @@ module DRP (
                         data_valid <= 1'b1;
                         state      <= DONE;
                     end 
-                     else if (timeout_counter >= TIMEOUT_COUNT) begin
-                        timeout  <= 1'b1; // Set timeout flag
-                        state    <= IDLE; // Reset to idle state
-                     end 
+                    //  else if (timeout_counter >= TIMEOUT_COUNT) begin
+                    //     timeout  <= 1'b1; // Set timeout flag
+                    //     state    <= IDLE; // Reset to idle state
+                    //  end 
                     else begin
                         timeout_counter <= timeout_counter + 1; // Increment timeout counter
                     end
