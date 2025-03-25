@@ -22,7 +22,12 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="PRBS_LED_OTMB2019.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="GEM_TOP_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="Top_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_COREGEN" xil_pn:name="ipcore_dir/Gem_firefly.xco" xil_pn:origination="imported">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
     <file xil_pn:fileType="FILE_ASY" xil_pn:name="ipcore_dir/ICON_2p.asy" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VEO" xil_pn:name="ipcore_dir/ICON_2p.veo" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_ASY" xil_pn:name="ipcore_dir/ILA_error.asy" xil_pn:origination="imported"/>
@@ -32,6 +37,11 @@
     <file xil_pn:fileType="FILE_VEO" xil_pn:name="ipcore_dir/bi_firefly.veo" xil_pn:origination="imported"/>
   </files>
 
-  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1742925517" xil_pn:in_ck="-7860981082163515266" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1742925517">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+  </transforms>
 
 </generated_project>
