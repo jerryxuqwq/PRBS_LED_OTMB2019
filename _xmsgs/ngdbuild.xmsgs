@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="NgdBuild" num="1317" delta="old" >Using core <arg fmt="%s" index="1">chipscope_ila_v1</arg> requires a ChipScopePro license.  The following blocks are instances of core <arg fmt="%s" index="2">chipscope_ila_v1</arg>:
+</msg>
+
+<msg type="info" file="NgdBuild" num="1317" delta="old" >Using core <arg fmt="%s" index="1">chipscope_vio_v1</arg> requires a ChipScopePro license.  The following blocks are instances of core <arg fmt="%s" index="2">chipscope_vio_v1</arg>:
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >Constraint &lt;NET &quot;tmb_clock0&quot;	TNM_NET = &quot;tmb_clock0&quot;;&gt; [otmb2019_bi.ucf(29)] was not distributed to the output pin TXOUTCLK of block bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i because the signal path to this output pin depends upon block attribute settings. Constraint distribution does not support attribute dependent distribution.
+</msg>
+
+</messages>
+

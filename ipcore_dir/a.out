@@ -1,0 +1,25 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x55b6f0a95df0 .scope module, "ILA_error" "ILA_error" 2 21;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 36 "CONTROL";
+    .port_info 1 /INPUT 1 "CLK";
+    .port_info 2 /INPUT 17 "TRIG0";
+o0x7f3907fd4018 .functor BUFZ 1, C4<z>; HiZ drive
+v0x55b6f0a97370_0 .net "CLK", 0 0, o0x7f3907fd4018;  0 drivers
+o0x7f3907fd4048 .functor BUFZ 36, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0x55b6f0a977f0_0 .net "CONTROL", 35 0, o0x7f3907fd4048;  0 drivers
+o0x7f3907fd4078 .functor BUFZ 17, C4<zzzzzzzzzzzzzzzzz>; HiZ drive
+v0x55b6f0a97c00_0 .net "TRIG0", 16 0, o0x7f3907fd4078;  0 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/ipcore_dir/ILA_error.v";

@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.ncd
-OUTFILE=/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.bit
-FAMILY=Virtex6
-PART=xc6vlx240t-1ff1156
-WORKINGDIR=/home/jerryxu/ISE_project/PRBS_LED_OTMB2019
-LICENSE=ISE
-USER_INFO=__0_0_0

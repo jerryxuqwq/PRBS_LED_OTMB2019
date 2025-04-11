@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="568" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/DRP.v" Line 39: Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 431: Assignment to <arg fmt="%s" index="1">tied_to_vcc_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 432: Assignment to <arg fmt="%s" index="1">tied_to_vcc_vec_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 450: Assignment to <arg fmt="%s" index="1">gtx0_tx_system_reset_c</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 451: Assignment to <arg fmt="%s" index="1">gtx1_tx_system_reset_c</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 452: Assignment to <arg fmt="%s" index="1">gtx2_tx_system_reset_c</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 453: Assignment to <arg fmt="%s" index="1">gtx3_tx_system_reset_c</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 456: Assignment to <arg fmt="%s" index="1">gtx0_rx_system_reset_c</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 457: Assignment to <arg fmt="%s" index="1">gtx1_rx_system_reset_c</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 458: Assignment to <arg fmt="%s" index="1">gtx2_rx_system_reset_c</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 459: Assignment to <arg fmt="%s" index="1">gtx3_rx_system_reset_c</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 463: Assignment to <arg fmt="%s" index="1">user_tx_reset_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 464: Assignment to <arg fmt="%s" index="1">user_rx_reset_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 465: Assignment to <arg fmt="%s" index="1">mux_sel_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 466: Assignment to <arg fmt="%s" index="1">gtx0_plltxreset_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 476: Assignment to <arg fmt="%s" index="1">gtx1_plltxreset_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 486: Assignment to <arg fmt="%s" index="1">gtx2_plltxreset_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 496: Assignment to <arg fmt="%s" index="1">gtx3_plltxreset_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 529: Assignment to <arg fmt="%s" index="1">q3_clk0_refclk_i_bufg</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/ipcore_dir/bi_firefly.v" Line 292: Assignment to <arg fmt="%s" index="1">tied_to_ground_vec_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/ipcore_dir/bi_firefly.v" Line 293: Assignment to <arg fmt="%s" index="1">tied_to_vcc_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/ipcore_dir/bi_firefly.v" Line 294: Assignment to <arg fmt="%s" index="1">tied_to_vcc_vec_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/ipcore_dir/bi_firefly_gtx.v" Line 169: Assignment to <arg fmt="%s" index="1">tied_to_vcc_vec_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 553: Assignment to <arg fmt="%s" index="1">gtx0_rxprbserr_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 555: Assignment to <arg fmt="%s" index="1">gtx0_rxdata_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 565: Assignment to <arg fmt="%s" index="1">gtx0_rxplllkdet_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 607: Assignment to <arg fmt="%s" index="1">gtx1_rxdata_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 617: Assignment to <arg fmt="%s" index="1">gtx1_rxplllkdet_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 629: Assignment to <arg fmt="%s" index="1">gtx1_txoutclk_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 657: Assignment to <arg fmt="%s" index="1">gtx2_rxprbserr_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 659: Assignment to <arg fmt="%s" index="1">gtx2_rxdata_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 669: Assignment to <arg fmt="%s" index="1">gtx2_rxplllkdet_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 681: Assignment to <arg fmt="%s" index="1">gtx2_txoutclk_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 709: Assignment to <arg fmt="%s" index="1">gtx3_rxprbserr_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 711: Assignment to <arg fmt="%s" index="1">gtx3_rxdata_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 721: Assignment to <arg fmt="%s" index="1">gtx3_rxplllkdet_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 733: Assignment to <arg fmt="%s" index="1">gtx3_txoutclk_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 930: Assignment to <arg fmt="%s" index="1">allreset_r</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 962: Assignment to <arg fmt="%s" index="1">counter_boot</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 1043: Result of <arg fmt="%d" index="1">24</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">23</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/DRP.v" Line 79: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/DRP.v" Line 41: Assignment to <arg fmt="%s" index="1">timeout</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 1080: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">drp_addr</arg>&gt;. Formal port size is <arg fmt="%d" index="2">10</arg>-bit while actual signal size is <arg fmt="%d" index="1">8</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 1094: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">drp_addr</arg>&gt;. Formal port size is <arg fmt="%d" index="2">10</arg>-bit while actual signal size is <arg fmt="%d" index="1">8</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 1107: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">drp_addr</arg>&gt;. Formal port size is <arg fmt="%d" index="2">10</arg>-bit while actual signal size is <arg fmt="%d" index="1">8</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 1120: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">drp_addr</arg>&gt;. Formal port size is <arg fmt="%d" index="2">10</arg>-bit while actual signal size is <arg fmt="%d" index="1">8</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 1146: Assignment to <arg fmt="%s" index="1">gtx_2_checker_status</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 1156: Assignment to <arg fmt="%s" index="1">gtx_3_checker_status</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 116: Net &lt;<arg fmt="%s" index="1">gtx0_txdata_i[19]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 161: Net &lt;<arg fmt="%s" index="1">gtx1_txdata_i[19]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 206: Net &lt;<arg fmt="%s" index="1">gtx2_txdata_i[19]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v" Line 251: Net &lt;<arg fmt="%s" index="1">gtx3_txdata_i[19]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">540</arg>: Output port &lt;<arg fmt="%s" index="3">GTX0_RXDATA_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">540</arg>: Output port &lt;<arg fmt="%s" index="3">GTX1_RXDATA_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">540</arg>: Output port &lt;<arg fmt="%s" index="3">GTX2_RXDATA_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">540</arg>: Output port &lt;<arg fmt="%s" index="3">GTX3_RXDATA_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">540</arg>: Output port &lt;<arg fmt="%s" index="3">GTX0_RXPRBSERR_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">540</arg>: Output port &lt;<arg fmt="%s" index="3">GTX0_RXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">540</arg>: Output port &lt;<arg fmt="%s" index="3">GTX1_RXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">540</arg>: Output port &lt;<arg fmt="%s" index="3">GTX1_TXOUTCLK_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">540</arg>: Output port &lt;<arg fmt="%s" index="3">GTX2_RXPRBSERR_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">540</arg>: Output port &lt;<arg fmt="%s" index="3">GTX2_RXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">540</arg>: Output port &lt;<arg fmt="%s" index="3">GTX2_TXOUTCLK_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">540</arg>: Output port &lt;<arg fmt="%s" index="3">GTX3_RXPRBSERR_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">540</arg>: Output port &lt;<arg fmt="%s" index="3">GTX3_RXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">540</arg>: Output port &lt;<arg fmt="%s" index="3">GTX3_TXOUTCLK_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">gtx0_txdata_i</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">gtx1_txdata_i</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">gtx2_txdata_i</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">gtx3_txdata_i</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">rx_prbs_mode&lt;2&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">rx_prbs_mode&lt;0&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">prbscntreset</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">next_state&lt;2&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">next_state&lt;1&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">next_state&lt;0&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/ipcore_dir/bi_firefly.v</arg>&quot; line <arg fmt="%s" index="2">315</arg>: Output port &lt;<arg fmt="%s" index="3">TXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gtx0_bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/ipcore_dir/bi_firefly.v</arg>&quot; line <arg fmt="%s" index="2">383</arg>: Output port &lt;<arg fmt="%s" index="3">TXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gtx1_bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/ipcore_dir/bi_firefly.v</arg>&quot; line <arg fmt="%s" index="2">451</arg>: Output port &lt;<arg fmt="%s" index="3">TXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gtx2_bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/jerryxu/ISE_project/PRBS_LED_OTMB2019/ipcore_dir/bi_firefly.v</arg>&quot; line <arg fmt="%s" index="2">519</arg>: Output port &lt;<arg fmt="%s" index="3">TXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gtx3_bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="1901" delta="new" >Instance <arg fmt="%s" index="1">U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36</arg> in unit <arg fmt="%s" index="2">U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36</arg> of type <arg fmt="%s" index="3">RAMB36</arg> has been replaced by <arg fmt="%s" index="4">RAMB36E1</arg>
+</msg>
+
+<msg type="info" file="Xst" num="1901" delta="new" >Instance <arg fmt="%s" index="1">U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36</arg> in unit <arg fmt="%s" index="2">U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36</arg> of type <arg fmt="%s" index="3">RAMB36</arg> has been replaced by <arg fmt="%s" index="4">RAMB36E1</arg>
+</msg>
+
+<msg type="info" file="Xst" num="1901" delta="new" >Instance <arg fmt="%s" index="1">U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36</arg> in unit <arg fmt="%s" index="2">U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36</arg> of type <arg fmt="%s" index="3">RAMB36</arg> has been replaced by <arg fmt="%s" index="4">RAMB36E1</arg>
+</msg>
+
+<msg type="info" file="Xst" num="1901" delta="new" >Instance <arg fmt="%s" index="1">U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36</arg> in unit <arg fmt="%s" index="2">U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36</arg> of type <arg fmt="%s" index="3">RAMB36</arg> has been replaced by <arg fmt="%s" index="4">RAMB36E1</arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">drp_addr_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">DRP_read_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;drp_addr_9&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">drp_addr_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">DRP_read_1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;drp_addr_9&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">drp_addr_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">DRP_read_2</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;drp_addr_9&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">drp_addr_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">DRP_read_3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;drp_addr_9&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">rx_prbs_mode_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">drp_addr_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DRP_read_3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">drp_addr_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DRP_read_3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">drp_addr_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DRP_read_3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">drp_addr_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DRP_read_3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">drp_addr_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DRP_read_3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">drp_addr_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DRP_read_3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">drp_addr_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DRP_read_2</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">drp_addr_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DRP_read_2</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">drp_addr_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DRP_read_2</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">drp_addr_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DRP_read_2</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">drp_addr_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DRP_read_2</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">drp_addr_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DRP_read_2</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">drp_addr_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DRP_read_1</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">drp_addr_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DRP_read_1</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">drp_addr_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DRP_read_1</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">drp_addr_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DRP_read_1</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">drp_addr_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DRP_read_1</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">drp_addr_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DRP_read_1</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">drp_addr_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DRP_read_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">drp_addr_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DRP_read_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">drp_addr_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DRP_read_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">drp_addr_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DRP_read_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">drp_addr_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DRP_read_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">drp_addr_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DRP_read_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">drp_addr_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">DRP_read_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">drp_addr_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">DRP_read_1</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">drp_addr_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">DRP_read_2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">drp_addr_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">DRP_read_3</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2404" delta="new" > FFs/Latches &lt;<arg fmt="%s" index="1">drp_addr</arg>&lt;<arg fmt="%d" index="2">9</arg>:<arg fmt="%d" index="3">8</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">DRP</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n0211</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">rx_prbs_mode_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_0/drp_addr_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_0/drp_addr_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_0/drp_addr_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_0/drp_addr_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_0/drp_addr_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_0/drp_addr_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_1/drp_addr_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_1/drp_addr_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_1/drp_addr_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_1/drp_addr_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_1/drp_addr_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_1/drp_addr_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_2/drp_addr_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_2/drp_addr_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_2/drp_addr_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_2/drp_addr_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_2/drp_addr_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_2/drp_addr_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_3/drp_addr_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_3/drp_addr_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_3/drp_addr_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_3/drp_addr_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_3/drp_addr_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_3/drp_addr_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_3/drp_addr_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DRP_read_3/drp_addr_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_1/drp_addr_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DRP_read_1/drp_addr_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_2/drp_addr_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DRP_read_2/drp_addr_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_0/drp_addr_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DRP_read_0/drp_addr_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>
+

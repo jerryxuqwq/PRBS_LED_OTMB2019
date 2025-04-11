@@ -940,15 +940,25 @@ module Top#(
   end
 
   // State encoding
-  parameter START   = 3'b000;
-  parameter START_PRBS  = 3'b001;
-  parameter ACTIVE = 3'b010;
-  parameter DEFAULT = 3'b011;
-  parameter CLEAR_PRBS = 3'b100;
-  
+  parameter START         = 3'b000;
+  parameter START_PRBS_TX = 3'b001;
+  parameter START_PRBS_RX = 3'b010;
+  parameter ACTIVE        = 3'b011;
+  parameter DEFAULT       = 3'b100;
+  parameter CLEAR_PRBS    = 3'b101;
+  parameter PRBS_INJECT   = 3'b110;
+  parameter CLEAR_PRBS_2  = 3'b111;
 
   reg [2:0] current_state, next_state;
-  reg [22:0] counter_boot;
+  wire [31:0] counter_boot;
+  reg counter_boot_rst;
+  reg error_inject;
+  counter mycounter(
+  .clk(gtx0_txusrclk2_i),
+  .rst(counter_boot_rst),
+	.out(counter_boot)
+  );
+
   // Sequential Block: State Register
   always @(posedge gtx0_txusrclk2_i or posedge reset)
   begin
@@ -961,14 +971,14 @@ module Top#(
   // Combinational Block: Next-State and Output Logic
   always @(*)
   begin
-
     case (current_state)
       DEFAULT:
       begin
         rx_prbs_mode <= 3'b000;
         tx_prbs_mode <= 3'b000;
         prbscntreset <= 1'b0;
-        counter_boot <= 1'b0;
+        error_inject <= 1'b0;
+        counter_boot_rst <= 1'b1;
         next_state <= START;
       end
 
@@ -977,32 +987,69 @@ module Top#(
         rx_prbs_mode <= 3'b000;
         tx_prbs_mode <= 3'b000;
         prbscntreset <= 1'b0;
+        error_inject <= 1'b0;
+        counter_boot_rst <= 1'b1;
         if (alldone)
-          next_state <= START_PRBS;
+          next_state <= START_PRBS_TX;
       end
 
-      START_PRBS:
+      START_PRBS_TX:
+      begin
+        rx_prbs_mode <= 3'b000;
+        tx_prbs_mode <= 3'b001;
+        prbscntreset <= 1'b0;
+        error_inject <= 1'b0;
+        counter_boot_rst <= 1'b1;
+        next_state <= START_PRBS_RX;
+      end
+      START_PRBS_RX:
       begin
         rx_prbs_mode <= 3'b001;
         tx_prbs_mode <= 3'b001;
         prbscntreset <= 1'b0;
+        error_inject <= 1'b0;
+        counter_boot_rst <= 1'b1;
         next_state <= CLEAR_PRBS;
       end
-
       CLEAR_PRBS:
       begin
         rx_prbs_mode <= 3'b001;
         tx_prbs_mode <= 3'b001;
         prbscntreset <= 1'b1;
-        if(!gtx_1_error)
-          next_state <= ACTIVE;
+        error_inject <= 1'b0;
+        counter_boot_rst <= 1'b1;
+        next_state <= PRBS_INJECT;
       end
-
-
+      PRBS_INJECT:
+      begin
+        rx_prbs_mode <= 3'b001;
+        tx_prbs_mode <= 3'b001;
+        prbscntreset <= 1'b0;
+        error_inject <= 1'b1;
+        counter_boot_rst <=1'b0;
+        if (counter_boot>=31'd10_000)
+          next_state <= CLEAR_PRBS_2;
+        else
+          next_state <= PRBS_INJECT;
+      end
+      CLEAR_PRBS_2:
+      begin
+        rx_prbs_mode <= 3'b001;
+        tx_prbs_mode <= 3'b001;
+        prbscntreset <= 1'b1;
+        error_inject <= 1'b0;
+        counter_boot_rst <=1'b1;
+        if(!(gtx0_rxprbserr_i|gtx1_rxprbserr_i|gtx2_rxprbserr_i|gtx3_rxprbserr_i))
+          next_state <= ACTIVE;
+        else
+          next_state <= CLEAR_PRBS_2;
+      end
       ACTIVE:
       begin
         rx_prbs_mode <= 3'b001;
         tx_prbs_mode <= 3'b001;
+        error_inject <= 1'b0;
+        counter_boot_rst <=1'b1;
         prbscntreset <= v_button[6];
         next_state <= ACTIVE;
       end
@@ -1012,10 +1059,10 @@ module Top#(
 
   assign  gtxtxreset_i = reset;
   assign  gtxrxreset_i  = reset;
-  assign gtx0_txprbsforceerr_i =  v_button_sync[0];
-  assign gtx1_txprbsforceerr_i =  v_button_sync[1];
-  assign gtx2_txprbsforceerr_i =  v_button_sync[2];
-  assign gtx3_txprbsforceerr_i =  v_button_sync[3];
+  assign gtx0_txprbsforceerr_i =  v_button_sync[0]|error_inject;
+  assign gtx1_txprbsforceerr_i =  v_button_sync[1]|error_inject;
+  assign gtx2_txprbsforceerr_i =  v_button_sync[2]|error_inject;
+  assign gtx3_txprbsforceerr_i =  v_button_sync[3]|error_inject;
 
   assign led_fp = v_led;
 
@@ -1059,9 +1106,9 @@ module Top#(
     else
     begin
       v_led[0] <= gtx_0_checker_status;
-      //v_led[1] <= gtx0_rxprbserr_i;
-      v_led[2] <= gtx_1_checker_status;
-      //v_led[3] <= gtx1_rxprbserr_i;
+      v_led[1] <= gtx_1_checker_status;
+      v_led[2] <= gtx_2_checker_status;
+      v_led[3] <= gtx_3_checker_status;
       v_led[4] <= drp_clk_in_i;
       v_led[5] <= alldone_r;
       v_led[6] <= allreset;
@@ -1222,8 +1269,8 @@ module Top#(
           );
   ILA_error ILA_error (
               .CONTROL(CONTROL0), // INOUT BUS [35:0]
-              .CLK(drp_clk_in_i), // IN
-              .TRIG0({gtx_1_data_valid,gtx1_rxprbserr_i,gtx_1_data_out[14:0]})
+              .CLK(tmb_clock0), // IN
+              .TRIG0({prbscntreset,gtx1_rxprbserr_i,counter_boot[14:0]})
             );
   VIO_fp VIO_fp (
            .CONTROL(CONTROL1), // INOUT BUS [35:0]
