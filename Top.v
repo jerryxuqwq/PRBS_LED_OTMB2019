@@ -1027,7 +1027,7 @@ module Top#(
         prbscntreset <= 1'b0;
         error_inject <= 1'b1;
         counter_boot_rst <=1'b0;
-        if (counter_boot>=31'd10_000)
+        if (counter_boot>=31'd100_000_000)
           next_state <= CLEAR_PRBS_2;
         else
           next_state <= PRBS_INJECT;
