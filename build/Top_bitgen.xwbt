@@ -1,0 +1,8 @@
+INTSTYLE=xflow
+INFILE=/home/cscdev/Desktop/PRBS_LED_OTMB2019-d6e202dda7b00d98873a915de42f4d1afa212c67/build/Top.ncd
+OUTFILE=/home/cscdev/Desktop/PRBS_LED_OTMB2019-d6e202dda7b00d98873a915de42f4d1afa212c67/build/Top.bit
+FAMILY=Virtex6
+PART=xc6vlx240t-1ff1156
+WORKINGDIR=/home/cscdev/Desktop/PRBS_LED_OTMB2019-d6e202dda7b00d98873a915de42f4d1afa212c67/build
+LICENSE=ISE
+USER_INFO=__0_0_0

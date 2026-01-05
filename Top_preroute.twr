@@ -1,0 +1,826 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/data/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 2
+-n 3 -fastpaths -xml Top_preroute.twx Top_map.ncd -o Top_preroute.twr Top.pcf
+-ucf otmb2019_bi.ucf
+
+Design file:              Top_map.ncd
+Physical constraint file: Top.pcf
+Device,package,speed:     xc6vlx240t,ff1156,C,-2 (PRODUCTION 1.17 2013-10-13, STEPPING level 0)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3284 - This timing report was generated using estimated delay 
+   information.  For accurate numbers, please refer to the post Place and Route 
+   timing report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_q3_clk0_refclk_i = PERIOD TIMEGRP "q3_clk0_refclk_i" 8 ns 
+HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   1.538ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_q3_clk0_refclk_i = PERIOD TIMEGRP "q3_clk0_refclk_i" 8 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 6.462ns (period - min period limit)
+  Period: 8.000ns
+  Min period limit: 1.538ns (650.195MHz) (Tgtxper_REFCLK(Fgclk))
+  Physical resource: bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i/MGTREFCLKRX0
+  Logical resource: bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i/MGTREFCLKRX0
+  Location pin: GTXE1_X0Y12.MGTREFCLKRX0
+  Clock network: q3_clk0_refclk_i
+--------------------------------------------------------------------------------
+Slack: 6.462ns (period - min period limit)
+  Period: 8.000ns
+  Min period limit: 1.538ns (650.195MHz) (Tgtxper_REFCLK(Fgclk))
+  Physical resource: bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i/MGTREFCLKTX0
+  Logical resource: bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i/MGTREFCLKTX0
+  Location pin: GTXE1_X0Y12.MGTREFCLKTX0
+  Clock network: q3_clk0_refclk_i
+--------------------------------------------------------------------------------
+Slack: 6.462ns (period - min period limit)
+  Period: 8.000ns
+  Min period limit: 1.538ns (650.195MHz) (Tgtxper_REFCLK(Fgclk))
+  Physical resource: bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i/MGTREFCLKRX0
+  Logical resource: bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i/MGTREFCLKRX0
+  Location pin: GTXE1_X0Y17.MGTREFCLKRX0
+  Clock network: q3_clk0_refclk_i
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_gtx0_txusrclk2_i = PERIOD TIMEGRP "gtx0_txusrclk2_i" 5 ns 
+HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 257 paths analyzed, 131 endpoints analyzed, 1 failing endpoint
+ 1 timing error detected. (1 setup error, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   5.289ns.
+--------------------------------------------------------------------------------
+
+Paths for end point v_led_3_1 (OLOGIC_X1Y95.D1), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.289ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i (HSIO)
+  Destination:          v_led_3_1 (FF)
+  Requirement:          5.000ns
+  Data Path Delay:      5.254ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         gtx0_txusrclk2_i rising at 0.000ns
+  Destination Clock:    gtx0_txusrclk2_i rising at 5.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i to v_led_3_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    GTXE1_X0Y17.RXPRBSERRTgtxcko_PRBS          0.411   bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i
+                                                       bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i
+    OLOGIC_X1Y95.D1      net (fanout=2)     e  4.347   gtx2_rxprbserr_i
+    OLOGIC_X1Y95.CLK     Todck                 0.496   v_led_3_1
+                                                       v_led_3_1
+    -------------------------------------------------  ---------------------------
+    Total                                      5.254ns (0.907ns logic, 4.347ns route)
+                                                       (17.3% logic, 82.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point v_led_1_1 (OLOGIC_X1Y93.D1), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     0.802ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i (HSIO)
+  Destination:          v_led_1_1 (FF)
+  Requirement:          5.000ns
+  Data Path Delay:      4.163ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         gtx0_txusrclk2_i rising at 0.000ns
+  Destination Clock:    gtx0_txusrclk2_i rising at 5.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i to v_led_1_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    GTXE1_X0Y12.RXPRBSERRTgtxcko_PRBS          0.411   bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i
+                                                       bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i
+    OLOGIC_X1Y93.D1      net (fanout=3)     e  3.256   gtx0_rxprbserr_i
+    OLOGIC_X1Y93.CLK     Todck                 0.496   v_led_1_1
+                                                       v_led_1_1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.163ns (0.907ns logic, 3.256ns route)
+                                                       (21.8% logic, 78.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i (GTXE1_X0Y19.PRBSCNTRESET), 3 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     1.324ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               current_state_FSM_FFd3 (FF)
+  Destination:          bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i (HSIO)
+  Requirement:          5.000ns
+  Data Path Delay:      3.641ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         gtx0_txusrclk2_i rising at 0.000ns
+  Destination Clock:    gtx0_txusrclk2_i rising at 5.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: current_state_FSM_FFd3 to bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i
+    Location                 Delay type         Delay(ns)  Physical Resource
+                                                           Logical Resource(s)
+    -----------------------------------------------------  -------------------
+    SLICE_X134Y151.BMUX      Tshcko                0.396   current_state_FSM_FFd2
+                                                           current_state_FSM_FFd3
+    SLICE_X134Y152.D3        net (fanout=4)     e  0.406   current_state_FSM_FFd3
+    SLICE_X134Y152.DMUX      Tilo                  0.195   v_led<7>
+                                                           Mmux_prbscntreset11
+    GTXE1_X0Y19.PRBSCNTRESET net (fanout=5)     e  2.384   prbscntreset
+    GTXE1_X0Y19.RXUSRCLK2    Tgtxcck_PRBS          0.260   bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i
+                                                           bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i
+    -----------------------------------------------------  ---------------------------
+    Total                                          3.641ns (0.851ns logic, 2.790ns route)
+                                                           (23.4% logic, 76.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.361ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               current_state_FSM_FFd1 (FF)
+  Destination:          bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i (HSIO)
+  Requirement:          5.000ns
+  Data Path Delay:      3.604ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         gtx0_txusrclk2_i rising at 0.000ns
+  Destination Clock:    gtx0_txusrclk2_i rising at 5.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: current_state_FSM_FFd1 to bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i
+    Location                 Delay type         Delay(ns)  Physical Resource
+                                                           Logical Resource(s)
+    -----------------------------------------------------  -------------------
+    SLICE_X134Y151.AQ        Tcko                  0.322   current_state_FSM_FFd2
+                                                           current_state_FSM_FFd1
+    SLICE_X134Y152.D4        net (fanout=3)     e  0.442   current_state_FSM_FFd1
+    SLICE_X134Y152.DMUX      Tilo                  0.196   v_led<7>
+                                                           Mmux_prbscntreset11
+    GTXE1_X0Y19.PRBSCNTRESET net (fanout=5)     e  2.384   prbscntreset
+    GTXE1_X0Y19.RXUSRCLK2    Tgtxcck_PRBS          0.260   bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i
+                                                           bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i
+    -----------------------------------------------------  ---------------------------
+    Total                                          3.604ns (0.778ns logic, 2.826ns route)
+                                                           (21.6% logic, 78.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.414ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               current_state_FSM_FFd2 (FF)
+  Destination:          bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i (HSIO)
+  Requirement:          5.000ns
+  Data Path Delay:      3.551ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         gtx0_txusrclk2_i rising at 0.000ns
+  Destination Clock:    gtx0_txusrclk2_i rising at 5.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: current_state_FSM_FFd2 to bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i
+    Location                 Delay type         Delay(ns)  Physical Resource
+                                                           Logical Resource(s)
+    -----------------------------------------------------  -------------------
+    SLICE_X134Y151.BQ        Tcko                  0.322   current_state_FSM_FFd2
+                                                           current_state_FSM_FFd2
+    SLICE_X134Y152.D5        net (fanout=4)     e  0.388   current_state_FSM_FFd2
+    SLICE_X134Y152.DMUX      Tilo                  0.197   v_led<7>
+                                                           Mmux_prbscntreset11
+    GTXE1_X0Y19.PRBSCNTRESET net (fanout=5)     e  2.384   prbscntreset
+    GTXE1_X0Y19.RXUSRCLK2    Tgtxcck_PRBS          0.260   bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i
+                                                           bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i
+    -----------------------------------------------------  ---------------------------
+    Total                                          3.551ns (0.779ns logic, 2.772ns route)
+                                                           (21.9% logic, 78.1% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_gtx0_txusrclk2_i = PERIOD TIMEGRP "gtx0_txusrclk2_i" 5 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point gtx1_rxresetdone_r2 (SLICE_X146Y153.AX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.217ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               gtx1_rxresetdone_r (FF)
+  Destination:          gtx1_rxresetdone_r2 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.217ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         gtx0_txusrclk2_i rising at 5.000ns
+  Destination Clock:    gtx0_txusrclk2_i rising at 5.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: gtx1_rxresetdone_r to gtx1_rxresetdone_r2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X147Y153.DQ    Tcko                  0.098   gtx1_rxresetdone_r
+                                                       gtx1_rxresetdone_r
+    SLICE_X146Y153.AX    net (fanout=1)     e  0.208   gtx1_rxresetdone_r
+    SLICE_X146Y153.CLK   Tckdi       (-Th)     0.089   gtx1_rxresetdone_r2
+                                                       gtx1_rxresetdone_r2
+    -------------------------------------------------  ---------------------------
+    Total                                      0.217ns (0.009ns logic, 0.208ns route)
+                                                       (4.1% logic, 95.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point gtx0_rxresetdone_r2 (SLICE_X146Y136.DX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.229ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               gtx0_rxresetdone_r (FF)
+  Destination:          gtx0_rxresetdone_r2 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.229ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         gtx0_txusrclk2_i rising at 5.000ns
+  Destination Clock:    gtx0_txusrclk2_i rising at 5.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: gtx0_rxresetdone_r to gtx0_rxresetdone_r2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X146Y136.AQ    Tcko                  0.115   gtx0_rxresetdone_r2
+                                                       gtx0_rxresetdone_r
+    SLICE_X146Y136.DX    net (fanout=1)     e  0.203   gtx0_rxresetdone_r
+    SLICE_X146Y136.CLK   Tckdi       (-Th)     0.089   gtx0_rxresetdone_r2
+                                                       gtx0_rxresetdone_r2
+    -------------------------------------------------  ---------------------------
+    Total                                      0.229ns (0.026ns logic, 0.203ns route)
+                                                       (11.4% logic, 88.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point gtx2_txresetdone_r2 (SLICE_X151Y168.AX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.230ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               gtx2_txresetdone_r (FF)
+  Destination:          gtx2_txresetdone_r2 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.230ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         gtx0_txusrclk2_i rising at 5.000ns
+  Destination Clock:    gtx0_txusrclk2_i rising at 5.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: gtx2_txresetdone_r to gtx2_txresetdone_r2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X150Y168.DQ    Tcko                  0.098   gtx2_txresetdone_r
+                                                       gtx2_txresetdone_r
+    SLICE_X151Y168.AX    net (fanout=1)     e  0.208   gtx2_txresetdone_r
+    SLICE_X151Y168.CLK   Tckdi       (-Th)     0.076   gtx2_txresetdone_r2
+                                                       gtx2_txresetdone_r2
+    -------------------------------------------------  ---------------------------
+    Total                                      0.230ns (0.022ns logic, 0.208ns route)
+                                                       (9.6% logic, 90.4% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_gtx0_txusrclk2_i = PERIOD TIMEGRP "gtx0_txusrclk2_i" 5 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 1.970ns (period - min period limit)
+  Period: 5.000ns
+  Min period limit: 3.030ns (330.033MHz) (Tgtxper_USRCLK)
+  Physical resource: bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i/RXUSRCLK2
+  Logical resource: bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i/RXUSRCLK2
+  Location pin: GTXE1_X0Y12.RXUSRCLK2
+  Clock network: gtx0_txusrclk2_i
+--------------------------------------------------------------------------------
+Slack: 1.970ns (period - min period limit)
+  Period: 5.000ns
+  Min period limit: 3.030ns (330.033MHz) (Tgtxper_USRCLK)
+  Physical resource: bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i/TXUSRCLK2
+  Logical resource: bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i/TXUSRCLK2
+  Location pin: GTXE1_X0Y12.TXUSRCLK2
+  Clock network: gtx0_txusrclk2_i
+--------------------------------------------------------------------------------
+Slack: 1.970ns (period - min period limit)
+  Period: 5.000ns
+  Min period limit: 3.030ns (330.033MHz) (Tgtxper_USRCLK)
+  Physical resource: bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i/RXUSRCLK2
+  Logical resource: bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i/RXUSRCLK2
+  Location pin: GTXE1_X0Y17.RXUSRCLK2
+  Clock network: gtx0_txusrclk2_i
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_tmb_clock0 = PERIOD TIMEGRP "tmb_clock0" 25 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 14126 paths analyzed, 903 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   6.250ns.
+--------------------------------------------------------------------------------
+
+Paths for end point DRP_read_2/data_out_8 (SLICE_X149Y167.CE), 3 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     21.921ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i (HSIO)
+  Destination:          DRP_read_2/data_out_8 (FF)
+  Requirement:          25.000ns
+  Data Path Delay:      3.044ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         drp_clk_in_i rising at 0.000ns
+  Destination Clock:    drp_clk_in_i rising at 25.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i to DRP_read_2/data_out_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    GTXE1_X0Y17.DRDY     Tgtxcko_DRDY          0.908   bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i
+                                                       bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i
+    SLICE_X154Y167.A2    net (fanout=2)     e  1.433   gtx2_drdy_i
+    SLICE_X154Y167.A     Tilo                  0.061   DRP_read_2/data_valid
+                                                       DRP_read_2/_n0061_inv1
+    SLICE_X149Y167.CE    net (fanout=3)     e  0.401   DRP_read_2/_n0061_inv
+    SLICE_X149Y167.CLK   Tceck                 0.241   DRP_read_2/data_out<11>
+                                                       DRP_read_2/data_out_8
+    -------------------------------------------------  ---------------------------
+    Total                                      3.044ns (1.210ns logic, 1.834ns route)
+                                                       (39.8% logic, 60.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     23.455ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               DRP_read_2/state_FSM_FFd2 (FF)
+  Destination:          DRP_read_2/data_out_8 (FF)
+  Requirement:          25.000ns
+  Data Path Delay:      1.510ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         drp_clk_in_i rising at 0.000ns
+  Destination Clock:    drp_clk_in_i rising at 25.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: DRP_read_2/state_FSM_FFd2 to DRP_read_2/data_out_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X155Y167.DQ    Tcko                  0.283   DRP_read_2/state_FSM_FFd2
+                                                       DRP_read_2/state_FSM_FFd2
+    SLICE_X154Y167.A3    net (fanout=3)     e  0.524   DRP_read_2/state_FSM_FFd2
+    SLICE_X154Y167.A     Tilo                  0.061   DRP_read_2/data_valid
+                                                       DRP_read_2/_n0061_inv1
+    SLICE_X149Y167.CE    net (fanout=3)     e  0.401   DRP_read_2/_n0061_inv
+    SLICE_X149Y167.CLK   Tceck                 0.241   DRP_read_2/data_out<11>
+                                                       DRP_read_2/data_out_8
+    -------------------------------------------------  ---------------------------
+    Total                                      1.510ns (0.585ns logic, 0.925ns route)
+                                                       (38.7% logic, 61.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     23.538ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               DRP_read_2/state_FSM_FFd1 (FF)
+  Destination:          DRP_read_2/data_out_8 (FF)
+  Requirement:          25.000ns
+  Data Path Delay:      1.427ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         drp_clk_in_i rising at 0.000ns
+  Destination Clock:    drp_clk_in_i rising at 25.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: DRP_read_2/state_FSM_FFd1 to DRP_read_2/data_out_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X155Y167.DMUX  Tshcko                0.357   DRP_read_2/state_FSM_FFd2
+                                                       DRP_read_2/state_FSM_FFd1
+    SLICE_X154Y167.A5    net (fanout=3)     e  0.367   DRP_read_2/state_FSM_FFd1
+    SLICE_X154Y167.A     Tilo                  0.061   DRP_read_2/data_valid
+                                                       DRP_read_2/_n0061_inv1
+    SLICE_X149Y167.CE    net (fanout=3)     e  0.401   DRP_read_2/_n0061_inv
+    SLICE_X149Y167.CLK   Tceck                 0.241   DRP_read_2/data_out<11>
+                                                       DRP_read_2/data_out_8
+    -------------------------------------------------  ---------------------------
+    Total                                      1.427ns (0.659ns logic, 0.768ns route)
+                                                       (46.2% logic, 53.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point DRP_read_2/data_out_9 (SLICE_X149Y167.CE), 3 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     21.921ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i (HSIO)
+  Destination:          DRP_read_2/data_out_9 (FF)
+  Requirement:          25.000ns
+  Data Path Delay:      3.044ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         drp_clk_in_i rising at 0.000ns
+  Destination Clock:    drp_clk_in_i rising at 25.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i to DRP_read_2/data_out_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    GTXE1_X0Y17.DRDY     Tgtxcko_DRDY          0.908   bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i
+                                                       bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i
+    SLICE_X154Y167.A2    net (fanout=2)     e  1.433   gtx2_drdy_i
+    SLICE_X154Y167.A     Tilo                  0.061   DRP_read_2/data_valid
+                                                       DRP_read_2/_n0061_inv1
+    SLICE_X149Y167.CE    net (fanout=3)     e  0.401   DRP_read_2/_n0061_inv
+    SLICE_X149Y167.CLK   Tceck                 0.241   DRP_read_2/data_out<11>
+                                                       DRP_read_2/data_out_9
+    -------------------------------------------------  ---------------------------
+    Total                                      3.044ns (1.210ns logic, 1.834ns route)
+                                                       (39.8% logic, 60.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     23.455ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               DRP_read_2/state_FSM_FFd2 (FF)
+  Destination:          DRP_read_2/data_out_9 (FF)
+  Requirement:          25.000ns
+  Data Path Delay:      1.510ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         drp_clk_in_i rising at 0.000ns
+  Destination Clock:    drp_clk_in_i rising at 25.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: DRP_read_2/state_FSM_FFd2 to DRP_read_2/data_out_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X155Y167.DQ    Tcko                  0.283   DRP_read_2/state_FSM_FFd2
+                                                       DRP_read_2/state_FSM_FFd2
+    SLICE_X154Y167.A3    net (fanout=3)     e  0.524   DRP_read_2/state_FSM_FFd2
+    SLICE_X154Y167.A     Tilo                  0.061   DRP_read_2/data_valid
+                                                       DRP_read_2/_n0061_inv1
+    SLICE_X149Y167.CE    net (fanout=3)     e  0.401   DRP_read_2/_n0061_inv
+    SLICE_X149Y167.CLK   Tceck                 0.241   DRP_read_2/data_out<11>
+                                                       DRP_read_2/data_out_9
+    -------------------------------------------------  ---------------------------
+    Total                                      1.510ns (0.585ns logic, 0.925ns route)
+                                                       (38.7% logic, 61.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     23.538ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               DRP_read_2/state_FSM_FFd1 (FF)
+  Destination:          DRP_read_2/data_out_9 (FF)
+  Requirement:          25.000ns
+  Data Path Delay:      1.427ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         drp_clk_in_i rising at 0.000ns
+  Destination Clock:    drp_clk_in_i rising at 25.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: DRP_read_2/state_FSM_FFd1 to DRP_read_2/data_out_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X155Y167.DMUX  Tshcko                0.357   DRP_read_2/state_FSM_FFd2
+                                                       DRP_read_2/state_FSM_FFd1
+    SLICE_X154Y167.A5    net (fanout=3)     e  0.367   DRP_read_2/state_FSM_FFd1
+    SLICE_X154Y167.A     Tilo                  0.061   DRP_read_2/data_valid
+                                                       DRP_read_2/_n0061_inv1
+    SLICE_X149Y167.CE    net (fanout=3)     e  0.401   DRP_read_2/_n0061_inv
+    SLICE_X149Y167.CLK   Tceck                 0.241   DRP_read_2/data_out<11>
+                                                       DRP_read_2/data_out_9
+    -------------------------------------------------  ---------------------------
+    Total                                      1.427ns (0.659ns logic, 0.768ns route)
+                                                       (46.2% logic, 53.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point DRP_read_2/data_out_10 (SLICE_X149Y167.CE), 3 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     21.921ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i (HSIO)
+  Destination:          DRP_read_2/data_out_10 (FF)
+  Requirement:          25.000ns
+  Data Path Delay:      3.044ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         drp_clk_in_i rising at 0.000ns
+  Destination Clock:    drp_clk_in_i rising at 25.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i to DRP_read_2/data_out_10
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    GTXE1_X0Y17.DRDY     Tgtxcko_DRDY          0.908   bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i
+                                                       bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i
+    SLICE_X154Y167.A2    net (fanout=2)     e  1.433   gtx2_drdy_i
+    SLICE_X154Y167.A     Tilo                  0.061   DRP_read_2/data_valid
+                                                       DRP_read_2/_n0061_inv1
+    SLICE_X149Y167.CE    net (fanout=3)     e  0.401   DRP_read_2/_n0061_inv
+    SLICE_X149Y167.CLK   Tceck                 0.241   DRP_read_2/data_out<11>
+                                                       DRP_read_2/data_out_10
+    -------------------------------------------------  ---------------------------
+    Total                                      3.044ns (1.210ns logic, 1.834ns route)
+                                                       (39.8% logic, 60.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     23.455ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               DRP_read_2/state_FSM_FFd2 (FF)
+  Destination:          DRP_read_2/data_out_10 (FF)
+  Requirement:          25.000ns
+  Data Path Delay:      1.510ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         drp_clk_in_i rising at 0.000ns
+  Destination Clock:    drp_clk_in_i rising at 25.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: DRP_read_2/state_FSM_FFd2 to DRP_read_2/data_out_10
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X155Y167.DQ    Tcko                  0.283   DRP_read_2/state_FSM_FFd2
+                                                       DRP_read_2/state_FSM_FFd2
+    SLICE_X154Y167.A3    net (fanout=3)     e  0.524   DRP_read_2/state_FSM_FFd2
+    SLICE_X154Y167.A     Tilo                  0.061   DRP_read_2/data_valid
+                                                       DRP_read_2/_n0061_inv1
+    SLICE_X149Y167.CE    net (fanout=3)     e  0.401   DRP_read_2/_n0061_inv
+    SLICE_X149Y167.CLK   Tceck                 0.241   DRP_read_2/data_out<11>
+                                                       DRP_read_2/data_out_10
+    -------------------------------------------------  ---------------------------
+    Total                                      1.510ns (0.585ns logic, 0.925ns route)
+                                                       (38.7% logic, 61.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     23.538ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               DRP_read_2/state_FSM_FFd1 (FF)
+  Destination:          DRP_read_2/data_out_10 (FF)
+  Requirement:          25.000ns
+  Data Path Delay:      1.427ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         drp_clk_in_i rising at 0.000ns
+  Destination Clock:    drp_clk_in_i rising at 25.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: DRP_read_2/state_FSM_FFd1 to DRP_read_2/data_out_10
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X155Y167.DMUX  Tshcko                0.357   DRP_read_2/state_FSM_FFd2
+                                                       DRP_read_2/state_FSM_FFd1
+    SLICE_X154Y167.A5    net (fanout=3)     e  0.367   DRP_read_2/state_FSM_FFd1
+    SLICE_X154Y167.A     Tilo                  0.061   DRP_read_2/data_valid
+                                                       DRP_read_2/_n0061_inv1
+    SLICE_X149Y167.CE    net (fanout=3)     e  0.401   DRP_read_2/_n0061_inv
+    SLICE_X149Y167.CLK   Tceck                 0.241   DRP_read_2/data_out<11>
+                                                       DRP_read_2/data_out_10
+    -------------------------------------------------  ---------------------------
+    Total                                      1.427ns (0.659ns logic, 0.768ns route)
+                                                       (46.2% logic, 53.8% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_tmb_clock0 = PERIOD TIMEGRP "tmb_clock0" 25 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i (GTXE1_X0Y15.DEN), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.175ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               DRP_read_1/drp_en (FF)
+  Destination:          bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i (HSIO)
+  Requirement:          0.000ns
+  Data Path Delay:      0.175ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         drp_clk_in_i rising at 25.000ns
+  Destination Clock:    drp_clk_in_i rising at 25.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Slow Process Corner: DRP_read_1/drp_en to bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X160Y158.AQ    Tcko                  0.228   DRP_read_1/drp_en
+                                                       DRP_read_1/drp_en
+    GTXE1_X0Y15.DEN      net (fanout=2)     e  0.466   DRP_read_1/drp_en
+    GTXE1_X0Y15.DCLK     Tgtxckc_DEN (-Th)     0.519   bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i
+                                                       bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i
+    -------------------------------------------------  ---------------------------
+    Total                                      0.175ns (-0.291ns logic, 0.466ns route)
+                                                       (-166.3% logic, 266.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point DRP_read_3/drp_addr_7 (SLICE_X159Y195.B5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.184ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               DRP_read_3/state_FSM_FFd2 (FF)
+  Destination:          DRP_read_3/drp_addr_7 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.184ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         drp_clk_in_i rising at 25.000ns
+  Destination Clock:    drp_clk_in_i rising at 25.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: DRP_read_3/state_FSM_FFd2 to DRP_read_3/drp_addr_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X159Y195.CQ    Tcko                  0.098   DRP_read_3/data_valid
+                                                       DRP_read_3/state_FSM_FFd2
+    SLICE_X159Y195.B5    net (fanout=3)     e  0.166   DRP_read_3/state_FSM_FFd2
+    SLICE_X159Y195.CLK   Tah         (-Th)     0.080   DRP_read_3/data_valid
+                                                       DRP_read_3/drp_addr_7_rstpot
+                                                       DRP_read_3/drp_addr_7
+    -------------------------------------------------  ---------------------------
+    Total                                      0.184ns (0.018ns logic, 0.166ns route)
+                                                       (9.8% logic, 90.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point DRP_read_0/drp_addr_7 (SLICE_X151Y133.D5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.190ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               DRP_read_0/state_FSM_FFd2 (FF)
+  Destination:          DRP_read_0/drp_addr_7 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.190ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         drp_clk_in_i rising at 25.000ns
+  Destination Clock:    drp_clk_in_i rising at 25.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: DRP_read_0/state_FSM_FFd2 to DRP_read_0/drp_addr_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X151Y133.AQ    Tcko                  0.098   DRP_read_0/drp_en
+                                                       DRP_read_0/state_FSM_FFd2
+    SLICE_X151Y133.D5    net (fanout=3)     e  0.175   DRP_read_0/state_FSM_FFd2
+    SLICE_X151Y133.CLK   Tah         (-Th)     0.083   DRP_read_0/drp_en
+                                                       DRP_read_0/drp_addr_7_rstpot
+                                                       DRP_read_0/drp_addr_7
+    -------------------------------------------------  ---------------------------
+    Total                                      0.190ns (0.015ns logic, 0.175ns route)
+                                                       (7.9% logic, 92.1% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_tmb_clock0 = PERIOD TIMEGRP "tmb_clock0" 25 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 18.750ns (period - min period limit)
+  Period: 25.000ns
+  Min period limit: 6.250ns (160.000MHz) (Tgtxper_DCLK)
+  Physical resource: bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i/DCLK
+  Logical resource: bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i/DCLK
+  Location pin: GTXE1_X0Y12.DCLK
+  Clock network: drp_clk_in_i
+--------------------------------------------------------------------------------
+Slack: 18.750ns (period - min period limit)
+  Period: 25.000ns
+  Min period limit: 6.250ns (160.000MHz) (Tgtxper_DCLK)
+  Physical resource: bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i/DCLK
+  Logical resource: bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i/DCLK
+  Location pin: GTXE1_X0Y17.DCLK
+  Clock network: drp_clk_in_i
+--------------------------------------------------------------------------------
+Slack: 18.750ns (period - min period limit)
+  Period: 25.000ns
+  Min period limit: 6.250ns (160.000MHz) (Tgtxper_DCLK)
+  Physical resource: bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i/DCLK
+  Logical resource: bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i/DCLK
+  Location pin: GTXE1_X0Y15.DCLK
+  Clock network: drp_clk_in_i
+--------------------------------------------------------------------------------
+
+
+1 constraint not met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock tmb_clock0
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+tmb_clock0     |    3.079|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 1  Score: 289  (Setup/Max: 289, Hold: 0)
+
+Constraints cover 14383 paths, 0 nets, and 1079 connections
+
+Design statistics:
+   Minimum period:   6.250ns{1}   (Maximum frequency: 160.000MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Fri Dec 19 03:02:04 2025 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 818 MB
+
+
+

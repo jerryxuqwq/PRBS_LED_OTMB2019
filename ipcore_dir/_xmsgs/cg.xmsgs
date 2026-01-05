@@ -8,16 +8,16 @@
 <msg type="info" file="sim" num="172" delta="old" >Generating IP...
 </msg>
 
-<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">A core named &apos;Gem_firefly&apos; already exists in the project. Output products for this core may be overwritten.</arg>
+<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">A core named &apos;bi_firefly&apos; already exists in the project. Output products for this core may be overwritten.</arg>
 </msg>
 
-<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">A core named &apos;Gem_firefly&apos; already exists in the project. Output products for this core may be overwritten.</arg>
+<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">A core named &apos;bi_firefly&apos; already exists in the project. Output products for this core may be overwritten.</arg>
 </msg>
 
 <msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Component v6_gtxwizard_v1_12 does not have a valid model name for Verilog synthesis</arg>
 </msg>
 
-<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Overwriting existing file /home/jerryxu/ISE_project/PRBS_LED_OTMB2019/ipcore_dir/tmp/_cg/Gem_firefly/doc/ug516_v6_gtxwizard.pdf with file from view xilinx_documentation</arg>
+<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Overwriting existing file /home/cscdev/Desktop/PRBS_LED_OTMB2019-d6e202dda7b00d98873a915de42f4d1afa212c67/ipcore_dir/tmp/_cg/bi_firefly/doc/ug516_v6_gtxwizard.pdf with file from view xilinx_documentation</arg>
 </msg>
 
 <msg type="info" file="sim" num="993" delta="old" >The selected IP does not support an ASY schematic symbol.
@@ -27,6 +27,15 @@
 </msg>
 
 <msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">The chosen IP does not support an SYM schematic symbol.</arg>
+</msg>
+
+<msg type="warning" file="coreutil" num="0" delta="new" >WARNING:ProjectMgmt - Failed to confirm that part information for the file
+   &quot;/home/cscdev/Desktop/PRBS_LED_OTMB2019-d6e202dda7b00d98873a915de42f4d1afa212
+   c67/ipcore_dir/tmp/_cg/bi_firefly/implement/ila.ngc&quot; matches the current
+   project settings.
+Adding /home/cscdev/Desktop/PRBS_LED_OTMB2019-d6e202dda7b00d98873a915de42f4d1afa212c67/ipcore_dir/tmp/_cg/bi_firefly.veo -view all -origin_type imported
+WARNING: This core does not have a top level called &quot;/bi_firefly&quot;
+WARNING: Top level has been set to &quot;/bi_firefly_top&quot;
 </msg>
 
 <msg type="info" file="sim" num="948" delta="old" >Finished FLIST file generation.

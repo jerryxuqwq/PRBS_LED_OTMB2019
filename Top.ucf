@@ -1,0 +1,95 @@
+NET "tmb_clock0"  	LOC = "B31";	# GCLK19P  JRG: this is really tmb_clock05p on the baseboard!  *stoppable*
+
+NET "led_fp<0>"		LOC = "AF24";	# I/O_521	** Dual use output: BPI Flash PROM Data D00
+NET "led_fp<1>"		LOC = "AF25";	# I/O_522	** Dual use output: BPI Flash PROM Data D01
+NET "led_fp<2>"		LOC = "W24";	# I/O_523	** Dual use output: BPI Flash PROM Data D02
+NET "led_fp<3>"		LOC = "V24";	# I/O_524	** Dual use output: BPI Flash PROM Data D03
+NET "led_fp<4>"		LOC = "H24";	# I/O_525	** Dual use output: BPI Flash PROM Data D04
+NET "led_fp<5>"		LOC = "H25";	# I/O_526	** Dual use output: BPI Flash PROM Data D05
+NET "led_fp<6>"		LOC = "P24";	# I/O_527	** Dual use output: BPI Flash PROM Data D06
+NET "led_fp<7>"		LOC = "R24";	# I/O_528	** Dual use output: BPI Flash PROM Data D07
+
+NET "reset_btn"		LOC = "U25";
+#NET "set_sw<8>"		LOC = "U26";
+NET "qpll_lock"		LOC = "M22";
+NET "qpll_nrst"		LOC = "U30";
+################################## Clock Constraints ##########################
+
+NET "q3_clk0_refclk_i" TNM_NET = "q3_clk0_refclk_i";
+TIMESPEC "TS_q3_clk0_refclk_i" = PERIOD "q3_clk0_refclk_i" 6.25;
+
+# User Clock Constraints
+NET "gtx0_txusrclk2_i" TNM_NET = "gtx0_txusrclk2_i";
+TIMESPEC "TS_gtx0_txusrclk2_i" = PERIOD "gtx0_txusrclk2_i" 5.0;
+
+NET "gtx1_txusrclk2_i" TNM_NET = "gtx1_txusrclk2_i";
+TIMESPEC "TS_gtx1_txusrclk2_i" = PERIOD "gtx1_txusrclk2_i" 5.0;
+
+NET "gtx2_txusrclk2_i" TNM_NET = "gtx2_txusrclk2_i";
+TIMESPEC "TS_gtx2_txusrclk2_i" = PERIOD "gtx2_txusrclk2_i" 5.0;
+
+NET "gtx3_txusrclk2_i" TNM_NET = "gtx3_txusrclk2_i";
+TIMESPEC "TS_gtx3_txusrclk2_i" = PERIOD "gtx3_txusrclk2_i" 5.0;
+
+####################### GTX reference clock constraints #######################
+NET Q3_CLK0_MGTREFCLK_PAD_N_IN  LOC=P5;
+NET Q3_CLK0_MGTREFCLK_PAD_P_IN  LOC=P6;
+####################### CCB clock##############################################
+
+NET "tmb_clock0"	TNM_NET = "tmb_clock0";	# TMB main Clock  JRG: this is really tmb_clock05p on the baseboard!  *stoppable*
+TIMESPEC "TS_tmb_clock0" = PERIOD "tmb_clock0"  25.0 ns HIGH 50%;
+
+# DRP Clock Constraint
+NET "drp_clk_in_i" TNM_NET = "drp_clk_in_i";
+TIMESPEC "TS_drp_clk_in_i" = PERIOD "drp_clk_in_i" 25.0;
+################################# mgt wrapper constraints #####################
+
+##---------- Set placement for gtx0_gtx_wrapper_i/GTX_DUAL ------
+INST bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i LOC=GTXE1_X0Y12;
+
+##---------- Set placement for gtx1_gtx_wrapper_i/GTX_DUAL ------
+INST bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i LOC=GTXE1_X0Y15;
+
+##---------- Set placement for gtx2_gtx_wrapper_i/GTX_DUAL ------
+INST bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i LOC=GTXE1_X0Y17;
+
+##---------- Set placement for gtx3_gtx_wrapper_i/GTX_DUAL ------
+INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i LOC=GTXE1_X0Y19;
+
+#-------------------------------------------------------------------------------------------------------------------
+# FireFly bi-directional transceiver: Rx... JRG-Ok
+#-------------------------------------------------------------------------------------------------------------------
+# FireFly fiber1 mgt: gtx?/rx1
+NET "RXP_IN[0]"		LOC = N3 | IOSTANDARD = "LVDS_25";	# MGTRXP0_115, use cp160 as MGTREF
+NET "RXN_IN[0]"		LOC = N4 | IOSTANDARD = "LVDS_25";	# MGTRXN0_115
+
+# FireFly fiber4 mgt: gtx?/rx4
+NET "RXP_IN[1]"		LOC = J3 | IOSTANDARD = "LVDS_25";	# MGTRXP3_115
+NET "RXN_IN[1]"		LOC = J4 | IOSTANDARD = "LVDS_25";	# MGTRXN3_115
+
+# FireFly fiber3 mgt: gtx?/rx3
+NET "RXP_IN[2]"		LOC = E3 | IOSTANDARD = "LVDS_25";	# MGTRXP1_116, use cp160 as MGTREF
+NET "RXN_IN[2]"		LOC = E4 | IOSTANDARD = "LVDS_25";	# MGTRXN1_116
+
+# FireFly fiber2 mgt: gtx?/rx2
+NET "RXP_IN[3]"		LOC = B5 | IOSTANDARD = "LVDS_25";	# MGTRXP3_116
+NET "RXN_IN[3]"		LOC = B6 | IOSTANDARD = "LVDS_25";	# MGTRXN3_116
+
+#-------------------------------------------------------------------------------------------------------------------
+# FireFly bi-directional transceiver: Tx... JRG-Ok
+#-------------------------------------------------------------------------------------------------------------------
+# FireFly fiber12 mgt: gtx?/rx1
+NET "TXP_OUT[0]"		LOC = M1 | IOSTANDARD = "LVDS_25";	# MGTTXP0_115, use cp160 as MGTREF
+NET "TXN_OUT[0]"		LOC = M2 | IOSTANDARD = "LVDS_25";	# MGTTXN0_115
+
+# FireFly fiber9 mgt: gtx?/rx4
+NET "TXP_OUT[1]"		LOC = F1 | IOSTANDARD = "LVDS_25";	# MGTTXP3_115
+NET "TXN_OUT[1]"		LOC = F2 | IOSTANDARD = "LVDS_25";	# MGTTXN3_115
+
+# FireFly fiber10 mgt: gtx?/rx3
+NET "TXP_OUT[2]"		LOC = C3 | IOSTANDARD = "LVDS_25";	# MGTTXP1_116, use cp160 as MGTREF
+NET "TXN_OUT[2]"		LOC = C4 | IOSTANDARD = "LVDS_25";	# MGTTXN1_116
+
+# FireFly fiber11 mgt: gtx?/rx2
+NET "TXP_OUT[3]"		LOC = A3 | IOSTANDARD = "LVDS_25";	# MGTTXP3_116
+NET "TXN_OUT[3]"		LOC = A4 | IOSTANDARD = "LVDS_25";	# MGTTXN3_116

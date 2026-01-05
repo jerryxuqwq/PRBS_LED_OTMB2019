@@ -1,0 +1,1 @@
+run -ifn Top.prj -ofn Top.ngc -ifmt mixed  -top Top -ofmt NGC -p xc6vlx240t-1ff1156

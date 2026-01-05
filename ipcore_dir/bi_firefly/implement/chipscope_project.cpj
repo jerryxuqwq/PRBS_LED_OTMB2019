@@ -1,6 +1,6 @@
 #ChipScope Pro Analyzer Project File, Version 3.0
 #Thu Jul 27 15:56:09 IST 2006
-device.1.configFileDir=/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/ipcore_dir/bi_firefly/implement/
+device.1.configFileDir=/home/cscdev/Desktop/PRBS_LED_OTMB2019-d6e202dda7b00d98873a915de42f4d1afa212c67/ipcore_dir/bi_firefly/implement/
 device.1.configFilename=bi_firefly_top.bit
 deviceChain.deviceName0=System_ACE
 deviceChain.deviceName1=XC6VLX240T
