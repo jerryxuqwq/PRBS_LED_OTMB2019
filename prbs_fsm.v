@@ -101,26 +101,26 @@ module prbs_fsm (
       end
 
       START_PRBS_TX: begin
-        tx_prbs_mode = 3'b001;
+        tx_prbs_mode = 3'b100;
         next_state   = START_PRBS_RX;
       end
 
       START_PRBS_RX: begin
-        tx_prbs_mode = 3'b001;
+        tx_prbs_mode = 3'b100;
         next_state   = CLEAR_PRBS;
       end
 
       CLEAR_PRBS: begin
-        rx_prbs_mode = 3'b001;
-        tx_prbs_mode = 3'b001;
+        rx_prbs_mode = 3'b100;
+        tx_prbs_mode = 3'b100;
         prbscntreset = 1'b0;
         temp_error = 1'b0;
         next_state   = PRBS_INJECT;
       end
 
       PRBS_INJECT: begin
-        rx_prbs_mode     = 3'b001;
-        tx_prbs_mode     = 3'b001;
+        rx_prbs_mode     = 3'b100;
+        tx_prbs_mode     = 3'b100;
         counter_boot_rst = 1'b0;
         error_inject     = 1'b1;
 
@@ -132,8 +132,8 @@ module prbs_fsm (
       end
       
       DELAY: begin
-      rx_prbs_mode = 3'b001;
-      tx_prbs_mode = 3'b001;
+      rx_prbs_mode = 3'b100;
+      tx_prbs_mode = 3'b100;
       prbscntreset = 1'b0;
       error_inject = 1'b0;
         if (!rx_prbs_err)
@@ -141,8 +141,8 @@ module prbs_fsm (
       end
 
       CLEAR_PRBS_2: begin
-        rx_prbs_mode = 3'b001;
-        tx_prbs_mode = 3'b001;
+        rx_prbs_mode = 3'b100;
+        tx_prbs_mode = 3'b100;
         prbscntreset = 1'b1;
 
         // stay here until dwell time expires
@@ -156,8 +156,8 @@ module prbs_fsm (
       end
 
       ACTIVE: begin
-        rx_prbs_mode = 3'b001;
-        tx_prbs_mode = 3'b001;
+        rx_prbs_mode = 3'b100;
+        tx_prbs_mode = 3'b100;
         prbscntreset = prbscntreset_ext;
         error_inject = error_inject_ext;
         next_state   = ACTIVE;

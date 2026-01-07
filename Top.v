@@ -34,10 +34,52 @@ module Top#(
 	      output wire [7:0] led_fp,
 	      output wire [3:0] TXN_OUT,
 	      output wire [3:0] TXP_OUT,
-
+        
+        input wire   [50:0] _ccb_rx,
 	      input wire 	qpll_lock,
 	      output wire 	qpll_nrst
 	      );
+
+  	// Deal with ccb
+	
+	reg   [33:0]  ccb_rx_iobff_a = {34{1'b1}}; // synthesis attribute IOB of ccb_rx_iobff_a is "true";
+	reg   [50:36] ccb_rx_iobff_b = {15{1'b1}}; // synthesis attribute IOB of ccb_rx_iobff_b is "true";
+	wire [50:0]   ccb_rx;
+	wire [50:0]   ccb_rx_iobff;
+	
+	always @(posedge tmb_clock0) begin
+		ccb_rx_iobff_a[33:0]  <= _ccb_rx[33:0];
+		ccb_rx_iobff_b[50:36] <= _ccb_rx[50:36];
+	end
+	assign ccb_rx_iobff = {~ccb_rx_iobff_b[50:36],2'b00,~ccb_rx_iobff_a[33:0]};
+	assign ccb_rx[50:0] = ccb_rx_iobff;
+	
+	wire  [7:0]      ccb_cmd;
+	assign ccb_cmd[5:0] = ccb_rx[7:2];
+	assign  ccb_cmd_strobe =  ccb_rx[10];
+	assign  ccb_evcntres    =  ccb_rx[ 8];
+	assign  ccb_bcntres      =  ccb_rx[ 9];
+	assign ccb_cmd[7]     =  ccb_bcntres;  // don't use for cmd decoding
+	assign ccb_cmd[6]     =  ccb_evcntres;  // don't use for cmd decoding
+
+	
+	integer i;
+	parameter MXDEC = 'h32;    // Highest CCB Command decode
+	reg  [MXDEC:0] ccb_cmd_dec =0;
+	
+	always @(posedge tmb_clock0) begin
+		i=0;
+		while (i<=MXDEC)
+		begin
+		ccb_cmd_dec[i] <= (ccb_cmd[5:0]==i) && ccb_cmd_strobe;
+		i=i+1;
+		end
+	end
+	
+	wire ttc_bx0_dec        = ccb_cmd_dec['h01];  // Bunch Crossing Zero   
+	wire ttc_resync          = ccb_cmd_dec['h03];  // Reset L1 readout buffers and resynchronize optical links  
+	wire ttc_bxreset        = ccb_cmd_dec['h32];  // Resets bxn, does not reset l1a count or buffers	
+
    wire 			reset;
    assign qpll_nrst = 1'b1;
    
@@ -57,7 +99,7 @@ module Top#(
    reg 				gtx_1_error;
    reg 				gtx_2_error;
    reg 				gtx_3_error;
-   assign reset = reset_btn | v_button[7];
+   assign reset = ttc_resync | v_button[7];
 
    
    //************************** Register Declarations ****************************
@@ -1115,6 +1157,7 @@ prbs_fsm gtx_3 (
 	else if (counter == 0)
 	  blink <= ~blink;
      end
+
    always @(posedge gtx0_txusrclk2_i or posedge reset)
      begin
 	if (reset)
@@ -1130,7 +1173,7 @@ prbs_fsm gtx_3 (
 	     v_led[4] <= &prbs_test_pass;
 	     v_led[5] <= alldone_r;
 	     v_led[6] <= allreset;
-	     v_led[7] <= prbscntreset;
+	     v_led[7] <= blink;
 	  end
      end
 
