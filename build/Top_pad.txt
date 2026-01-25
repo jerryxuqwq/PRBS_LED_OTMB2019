@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Wed Jan  7 16:09:42 2026
+Sun Jan 25 01:28:18 2026
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -92,8 +92,8 @@ Pinout by Pin Number:
 |AB2       |                          |OPAD     |MGTTXN3_113               |UNUSED   |           |              |          |         |           |         |         |          |           |                |
 |AB3       |                          |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |AB4       |                          |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
-|AB5       |                          |IPAD     |MGTREFCLK1N_113           |UNUSED   |           |              |          |         |           |         |         |          |           |                |
-|AB6       |                          |IPAD     |MGTREFCLK1P_113           |UNUSED   |           |              |          |         |           |         |         |          |           |                |
+|AB5       |Q2_CLK1_MGTREFCLK_PAD_N_IN|IPAD     |MGTREFCLK1N_113           |         |           |              |          |         |           |         |         |LOCATED   |NO         |                |
+|AB6       |Q2_CLK1_MGTREFCLK_PAD_P_IN|IPAD     |MGTREFCLK1P_113           |         |           |              |          |         |           |         |         |LOCATED   |NO         |                |
 |AB7       |                          |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |AB8       |                          |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |AB9       |                          |         |VCCO_0                    |         |           |0             |          |         |           |         |any******|          |           |                |
@@ -360,8 +360,8 @@ Pinout by Pin Number:
 |AJ32      |                          |IOBS     |IO_L12N_VRP_12            |UNUSED   |           |12            |          |         |           |         |         |          |           |                |
 |AJ33      |                          |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |AJ34      |_ccb_rx<45>               |IOB      |IO_L4P_12                 |INPUT    |LVCMOS25*  |12            |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
-|AK1       |                          |OPAD     |MGTTXP3_112               |UNUSED   |           |              |          |         |           |         |         |          |           |                |
-|AK2       |                          |OPAD     |MGTTXN3_112               |UNUSED   |           |              |          |         |           |         |         |          |           |                |
+|AK1       |txp                       |OPAD     |MGTTXP3_112               |         |           |              |          |         |           |         |         |LOCATED   |NO         |                |
+|AK2       |txn                       |OPAD     |MGTTXN3_112               |         |           |              |          |         |           |         |         |LOCATED   |NO         |                |
 |AK3       |                          |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |AK4       |                          |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |AK5       |                          |IPAD     |MGTREFCLK0N_112           |UNUSED   |           |              |          |         |           |         |         |          |           |                |
@@ -670,8 +670,8 @@ Pinout by Pin Number:
 |F2        |TXN_OUT<1>                |OPAD     |MGTTXN3_115               |         |           |              |          |         |           |         |         |LOCATED   |NO         |                |
 |F3        |                          |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |F4        |                          |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
-|F5        |                          |IPAD     |MGTREFCLK1N_116           |UNUSED   |           |              |          |         |           |         |         |          |           |                |
-|F6        |                          |IPAD     |MGTREFCLK1P_116           |UNUSED   |           |              |          |         |           |         |         |          |           |                |
+|F5        |Q3_CLK0_MGTREFCLK_PAD_N_IN|IPAD     |MGTREFCLK1N_116           |         |           |              |          |         |           |         |         |LOCATED   |NO         |                |
+|F6        |Q3_CLK0_MGTREFCLK_PAD_P_IN|IPAD     |MGTREFCLK1P_116           |         |           |              |          |         |           |         |         |LOCATED   |NO         |                |
 |F7        |                          |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |F8        |                          |         |CSI_B_0                   |         |           |              |          |         |           |         |         |          |           |                |
 |F9        |                          |IOBM     |IO_L2P_A15_D31_34         |UNUSED   |           |34            |          |         |           |         |         |          |           |                |
@@ -942,8 +942,8 @@ Pinout by Pin Number:
 |P2        |                          |OPAD     |MGTTXN3_114               |UNUSED   |           |              |          |         |           |         |         |          |           |                |
 |P3        |                          |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |P4        |                          |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
-|P5        |Q3_CLK0_MGTREFCLK_PAD_N_IN|IPAD     |MGTREFCLK0N_115           |         |           |              |          |         |           |         |         |LOCATED   |NO         |                |
-|P6        |Q3_CLK0_MGTREFCLK_PAD_P_IN|IPAD     |MGTREFCLK0P_115           |         |           |              |          |         |           |         |         |LOCATED   |NO         |                |
+|P5        |                          |IPAD     |MGTREFCLK0N_115           |UNUSED   |           |              |          |         |           |         |         |          |           |                |
+|P6        |                          |IPAD     |MGTREFCLK0P_115           |UNUSED   |           |              |          |         |           |         |         |          |           |                |
 |P7        |                          |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |P8        |                          |         |INIT_B_0                  |         |           |              |          |         |           |         |         |          |           |                |
 |P9        |                          |         |VCCAUX                    |         |           |              |          |         |           |         |2.5      |          |           |                |

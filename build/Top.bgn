@@ -8,7 +8,7 @@ Loading device for application Rf_Device from file '6vlx240t.nph' in environment
    "Top" is an NCD, version 3.2, device xc6vlx240t, package ff1156, speed -1
 Opened constraints file Top.pcf.
 
-Wed Jan  7 16:09:48 2026
+Sun Jan 25 01:28:24 2026
 
 /data/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/bitgen -intstyle xflow -g UserID:DEADBEEF -g DriveDone:Yes -w Top.ncd Top.bit 
 
@@ -150,29 +150,38 @@ There were 0 CONFIG constraint(s) processed from Top.pcf.
 
 Running DRC.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   gtx_1/current_state[4]_GND_9_o_Select_40_o is sourced by a combinatorial pin.
-   This is not good design practice. Use the CE pin to control the loading of
-   data into the flip-flop.
+   gtx_3/current_state[4]_GND_12_o_Select_40_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   gtx_3/current_state[4]_GND_9_o_Select_40_o is sourced by a combinatorial pin.
-   This is not good design practice. Use the CE pin to control the loading of
-   data into the flip-flop.
+   gtx_2/current_state[4]_GND_12_o_Select_40_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   gtx_2/current_state[4]_GND_9_o_Select_40_o is sourced by a combinatorial pin.
-   This is not good design practice. Use the CE pin to control the loading of
-   data into the flip-flop.
+   gtx_1/current_state[4]_GND_12_o_Select_40_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   gtx_0/current_state[4]_GND_9_o_Select_40_o is sourced by a combinatorial pin.
-   This is not good design practice. Use the CE pin to control the loading of
-   data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net CONTROL0<13> is sourced by
+   gtx_0/current_state[4]_GND_12_o_Select_40_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net CONTROL1<13> is sourced by
+   a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net CONTROL3<13> is sourced by
+   a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net CONTROL4<13> is sourced by
+   a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net CONTROL2<13> is sourced by
    a combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:367 - The signal <VIO_fp/U0/I_VIO/UPDATE<4>> is
    incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <VIO_fp/U0/I_VIO/UPDATE<5>> is
    incomplete. The signal does not drive any load pins in the design.
-DRC detected 0 errors and 7 warnings.  Please see the previously displayed
+DRC detected 0 errors and 10 warnings.  Please see the previously displayed
 individual error or warning messages for more details.
 INFO:Security:56 - Part 'xc6vlx240t' is not a WebPack part.
 WARNING:Security:42 - Your software subscription period has lapsed. Your current

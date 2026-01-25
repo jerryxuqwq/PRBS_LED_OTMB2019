@@ -54,8 +54,8 @@ module prbs_fsm (
 
   reg [$clog2(CLEAR_PRBS_2_HOLD_CYCLES+1)-1:0] clear2_cnt;
 
-  always @(posedge clk or posedge pll_lock or posedge reset) begin
-    if (pll_lock | reset) begin
+  always @(posedge clk or negedge pll_lock or posedge reset) begin
+    if (!pll_lock | reset) begin
       clear2_cnt <= 'd0;
     end else begin
       if (current_state == CLEAR_PRBS_2 && (checker_status == 0) && !rx_prbs_err) begin
@@ -70,8 +70,8 @@ module prbs_fsm (
   // ------------------------------------------------------------
   // State Register
   // ------------------------------------------------------------
-  always @(posedge clk or posedge pll_lock or posedge reset) begin
-    if (pll_lock | reset)
+  always @(posedge clk or negedge pll_lock or posedge reset) begin
+    if (!pll_lock | reset)
       current_state <= DEFAULT;
     else
       current_state <= next_state;
@@ -107,6 +107,7 @@ module prbs_fsm (
 
       START_PRBS_RX: begin
         tx_prbs_mode = 3'b100;
+        rx_prbs_mode = 3'b100;
         next_state   = CLEAR_PRBS;
       end
 

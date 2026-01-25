@@ -93,11 +93,16 @@
         .GTX0_RXN_IN                    (),
         .GTX0_RXP_IN                    (),
         //---------------------- Receive Ports - RX PLL Ports ----------------------
+        .GTX0_GREFCLKRX_IN              (),
         .GTX0_GTXRXRESET_IN             (),
         .GTX0_MGTREFCLKRX_IN            (),
+        .GTX0_NORTHREFCLKRX_IN          (),
+        .GTX0_PERFCLKRX_IN              (),
         .GTX0_PLLRXRESET_IN             (),
         .GTX0_RXPLLLKDET_OUT            (),
+        .GTX0_RXPLLREFSELDY_IN          (),
         .GTX0_RXRESETDONE_OUT           (),
+        .GTX0_SOUTHREFCLKRX_IN          (),
         //----------- Shared Ports - Dynamic Reconfiguration Port (DRP) ------------
         .GTX0_DADDR_IN                  (),
         .GTX0_DCLK_IN                   (),
@@ -118,7 +123,12 @@
         //------------- Transmit Ports - TX Driver and OOB signalling --------------
         .GTX0_TXPREEMPHASIS_IN          (),
         //--------------------- Transmit Ports - TX PLL Ports ----------------------
+        .GTX0_GREFCLKTX_IN              (),
         .GTX0_GTXTXRESET_IN             (),
+        .GTX0_NORTHREFCLKTX_IN          (),
+        .GTX0_PERFCLKTX_IN              (),
+        .GTX0_SOUTHREFCLKTX_IN          (),
+        .GTX0_TXPLLREFSELDY_IN          (),
         .GTX0_TXRESETDONE_OUT           (),
         //------------------- Transmit Ports - TX PRBS Generator -------------------
         .GTX0_TXENPRBSTST_IN            (),
@@ -143,11 +153,16 @@
         .GTX1_RXN_IN                    (),
         .GTX1_RXP_IN                    (),
         //---------------------- Receive Ports - RX PLL Ports ----------------------
+        .GTX1_GREFCLKRX_IN              (),
         .GTX1_GTXRXRESET_IN             (),
         .GTX1_MGTREFCLKRX_IN            (),
+        .GTX1_NORTHREFCLKRX_IN          (),
+        .GTX1_PERFCLKRX_IN              (),
         .GTX1_PLLRXRESET_IN             (),
         .GTX1_RXPLLLKDET_OUT            (),
+        .GTX1_RXPLLREFSELDY_IN          (),
         .GTX1_RXRESETDONE_OUT           (),
+        .GTX1_SOUTHREFCLKRX_IN          (),
         //----------- Shared Ports - Dynamic Reconfiguration Port (DRP) ------------
         .GTX1_DADDR_IN                  (),
         .GTX1_DCLK_IN                   (),
@@ -168,7 +183,12 @@
         //------------- Transmit Ports - TX Driver and OOB signalling --------------
         .GTX1_TXPREEMPHASIS_IN          (),
         //--------------------- Transmit Ports - TX PLL Ports ----------------------
+        .GTX1_GREFCLKTX_IN              (),
         .GTX1_GTXTXRESET_IN             (),
+        .GTX1_NORTHREFCLKTX_IN          (),
+        .GTX1_PERFCLKTX_IN              (),
+        .GTX1_SOUTHREFCLKTX_IN          (),
+        .GTX1_TXPLLREFSELDY_IN          (),
         .GTX1_TXRESETDONE_OUT           (),
         //------------------- Transmit Ports - TX PRBS Generator -------------------
         .GTX1_TXENPRBSTST_IN            (),
@@ -193,11 +213,16 @@
         .GTX2_RXN_IN                    (),
         .GTX2_RXP_IN                    (),
         //---------------------- Receive Ports - RX PLL Ports ----------------------
+        .GTX2_GREFCLKRX_IN              (),
         .GTX2_GTXRXRESET_IN             (),
         .GTX2_MGTREFCLKRX_IN            (),
+        .GTX2_NORTHREFCLKRX_IN          (),
+        .GTX2_PERFCLKRX_IN              (),
         .GTX2_PLLRXRESET_IN             (),
         .GTX2_RXPLLLKDET_OUT            (),
+        .GTX2_RXPLLREFSELDY_IN          (),
         .GTX2_RXRESETDONE_OUT           (),
+        .GTX2_SOUTHREFCLKRX_IN          (),
         //----------- Shared Ports - Dynamic Reconfiguration Port (DRP) ------------
         .GTX2_DADDR_IN                  (),
         .GTX2_DCLK_IN                   (),
@@ -218,7 +243,12 @@
         //------------- Transmit Ports - TX Driver and OOB signalling --------------
         .GTX2_TXPREEMPHASIS_IN          (),
         //--------------------- Transmit Ports - TX PLL Ports ----------------------
+        .GTX2_GREFCLKTX_IN              (),
         .GTX2_GTXTXRESET_IN             (),
+        .GTX2_NORTHREFCLKTX_IN          (),
+        .GTX2_PERFCLKTX_IN              (),
+        .GTX2_SOUTHREFCLKTX_IN          (),
+        .GTX2_TXPLLREFSELDY_IN          (),
         .GTX2_TXRESETDONE_OUT           (),
         //------------------- Transmit Ports - TX PRBS Generator -------------------
         .GTX2_TXENPRBSTST_IN            (),
@@ -243,11 +273,16 @@
         .GTX3_RXN_IN                    (),
         .GTX3_RXP_IN                    (),
         //---------------------- Receive Ports - RX PLL Ports ----------------------
+        .GTX3_GREFCLKRX_IN              (),
         .GTX3_GTXRXRESET_IN             (),
         .GTX3_MGTREFCLKRX_IN            (),
+        .GTX3_NORTHREFCLKRX_IN          (),
+        .GTX3_PERFCLKRX_IN              (),
         .GTX3_PLLRXRESET_IN             (),
         .GTX3_RXPLLLKDET_OUT            (),
+        .GTX3_RXPLLREFSELDY_IN          (),
         .GTX3_RXRESETDONE_OUT           (),
+        .GTX3_SOUTHREFCLKRX_IN          (),
         //----------- Shared Ports - Dynamic Reconfiguration Port (DRP) ------------
         .GTX3_DADDR_IN                  (),
         .GTX3_DCLK_IN                   (),
@@ -268,7 +303,12 @@
         //------------- Transmit Ports - TX Driver and OOB signalling --------------
         .GTX3_TXPREEMPHASIS_IN          (),
         //--------------------- Transmit Ports - TX PLL Ports ----------------------
+        .GTX3_GREFCLKTX_IN              (),
         .GTX3_GTXTXRESET_IN             (),
+        .GTX3_NORTHREFCLKTX_IN          (),
+        .GTX3_PERFCLKTX_IN              (),
+        .GTX3_SOUTHREFCLKTX_IN          (),
+        .GTX3_TXPLLREFSELDY_IN          (),
         .GTX3_TXRESETDONE_OUT           (),
         //------------------- Transmit Ports - TX PRBS Generator -------------------
         .GTX3_TXENPRBSTST_IN            (),
@@ -283,13 +323,13 @@
     //---------------------Dedicated GTX Reference Clock Inputs ---------------
     // Each dedicated refclk you are using in your design will need its own IBUFDS_GTXE1 instance
     
-    IBUFDS_GTXE1 q3_clk0_refclk_ibufds_i
+    IBUFDS_GTXE1 q4_clk1_refclk_ibufds_i
     (
         .O                              (),
         .ODIV2                          (),
         .CEB                            (),
-        .I                              (),  // Connect to package pin P6
-        .IB                             ()  // Connect to package pin P5
+        .I                              (),  // Connect to package pin F6
+        .IB                             ()  // Connect to package pin F5
     );
 
 

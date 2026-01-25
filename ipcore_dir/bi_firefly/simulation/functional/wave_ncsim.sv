@@ -93,11 +93,16 @@
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.RXN_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.RXP_IN
   waveform  add  -label Receive_Ports_-_RX_PLL_Ports  -comment  Receive_Ports_-_RX_PLL_Ports
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.GREFCLKRX_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.GTXRXRESET_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.MGTREFCLKRX_IN
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.NORTHREFCLKRX_IN
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.PERFCLKRX_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.PLLRXRESET_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.RXPLLLKDET_OUT
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.RXPLLREFSELDY_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.RXRESETDONE_OUT
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.SOUTHREFCLKRX_IN
   waveform  add  -label Shared_Ports_-_Dynamic_Reconfiguration_Port_(DRP)  -comment  Shared_Ports_-_Dynamic_Reconfiguration_Port_(DRP)
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.DADDR_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.DCLK_IN
@@ -118,7 +123,12 @@
   waveform  add  -label Transmit_Ports_-_TX_Driver_and_OOB_signalling  -comment  Transmit_Ports_-_TX_Driver_and_OOB_signalling
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.TXPREEMPHASIS_IN
   waveform  add  -label Transmit_Ports_-_TX_PLL_Ports  -comment  Transmit_Ports_-_TX_PLL_Ports
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.GREFCLKTX_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.GTXTXRESET_IN
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.NORTHREFCLKTX_IN
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.PERFCLKTX_IN
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.SOUTHREFCLKTX_IN
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.TXPLLREFSELDY_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.TXRESETDONE_OUT
   waveform  add  -label Transmit_Ports_-_TX_PRBS_Generator  -comment  Transmit_Ports_-_TX_PRBS_Generator
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.TXENPRBSTST_IN
@@ -139,11 +149,16 @@
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.RXN_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.RXP_IN
   waveform  add  -label Receive_Ports_-_RX_PLL_Ports  -comment  Receive_Ports_-_RX_PLL_Ports
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.GREFCLKRX_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.GTXRXRESET_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.MGTREFCLKRX_IN
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.NORTHREFCLKRX_IN
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.PERFCLKRX_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.PLLRXRESET_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.RXPLLLKDET_OUT
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.RXPLLREFSELDY_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.RXRESETDONE_OUT
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.SOUTHREFCLKRX_IN
   waveform  add  -label Shared_Ports_-_Dynamic_Reconfiguration_Port_(DRP)  -comment  Shared_Ports_-_Dynamic_Reconfiguration_Port_(DRP)
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.DADDR_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.DCLK_IN
@@ -164,7 +179,12 @@
   waveform  add  -label Transmit_Ports_-_TX_Driver_and_OOB_signalling  -comment  Transmit_Ports_-_TX_Driver_and_OOB_signalling
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.TXPREEMPHASIS_IN
   waveform  add  -label Transmit_Ports_-_TX_PLL_Ports  -comment  Transmit_Ports_-_TX_PLL_Ports
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.GREFCLKTX_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.GTXTXRESET_IN
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.NORTHREFCLKTX_IN
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.PERFCLKTX_IN
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.SOUTHREFCLKTX_IN
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.TXPLLREFSELDY_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.TXRESETDONE_OUT
   waveform  add  -label Transmit_Ports_-_TX_PRBS_Generator  -comment  Transmit_Ports_-_TX_PRBS_Generator
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.TXENPRBSTST_IN
@@ -185,11 +205,16 @@
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.RXN_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.RXP_IN
   waveform  add  -label Receive_Ports_-_RX_PLL_Ports  -comment  Receive_Ports_-_RX_PLL_Ports
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.GREFCLKRX_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.GTXRXRESET_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.MGTREFCLKRX_IN
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.NORTHREFCLKRX_IN
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.PERFCLKRX_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.PLLRXRESET_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.RXPLLLKDET_OUT
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.RXPLLREFSELDY_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.RXRESETDONE_OUT
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.SOUTHREFCLKRX_IN
   waveform  add  -label Shared_Ports_-_Dynamic_Reconfiguration_Port_(DRP)  -comment  Shared_Ports_-_Dynamic_Reconfiguration_Port_(DRP)
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.DADDR_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.DCLK_IN
@@ -210,7 +235,12 @@
   waveform  add  -label Transmit_Ports_-_TX_Driver_and_OOB_signalling  -comment  Transmit_Ports_-_TX_Driver_and_OOB_signalling
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.TXPREEMPHASIS_IN
   waveform  add  -label Transmit_Ports_-_TX_PLL_Ports  -comment  Transmit_Ports_-_TX_PLL_Ports
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.GREFCLKTX_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.GTXTXRESET_IN
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.NORTHREFCLKTX_IN
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.PERFCLKTX_IN
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.SOUTHREFCLKTX_IN
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.TXPLLREFSELDY_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.TXRESETDONE_OUT
   waveform  add  -label Transmit_Ports_-_TX_PRBS_Generator  -comment  Transmit_Ports_-_TX_PRBS_Generator
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.TXENPRBSTST_IN
@@ -231,11 +261,16 @@
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.RXN_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.RXP_IN
   waveform  add  -label Receive_Ports_-_RX_PLL_Ports  -comment  Receive_Ports_-_RX_PLL_Ports
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.GREFCLKRX_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.GTXRXRESET_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.MGTREFCLKRX_IN
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.NORTHREFCLKRX_IN
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.PERFCLKRX_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.PLLRXRESET_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.RXPLLLKDET_OUT
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.RXPLLREFSELDY_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.RXRESETDONE_OUT
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.SOUTHREFCLKRX_IN
   waveform  add  -label Shared_Ports_-_Dynamic_Reconfiguration_Port_(DRP)  -comment  Shared_Ports_-_Dynamic_Reconfiguration_Port_(DRP)
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.DADDR_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.DCLK_IN
@@ -256,7 +291,12 @@
   waveform  add  -label Transmit_Ports_-_TX_Driver_and_OOB_signalling  -comment  Transmit_Ports_-_TX_Driver_and_OOB_signalling
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.TXPREEMPHASIS_IN
   waveform  add  -label Transmit_Ports_-_TX_PLL_Ports  -comment  Transmit_Ports_-_TX_PLL_Ports
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.GREFCLKTX_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.GTXTXRESET_IN
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.NORTHREFCLKTX_IN
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.PERFCLKTX_IN
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.SOUTHREFCLKTX_IN
+  waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.TXPLLREFSELDY_IN
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.TXRESETDONE_OUT
   waveform  add  -label Transmit_Ports_-_TX_PRBS_Generator  -comment  Transmit_Ports_-_TX_PRBS_Generator
   waveform  add  -signals  DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.TXENPRBSTST_IN

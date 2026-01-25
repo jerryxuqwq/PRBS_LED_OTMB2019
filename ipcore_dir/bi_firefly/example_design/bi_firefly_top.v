@@ -76,8 +76,8 @@ module bi_firefly_top #
     parameter EXAMPLE_USE_CHIPSCOPE                     =   1     // Set to 1 to use Chipscope to drive resets
 )
 (
-    input wire  Q3_CLK0_MGTREFCLK_PAD_N_IN,
-    input wire  Q3_CLK0_MGTREFCLK_PAD_P_IN,
+    input wire  Q4_CLK1_MGTREFCLK_PAD_N_IN,
+    input wire  Q4_CLK1_MGTREFCLK_PAD_P_IN,
     input wire  DRP_CLK_IN,
     input wire  GTXTXRESET_IN,
     input wire  GTXRXRESET_IN,
@@ -137,10 +137,15 @@ module bi_firefly_top #
     //----- Receive Ports - RX Driver,OOB signalling,Coupling and Eq.,CDR ------
     wire    [2:0]   gtx0_rxeqmix_i;
     //---------------------- Receive Ports - RX PLL Ports ----------------------
+    wire            gtx0_grefclkrx_i;
     wire            gtx0_gtxrxreset_i;
+    wire    [1:0]   gtx0_northrefclkrx_i;
+    wire            gtx0_perfclkrx_i;
     wire            gtx0_pllrxreset_i;
     wire            gtx0_rxplllkdet_i;
+    wire    [2:0]   gtx0_rxpllrefseldy_i;
     wire            gtx0_rxresetdone_i;
+    wire    [1:0]   gtx0_southrefclkrx_i;
     //----------- Shared Ports - Dynamic Reconfiguration Port (DRP) ------------
     wire    [7:0]   gtx0_daddr_i;
     wire            gtx0_dclk_i;
@@ -158,7 +163,12 @@ module bi_firefly_top #
     //------------- Transmit Ports - TX Driver and OOB signalling --------------
     wire    [3:0]   gtx0_txpreemphasis_i;
     //--------------------- Transmit Ports - TX PLL Ports ----------------------
+    wire            gtx0_grefclktx_i;
     wire            gtx0_gtxtxreset_i;
+    wire    [1:0]   gtx0_northrefclktx_i;
+    wire            gtx0_perfclktx_i;
+    wire    [1:0]   gtx0_southrefclktx_i;
+    wire    [2:0]   gtx0_txpllrefseldy_i;
     wire            gtx0_txresetdone_i;
     //------------------- Transmit Ports - TX PRBS Generator -------------------
     wire    [2:0]   gtx0_txenprbstst_i;
@@ -180,10 +190,15 @@ module bi_firefly_top #
     //----- Receive Ports - RX Driver,OOB signalling,Coupling and Eq.,CDR ------
     wire    [2:0]   gtx1_rxeqmix_i;
     //---------------------- Receive Ports - RX PLL Ports ----------------------
+    wire            gtx1_grefclkrx_i;
     wire            gtx1_gtxrxreset_i;
+    wire    [1:0]   gtx1_northrefclkrx_i;
+    wire            gtx1_perfclkrx_i;
     wire            gtx1_pllrxreset_i;
     wire            gtx1_rxplllkdet_i;
+    wire    [2:0]   gtx1_rxpllrefseldy_i;
     wire            gtx1_rxresetdone_i;
+    wire    [1:0]   gtx1_southrefclkrx_i;
     //----------- Shared Ports - Dynamic Reconfiguration Port (DRP) ------------
     wire    [7:0]   gtx1_daddr_i;
     wire            gtx1_dclk_i;
@@ -201,7 +216,12 @@ module bi_firefly_top #
     //------------- Transmit Ports - TX Driver and OOB signalling --------------
     wire    [3:0]   gtx1_txpreemphasis_i;
     //--------------------- Transmit Ports - TX PLL Ports ----------------------
+    wire            gtx1_grefclktx_i;
     wire            gtx1_gtxtxreset_i;
+    wire    [1:0]   gtx1_northrefclktx_i;
+    wire            gtx1_perfclktx_i;
+    wire    [1:0]   gtx1_southrefclktx_i;
+    wire    [2:0]   gtx1_txpllrefseldy_i;
     wire            gtx1_txresetdone_i;
     //------------------- Transmit Ports - TX PRBS Generator -------------------
     wire    [2:0]   gtx1_txenprbstst_i;
@@ -223,10 +243,15 @@ module bi_firefly_top #
     //----- Receive Ports - RX Driver,OOB signalling,Coupling and Eq.,CDR ------
     wire    [2:0]   gtx2_rxeqmix_i;
     //---------------------- Receive Ports - RX PLL Ports ----------------------
+    wire            gtx2_grefclkrx_i;
     wire            gtx2_gtxrxreset_i;
+    wire    [1:0]   gtx2_northrefclkrx_i;
+    wire            gtx2_perfclkrx_i;
     wire            gtx2_pllrxreset_i;
     wire            gtx2_rxplllkdet_i;
+    wire    [2:0]   gtx2_rxpllrefseldy_i;
     wire            gtx2_rxresetdone_i;
+    wire    [1:0]   gtx2_southrefclkrx_i;
     //----------- Shared Ports - Dynamic Reconfiguration Port (DRP) ------------
     wire    [7:0]   gtx2_daddr_i;
     wire            gtx2_dclk_i;
@@ -244,7 +269,12 @@ module bi_firefly_top #
     //------------- Transmit Ports - TX Driver and OOB signalling --------------
     wire    [3:0]   gtx2_txpreemphasis_i;
     //--------------------- Transmit Ports - TX PLL Ports ----------------------
+    wire            gtx2_grefclktx_i;
     wire            gtx2_gtxtxreset_i;
+    wire    [1:0]   gtx2_northrefclktx_i;
+    wire            gtx2_perfclktx_i;
+    wire    [1:0]   gtx2_southrefclktx_i;
+    wire    [2:0]   gtx2_txpllrefseldy_i;
     wire            gtx2_txresetdone_i;
     //------------------- Transmit Ports - TX PRBS Generator -------------------
     wire    [2:0]   gtx2_txenprbstst_i;
@@ -266,10 +296,15 @@ module bi_firefly_top #
     //----- Receive Ports - RX Driver,OOB signalling,Coupling and Eq.,CDR ------
     wire    [2:0]   gtx3_rxeqmix_i;
     //---------------------- Receive Ports - RX PLL Ports ----------------------
+    wire            gtx3_grefclkrx_i;
     wire            gtx3_gtxrxreset_i;
+    wire    [1:0]   gtx3_northrefclkrx_i;
+    wire            gtx3_perfclkrx_i;
     wire            gtx3_pllrxreset_i;
     wire            gtx3_rxplllkdet_i;
+    wire    [2:0]   gtx3_rxpllrefseldy_i;
     wire            gtx3_rxresetdone_i;
+    wire    [1:0]   gtx3_southrefclkrx_i;
     //----------- Shared Ports - Dynamic Reconfiguration Port (DRP) ------------
     wire    [7:0]   gtx3_daddr_i;
     wire            gtx3_dclk_i;
@@ -287,7 +322,12 @@ module bi_firefly_top #
     //------------- Transmit Ports - TX Driver and OOB signalling --------------
     wire    [3:0]   gtx3_txpreemphasis_i;
     //--------------------- Transmit Ports - TX PLL Ports ----------------------
+    wire            gtx3_grefclktx_i;
     wire            gtx3_gtxtxreset_i;
+    wire    [1:0]   gtx3_northrefclktx_i;
+    wire            gtx3_perfclktx_i;
+    wire    [1:0]   gtx3_southrefclktx_i;
+    wire    [2:0]   gtx3_txpllrefseldy_i;
     wire            gtx3_txresetdone_i;
     //------------------- Transmit Ports - TX PRBS Generator -------------------
     wire    [2:0]   gtx3_txenprbstst_i;
@@ -317,8 +357,8 @@ module bi_firefly_top #
 
     //--------------------------- Reference Clocks ----------------------------
     
-    wire            q3_clk0_refclk_i;
-    wire            q3_clk0_refclk_i_bufg;
+    wire            q4_clk1_refclk_i;
+    wire            q4_clk1_refclk_i_bufg;
     //--------------------- Frame check/gen Module Signals --------------------
     wire            gtx0_matchn_i;
     
@@ -453,6 +493,7 @@ module bi_firefly_top #
     wire            tx_vio_clk_mux_out_i;    
     wire            rx_vio_ila_clk_i;
     wire            rx_vio_ila_clk_mux_out_i;
+    wire  [1:0]     q4_clk1_refclk_i_i;
 
 //**************************** Main Body of Code *******************************
 
@@ -461,6 +502,38 @@ module bi_firefly_top #
     assign tied_to_ground_vec_i         = 64'h0000000000000000;
     assign tied_to_vcc_i                = 1'b1;
     assign tied_to_vcc_vec_i            = 8'hff;
+    assign gtx0_grefclktx_i             = tied_to_ground_i;
+    assign gtx0_grefclkrx_i             = tied_to_ground_i;
+    assign gtx0_perfclktx_i             = tied_to_ground_i;
+    assign gtx0_perfclkrx_i             = tied_to_ground_i;
+    assign gtx0_northrefclktx_i         = tied_to_ground_vec_i[1:0];
+    assign gtx0_northrefclkrx_i         = tied_to_ground_vec_i[1:0];
+    assign gtx0_southrefclktx_i         = tied_to_ground_vec_i[1:0];
+    assign gtx0_southrefclkrx_i         = tied_to_ground_vec_i[1:0];
+    assign gtx1_grefclktx_i             = tied_to_ground_i;
+    assign gtx1_grefclkrx_i             = tied_to_ground_i;
+    assign gtx1_perfclktx_i             = tied_to_ground_i;
+    assign gtx1_perfclkrx_i             = tied_to_ground_i;
+    assign gtx1_northrefclktx_i         = tied_to_ground_vec_i[1:0];
+    assign gtx1_northrefclkrx_i         = tied_to_ground_vec_i[1:0];
+    assign gtx1_southrefclktx_i         = tied_to_ground_vec_i[1:0];
+    assign gtx1_southrefclkrx_i         = tied_to_ground_vec_i[1:0];
+    assign gtx2_grefclktx_i             = tied_to_ground_i;
+    assign gtx2_grefclkrx_i             = tied_to_ground_i;
+    assign gtx2_perfclktx_i             = tied_to_ground_i;
+    assign gtx2_perfclkrx_i             = tied_to_ground_i;
+    assign gtx2_northrefclktx_i         = tied_to_ground_vec_i[1:0];
+    assign gtx2_northrefclkrx_i         = tied_to_ground_vec_i[1:0];
+    assign gtx2_southrefclktx_i         = tied_to_ground_vec_i[1:0];
+    assign gtx2_southrefclkrx_i         = tied_to_ground_vec_i[1:0];
+    assign gtx3_grefclktx_i             = tied_to_ground_i;
+    assign gtx3_grefclkrx_i             = tied_to_ground_i;
+    assign gtx3_perfclktx_i             = tied_to_ground_i;
+    assign gtx3_perfclkrx_i             = tied_to_ground_i;
+    assign gtx3_northrefclktx_i         = tied_to_ground_vec_i[1:0];
+    assign gtx3_northrefclkrx_i         = tied_to_ground_vec_i[1:0];
+    assign gtx3_southrefclktx_i         = tied_to_ground_vec_i[1:0];
+    assign gtx3_southrefclkrx_i         = tied_to_ground_vec_i[1:0];
 
    
     //---------------------------- DRP Clock ----------------------------------
@@ -489,22 +562,23 @@ module bi_firefly_top #
     // This network is the highest performace (lowest jitter) option for providing clocks
     // to the GTX transceivers.
     
-    IBUFDS_GTXE1 q3_clk0_refclk_ibufds_i
+    IBUFDS_GTXE1 q4_clk1_refclk_ibufds_i
     (
-        .O                              (q3_clk0_refclk_i),
+        .O                              (q4_clk1_refclk_i),
         .ODIV2                          (),
         .CEB                            (tied_to_ground_i),
-        .I                              (Q3_CLK0_MGTREFCLK_PAD_P_IN),
-        .IB                             (Q3_CLK0_MGTREFCLK_PAD_N_IN)
+        .I                              (Q4_CLK1_MGTREFCLK_PAD_P_IN),
+        .IB                             (Q4_CLK1_MGTREFCLK_PAD_N_IN)
     );
 
+    assign q4_clk1_refclk_i_i = {1'b0,q4_clk1_refclk_i};
  
     
 
-    BUFG q3_clk0_refclk_bufg_i
+    BUFG q4_clk1_refclk_bufg_i
     (
-        .I                              (q3_clk0_refclk_i),
-        .O                              (q3_clk0_refclk_i_bufg)
+        .I                              (q4_clk1_refclk_i),
+        .O                              (q4_clk1_refclk_i_bufg)
     );
 
 
@@ -565,11 +639,16 @@ module bi_firefly_top #
         .GTX0_RXN_IN                    (RXN_IN[0]),
         .GTX0_RXP_IN                    (RXP_IN[0]),
         //---------------------- Receive Ports - RX PLL Ports ----------------------
+        .GTX0_GREFCLKRX_IN              (gtx0_grefclkrx_i),
         .GTX0_GTXRXRESET_IN             (gtx0_gtxrxreset_i),
-        .GTX0_MGTREFCLKRX_IN            (q3_clk0_refclk_i),
+        .GTX0_MGTREFCLKRX_IN            (q4_clk1_refclk_i_i),
+        .GTX0_NORTHREFCLKRX_IN          (gtx0_northrefclkrx_i),
+        .GTX0_PERFCLKRX_IN              (gtx0_perfclkrx_i),
         .GTX0_PLLRXRESET_IN             (gtx0_pllrxreset_i),
         .GTX0_RXPLLLKDET_OUT            (gtx0_rxplllkdet_i),
+        .GTX0_RXPLLREFSELDY_IN          (gtx0_rxpllrefseldy_i),
         .GTX0_RXRESETDONE_OUT           (gtx0_rxresetdone_i),
+        .GTX0_SOUTHREFCLKRX_IN          (gtx0_southrefclkrx_i),
         //----------- Shared Ports - Dynamic Reconfiguration Port (DRP) ------------
         .GTX0_DADDR_IN                  (gtx0_daddr_i),
         .GTX0_DCLK_IN                   (drp_clk_in_i),
@@ -590,7 +669,12 @@ module bi_firefly_top #
         //------------- Transmit Ports - TX Driver and OOB signalling --------------
         .GTX0_TXPREEMPHASIS_IN          (gtx0_txpreemphasis_i),
         //--------------------- Transmit Ports - TX PLL Ports ----------------------
+        .GTX0_GREFCLKTX_IN              (gtx0_grefclktx_i),
         .GTX0_GTXTXRESET_IN             (gtx0_gtxtxreset_i),
+        .GTX0_NORTHREFCLKTX_IN          (gtx0_northrefclktx_i),
+        .GTX0_PERFCLKTX_IN              (gtx0_perfclktx_i),
+        .GTX0_SOUTHREFCLKTX_IN          (gtx0_southrefclktx_i),
+        .GTX0_TXPLLREFSELDY_IN          (gtx0_txpllrefseldy_i),
         .GTX0_TXRESETDONE_OUT           (gtx0_txresetdone_i),
         //------------------- Transmit Ports - TX PRBS Generator -------------------
         .GTX0_TXENPRBSTST_IN            (gtx0_txenprbstst_i),
@@ -617,11 +701,16 @@ module bi_firefly_top #
         .GTX1_RXN_IN                    (RXN_IN[1]),
         .GTX1_RXP_IN                    (RXP_IN[1]),
         //---------------------- Receive Ports - RX PLL Ports ----------------------
+        .GTX1_GREFCLKRX_IN              (gtx1_grefclkrx_i),
         .GTX1_GTXRXRESET_IN             (gtx1_gtxrxreset_i),
-        .GTX1_MGTREFCLKRX_IN            (q3_clk0_refclk_i),
+        .GTX1_MGTREFCLKRX_IN            (q4_clk1_refclk_i_i),
+        .GTX1_NORTHREFCLKRX_IN          (gtx1_northrefclkrx_i),
+        .GTX1_PERFCLKRX_IN              (gtx1_perfclkrx_i),
         .GTX1_PLLRXRESET_IN             (gtx1_pllrxreset_i),
         .GTX1_RXPLLLKDET_OUT            (gtx1_rxplllkdet_i),
+        .GTX1_RXPLLREFSELDY_IN          (gtx1_rxpllrefseldy_i),
         .GTX1_RXRESETDONE_OUT           (gtx1_rxresetdone_i),
+        .GTX1_SOUTHREFCLKRX_IN          (gtx1_southrefclkrx_i),
         //----------- Shared Ports - Dynamic Reconfiguration Port (DRP) ------------
         .GTX1_DADDR_IN                  (gtx1_daddr_i),
         .GTX1_DCLK_IN                   (drp_clk_in_i),
@@ -642,7 +731,12 @@ module bi_firefly_top #
         //------------- Transmit Ports - TX Driver and OOB signalling --------------
         .GTX1_TXPREEMPHASIS_IN          (gtx1_txpreemphasis_i),
         //--------------------- Transmit Ports - TX PLL Ports ----------------------
+        .GTX1_GREFCLKTX_IN              (gtx1_grefclktx_i),
         .GTX1_GTXTXRESET_IN             (gtx1_gtxtxreset_i),
+        .GTX1_NORTHREFCLKTX_IN          (gtx1_northrefclktx_i),
+        .GTX1_PERFCLKTX_IN              (gtx1_perfclktx_i),
+        .GTX1_SOUTHREFCLKTX_IN          (gtx1_southrefclktx_i),
+        .GTX1_TXPLLREFSELDY_IN          (gtx1_txpllrefseldy_i),
         .GTX1_TXRESETDONE_OUT           (gtx1_txresetdone_i),
         //------------------- Transmit Ports - TX PRBS Generator -------------------
         .GTX1_TXENPRBSTST_IN            (gtx1_txenprbstst_i),
@@ -669,11 +763,16 @@ module bi_firefly_top #
         .GTX2_RXN_IN                    (RXN_IN[2]),
         .GTX2_RXP_IN                    (RXP_IN[2]),
         //---------------------- Receive Ports - RX PLL Ports ----------------------
+        .GTX2_GREFCLKRX_IN              (gtx2_grefclkrx_i),
         .GTX2_GTXRXRESET_IN             (gtx2_gtxrxreset_i),
-        .GTX2_MGTREFCLKRX_IN            (q3_clk0_refclk_i),
+        .GTX2_MGTREFCLKRX_IN            (q4_clk1_refclk_i_i),
+        .GTX2_NORTHREFCLKRX_IN          (gtx2_northrefclkrx_i),
+        .GTX2_PERFCLKRX_IN              (gtx2_perfclkrx_i),
         .GTX2_PLLRXRESET_IN             (gtx2_pllrxreset_i),
         .GTX2_RXPLLLKDET_OUT            (gtx2_rxplllkdet_i),
+        .GTX2_RXPLLREFSELDY_IN          (gtx2_rxpllrefseldy_i),
         .GTX2_RXRESETDONE_OUT           (gtx2_rxresetdone_i),
+        .GTX2_SOUTHREFCLKRX_IN          (gtx2_southrefclkrx_i),
         //----------- Shared Ports - Dynamic Reconfiguration Port (DRP) ------------
         .GTX2_DADDR_IN                  (gtx2_daddr_i),
         .GTX2_DCLK_IN                   (drp_clk_in_i),
@@ -694,7 +793,12 @@ module bi_firefly_top #
         //------------- Transmit Ports - TX Driver and OOB signalling --------------
         .GTX2_TXPREEMPHASIS_IN          (gtx2_txpreemphasis_i),
         //--------------------- Transmit Ports - TX PLL Ports ----------------------
+        .GTX2_GREFCLKTX_IN              (gtx2_grefclktx_i),
         .GTX2_GTXTXRESET_IN             (gtx2_gtxtxreset_i),
+        .GTX2_NORTHREFCLKTX_IN          (gtx2_northrefclktx_i),
+        .GTX2_PERFCLKTX_IN              (gtx2_perfclktx_i),
+        .GTX2_SOUTHREFCLKTX_IN          (gtx2_southrefclktx_i),
+        .GTX2_TXPLLREFSELDY_IN          (gtx2_txpllrefseldy_i),
         .GTX2_TXRESETDONE_OUT           (gtx2_txresetdone_i),
         //------------------- Transmit Ports - TX PRBS Generator -------------------
         .GTX2_TXENPRBSTST_IN            (gtx2_txenprbstst_i),
@@ -721,11 +825,16 @@ module bi_firefly_top #
         .GTX3_RXN_IN                    (RXN_IN[3]),
         .GTX3_RXP_IN                    (RXP_IN[3]),
         //---------------------- Receive Ports - RX PLL Ports ----------------------
+        .GTX3_GREFCLKRX_IN              (gtx3_grefclkrx_i),
         .GTX3_GTXRXRESET_IN             (gtx3_gtxrxreset_i),
-        .GTX3_MGTREFCLKRX_IN            (q3_clk0_refclk_i),
+        .GTX3_MGTREFCLKRX_IN            (q4_clk1_refclk_i_i),
+        .GTX3_NORTHREFCLKRX_IN          (gtx3_northrefclkrx_i),
+        .GTX3_PERFCLKRX_IN              (gtx3_perfclkrx_i),
         .GTX3_PLLRXRESET_IN             (gtx3_pllrxreset_i),
         .GTX3_RXPLLLKDET_OUT            (gtx3_rxplllkdet_i),
+        .GTX3_RXPLLREFSELDY_IN          (gtx3_rxpllrefseldy_i),
         .GTX3_RXRESETDONE_OUT           (gtx3_rxresetdone_i),
+        .GTX3_SOUTHREFCLKRX_IN          (gtx3_southrefclkrx_i),
         //----------- Shared Ports - Dynamic Reconfiguration Port (DRP) ------------
         .GTX3_DADDR_IN                  (gtx3_daddr_i),
         .GTX3_DCLK_IN                   (drp_clk_in_i),
@@ -746,7 +855,12 @@ module bi_firefly_top #
         //------------- Transmit Ports - TX Driver and OOB signalling --------------
         .GTX3_TXPREEMPHASIS_IN          (gtx3_txpreemphasis_i),
         //--------------------- Transmit Ports - TX PLL Ports ----------------------
+        .GTX3_GREFCLKTX_IN              (gtx3_grefclktx_i),
         .GTX3_GTXTXRESET_IN             (gtx3_gtxtxreset_i),
+        .GTX3_NORTHREFCLKTX_IN          (gtx3_northrefclktx_i),
+        .GTX3_PERFCLKTX_IN              (gtx3_perfclktx_i),
+        .GTX3_SOUTHREFCLKTX_IN          (gtx3_southrefclktx_i),
+        .GTX3_TXPLLREFSELDY_IN          (gtx3_txpllrefseldy_i),
         .GTX3_TXRESETDONE_OUT           (gtx3_txresetdone_i),
         //------------------- Transmit Ports - TX PRBS Generator -------------------
         .GTX3_TXENPRBSTST_IN            (gtx3_txenprbstst_i),
@@ -1821,10 +1935,11 @@ begin : chipscope
     assign  gtx0_tx_data_vio_async_in_i[30]      =  gtx0_txresetdone_i;
     assign  gtx0_tx_data_vio_async_in_i[29:0]    =  30'b000000000000000000000000000000;
     assign  gtx0_tx_data_vio_sync_in_i[31:0]     =  32'b00000000000000000000000000000000;
-    assign  gtx0_loopback_i                      =  tx_data_vio_async_out_i[30:28];
-    assign  gtx0_txdiffctrl_i                    =  tx_data_vio_async_out_i[27:24];
-    assign  gtx0_txpreemphasis_i                 =  tx_data_vio_async_out_i[23:20];
-    assign  gtx0_txpostemphasis_i                =  tx_data_vio_async_out_i[19:15];
+    assign  gtx0_txpllrefseldy_i                 =  tx_data_vio_async_out_i[30:28];
+    assign  gtx0_loopback_i                      =  tx_data_vio_async_out_i[27:25];
+    assign  gtx0_txdiffctrl_i                    =  tx_data_vio_async_out_i[24:21];
+    assign  gtx0_txpreemphasis_i                 =  tx_data_vio_async_out_i[20:17];
+    assign  gtx0_txpostemphasis_i                =  tx_data_vio_async_out_i[16:12];
     assign  gtx0_txenprbstst_i                   =  tx_data_vio_sync_out_i[31:29];
     assign  gtx0_txprbsforceerr_i                =  tx_data_vio_sync_out_i[28];
     assign  gtx0_rx_data_vio_async_in_i[31]      =  gtx0_rxplllkdet_i;
@@ -1832,7 +1947,8 @@ begin : chipscope
     assign  gtx0_rx_data_vio_async_in_i[29:0]    =  30'b000000000000000000000000000000;
     assign  gtx0_rx_data_vio_sync_in_i[31:0]     =  32'b00000000000000000000000000000000;
     assign  gtx0_pllrxreset_i                    =  rx_data_vio_async_out_i[31];
-    assign  gtx0_rxeqmix_i                       =  rx_data_vio_async_out_i[30:28];
+    assign  gtx0_rxpllrefseldy_i                 =  rx_data_vio_async_out_i[30:28];
+    assign  gtx0_rxeqmix_i                       =  rx_data_vio_async_out_i[27:25];
     assign  gtx0_prbscntreset_i                  =  rx_data_vio_sync_out_i[31];
     assign  gtx0_rxenprbstst_i                   =  rx_data_vio_sync_out_i[30:28];
     assign  gtx0_ila_in_i[84]                    =  gtx0_rxprbserr_i;
@@ -1845,10 +1961,11 @@ begin : chipscope
     assign  gtx1_tx_data_vio_async_in_i[30]      =  gtx1_txresetdone_i;
     assign  gtx1_tx_data_vio_async_in_i[29:0]    =  30'b000000000000000000000000000000;
     assign  gtx1_tx_data_vio_sync_in_i[31:0]     =  32'b00000000000000000000000000000000;
-    assign  gtx1_loopback_i                      =  tx_data_vio_async_out_i[30:28];
-    assign  gtx1_txdiffctrl_i                    =  tx_data_vio_async_out_i[27:24];
-    assign  gtx1_txpreemphasis_i                 =  tx_data_vio_async_out_i[23:20];
-    assign  gtx1_txpostemphasis_i                =  tx_data_vio_async_out_i[19:15];
+    assign  gtx1_txpllrefseldy_i                 =  tx_data_vio_async_out_i[30:28];
+    assign  gtx1_loopback_i                      =  tx_data_vio_async_out_i[27:25];
+    assign  gtx1_txdiffctrl_i                    =  tx_data_vio_async_out_i[24:21];
+    assign  gtx1_txpreemphasis_i                 =  tx_data_vio_async_out_i[20:17];
+    assign  gtx1_txpostemphasis_i                =  tx_data_vio_async_out_i[16:12];
     assign  gtx1_txenprbstst_i                   =  tx_data_vio_sync_out_i[31:29];
     assign  gtx1_txprbsforceerr_i                =  tx_data_vio_sync_out_i[28];
     assign  gtx1_rx_data_vio_async_in_i[31]      =  gtx1_rxplllkdet_i;
@@ -1856,7 +1973,8 @@ begin : chipscope
     assign  gtx1_rx_data_vio_async_in_i[29:0]    =  30'b000000000000000000000000000000;
     assign  gtx1_rx_data_vio_sync_in_i[31:0]     =  32'b00000000000000000000000000000000;
     assign  gtx1_pllrxreset_i                    =  rx_data_vio_async_out_i[31];
-    assign  gtx1_rxeqmix_i                       =  rx_data_vio_async_out_i[30:28];
+    assign  gtx1_rxpllrefseldy_i                 =  rx_data_vio_async_out_i[30:28];
+    assign  gtx1_rxeqmix_i                       =  rx_data_vio_async_out_i[27:25];
     assign  gtx1_prbscntreset_i                  =  rx_data_vio_sync_out_i[31];
     assign  gtx1_rxenprbstst_i                   =  rx_data_vio_sync_out_i[30:28];
     assign  gtx1_ila_in_i[84]                    =  gtx1_rxprbserr_i;
@@ -1869,10 +1987,11 @@ begin : chipscope
     assign  gtx2_tx_data_vio_async_in_i[30]      =  gtx2_txresetdone_i;
     assign  gtx2_tx_data_vio_async_in_i[29:0]    =  30'b000000000000000000000000000000;
     assign  gtx2_tx_data_vio_sync_in_i[31:0]     =  32'b00000000000000000000000000000000;
-    assign  gtx2_loopback_i                      =  tx_data_vio_async_out_i[30:28];
-    assign  gtx2_txdiffctrl_i                    =  tx_data_vio_async_out_i[27:24];
-    assign  gtx2_txpreemphasis_i                 =  tx_data_vio_async_out_i[23:20];
-    assign  gtx2_txpostemphasis_i                =  tx_data_vio_async_out_i[19:15];
+    assign  gtx2_txpllrefseldy_i                 =  tx_data_vio_async_out_i[30:28];
+    assign  gtx2_loopback_i                      =  tx_data_vio_async_out_i[27:25];
+    assign  gtx2_txdiffctrl_i                    =  tx_data_vio_async_out_i[24:21];
+    assign  gtx2_txpreemphasis_i                 =  tx_data_vio_async_out_i[20:17];
+    assign  gtx2_txpostemphasis_i                =  tx_data_vio_async_out_i[16:12];
     assign  gtx2_txenprbstst_i                   =  tx_data_vio_sync_out_i[31:29];
     assign  gtx2_txprbsforceerr_i                =  tx_data_vio_sync_out_i[28];
     assign  gtx2_rx_data_vio_async_in_i[31]      =  gtx2_rxplllkdet_i;
@@ -1880,7 +1999,8 @@ begin : chipscope
     assign  gtx2_rx_data_vio_async_in_i[29:0]    =  30'b000000000000000000000000000000;
     assign  gtx2_rx_data_vio_sync_in_i[31:0]     =  32'b00000000000000000000000000000000;
     assign  gtx2_pllrxreset_i                    =  rx_data_vio_async_out_i[31];
-    assign  gtx2_rxeqmix_i                       =  rx_data_vio_async_out_i[30:28];
+    assign  gtx2_rxpllrefseldy_i                 =  rx_data_vio_async_out_i[30:28];
+    assign  gtx2_rxeqmix_i                       =  rx_data_vio_async_out_i[27:25];
     assign  gtx2_prbscntreset_i                  =  rx_data_vio_sync_out_i[31];
     assign  gtx2_rxenprbstst_i                   =  rx_data_vio_sync_out_i[30:28];
     assign  gtx2_ila_in_i[84]                    =  gtx2_rxprbserr_i;
@@ -1893,10 +2013,11 @@ begin : chipscope
     assign  gtx3_tx_data_vio_async_in_i[30]      =  gtx3_txresetdone_i;
     assign  gtx3_tx_data_vio_async_in_i[29:0]    =  30'b000000000000000000000000000000;
     assign  gtx3_tx_data_vio_sync_in_i[31:0]     =  32'b00000000000000000000000000000000;
-    assign  gtx3_loopback_i                      =  tx_data_vio_async_out_i[30:28];
-    assign  gtx3_txdiffctrl_i                    =  tx_data_vio_async_out_i[27:24];
-    assign  gtx3_txpreemphasis_i                 =  tx_data_vio_async_out_i[23:20];
-    assign  gtx3_txpostemphasis_i                =  tx_data_vio_async_out_i[19:15];
+    assign  gtx3_txpllrefseldy_i                 =  tx_data_vio_async_out_i[30:28];
+    assign  gtx3_loopback_i                      =  tx_data_vio_async_out_i[27:25];
+    assign  gtx3_txdiffctrl_i                    =  tx_data_vio_async_out_i[24:21];
+    assign  gtx3_txpreemphasis_i                 =  tx_data_vio_async_out_i[20:17];
+    assign  gtx3_txpostemphasis_i                =  tx_data_vio_async_out_i[16:12];
     assign  gtx3_txenprbstst_i                   =  tx_data_vio_sync_out_i[31:29];
     assign  gtx3_txprbsforceerr_i                =  tx_data_vio_sync_out_i[28];
     assign  gtx3_rx_data_vio_async_in_i[31]      =  gtx3_rxplllkdet_i;
@@ -1904,7 +2025,8 @@ begin : chipscope
     assign  gtx3_rx_data_vio_async_in_i[29:0]    =  30'b000000000000000000000000000000;
     assign  gtx3_rx_data_vio_sync_in_i[31:0]     =  32'b00000000000000000000000000000000;
     assign  gtx3_pllrxreset_i                    =  rx_data_vio_async_out_i[31];
-    assign  gtx3_rxeqmix_i                       =  rx_data_vio_async_out_i[30:28];
+    assign  gtx3_rxpllrefseldy_i                 =  rx_data_vio_async_out_i[30:28];
+    assign  gtx3_rxeqmix_i                       =  rx_data_vio_async_out_i[27:25];
     assign  gtx3_prbscntreset_i                  =  rx_data_vio_sync_out_i[31];
     assign  gtx3_rxenprbstst_i                   =  rx_data_vio_sync_out_i[30:28];
     assign  gtx3_ila_in_i[84]                    =  gtx3_rxprbserr_i;
@@ -1975,6 +2097,7 @@ begin: no_chipscope
     assign  user_tx_reset_i                      =  tied_to_ground_i;
     assign  user_rx_reset_i                      =  tied_to_ground_i;
     assign  mux_sel_i                            =  tied_to_ground_vec_i[1:0];
+    assign  gtx0_txpllrefseldy_i                 =  tied_to_ground_vec_i[2:0];
     assign  gtx0_loopback_i                      =  tied_to_ground_vec_i[2:0];
     assign  gtx0_txdiffctrl_i                    =  4'b1010;
     assign  gtx0_txpreemphasis_i                 =  tied_to_ground_vec_i[3:0];
@@ -1982,9 +2105,11 @@ begin: no_chipscope
     assign  gtx0_txenprbstst_i                   =  tied_to_ground_vec_i[2:0];
     assign  gtx0_txprbsforceerr_i                =  tied_to_ground_i;
     assign  gtx0_pllrxreset_i                    =  tied_to_ground_i;
+    assign  gtx0_rxpllrefseldy_i                 =  tied_to_ground_vec_i[2:0];
     assign  gtx0_rxeqmix_i                       =  tied_to_ground_vec_i[2:0];
     assign  gtx0_prbscntreset_i                  =  tied_to_ground_i;
     assign  gtx0_rxenprbstst_i                   =  tied_to_ground_vec_i[2:0];
+    assign  gtx1_txpllrefseldy_i                 =  tied_to_ground_vec_i[2:0];
     assign  gtx1_loopback_i                      =  tied_to_ground_vec_i[2:0];
     assign  gtx1_txdiffctrl_i                    =  4'b1010;
     assign  gtx1_txpreemphasis_i                 =  tied_to_ground_vec_i[3:0];
@@ -1992,9 +2117,11 @@ begin: no_chipscope
     assign  gtx1_txenprbstst_i                   =  tied_to_ground_vec_i[2:0];
     assign  gtx1_txprbsforceerr_i                =  tied_to_ground_i;
     assign  gtx1_pllrxreset_i                    =  tied_to_ground_i;
+    assign  gtx1_rxpllrefseldy_i                 =  tied_to_ground_vec_i[2:0];
     assign  gtx1_rxeqmix_i                       =  tied_to_ground_vec_i[2:0];
     assign  gtx1_prbscntreset_i                  =  tied_to_ground_i;
     assign  gtx1_rxenprbstst_i                   =  tied_to_ground_vec_i[2:0];
+    assign  gtx2_txpllrefseldy_i                 =  tied_to_ground_vec_i[2:0];
     assign  gtx2_loopback_i                      =  tied_to_ground_vec_i[2:0];
     assign  gtx2_txdiffctrl_i                    =  4'b1010;
     assign  gtx2_txpreemphasis_i                 =  tied_to_ground_vec_i[3:0];
@@ -2002,9 +2129,11 @@ begin: no_chipscope
     assign  gtx2_txenprbstst_i                   =  tied_to_ground_vec_i[2:0];
     assign  gtx2_txprbsforceerr_i                =  tied_to_ground_i;
     assign  gtx2_pllrxreset_i                    =  tied_to_ground_i;
+    assign  gtx2_rxpllrefseldy_i                 =  tied_to_ground_vec_i[2:0];
     assign  gtx2_rxeqmix_i                       =  tied_to_ground_vec_i[2:0];
     assign  gtx2_prbscntreset_i                  =  tied_to_ground_i;
     assign  gtx2_rxenprbstst_i                   =  tied_to_ground_vec_i[2:0];
+    assign  gtx3_txpllrefseldy_i                 =  tied_to_ground_vec_i[2:0];
     assign  gtx3_loopback_i                      =  tied_to_ground_vec_i[2:0];
     assign  gtx3_txdiffctrl_i                    =  4'b1010;
     assign  gtx3_txpreemphasis_i                 =  tied_to_ground_vec_i[3:0];
@@ -2012,6 +2141,7 @@ begin: no_chipscope
     assign  gtx3_txenprbstst_i                   =  tied_to_ground_vec_i[2:0];
     assign  gtx3_txprbsforceerr_i                =  tied_to_ground_i;
     assign  gtx3_pllrxreset_i                    =  tied_to_ground_i;
+    assign  gtx3_rxpllrefseldy_i                 =  tied_to_ground_vec_i[2:0];
     assign  gtx3_rxeqmix_i                       =  tied_to_ground_vec_i[2:0];
     assign  gtx3_prbscntreset_i                  =  tied_to_ground_i;
     assign  gtx3_rxenprbstst_i                   =  tied_to_ground_vec_i[2:0];

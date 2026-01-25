@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////////
-// Copyright (c) 2025 Xilinx, Inc.
+// Copyright (c) 2026 Xilinx, Inc.
 // All Rights Reserved
 ///////////////////////////////////////////////////////////////////////////////
 //   ____  ____
@@ -8,7 +8,7 @@
 // \   \   \/     Version    : 14.7
 //  \   \         Application: Xilinx CORE Generator
 //  /   /         Filename   : ICON_2p.veo
-// /___/   /\     Timestamp  : Wed Feb 26 14:44:55 CST 2025
+// /___/   /\     Timestamp  : Mon Jan 19 14:56:15 CST 2026
 // \   \  /  \
 //  \___\/\___\
 //
@@ -22,7 +22,10 @@
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
 ICON_2p YourInstanceName (
     .CONTROL0(CONTROL0), // INOUT BUS [35:0]
-    .CONTROL1(CONTROL1) // INOUT BUS [35:0]
+    .CONTROL1(CONTROL1), // INOUT BUS [35:0]
+    .CONTROL2(CONTROL2), // INOUT BUS [35:0]
+    .CONTROL3(CONTROL3), // INOUT BUS [35:0]
+    .CONTROL4(CONTROL4) // INOUT BUS [35:0]
 );
 
 // INST_TAG_END ------ End INSTANTIATION Template ---------

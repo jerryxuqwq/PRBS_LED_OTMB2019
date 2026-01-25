@@ -180,8 +180,8 @@ module DEMO_TB_IMP;
     bi_firefly_top 
     bi_firefly_top_i
     (
-        .Q3_CLK0_MGTREFCLK_PAD_N_IN          (rx_refclk_n_r), 
-        .Q3_CLK0_MGTREFCLK_PAD_P_IN          (rx_refclk_p_r),
+        .Q4_CLK1_MGTREFCLK_PAD_N_IN          (rx_refclk_n_r), 
+        .Q4_CLK1_MGTREFCLK_PAD_P_IN          (rx_refclk_p_r),
         .DRP_CLK_IN                          (drp_clk_r),
         .GTXTXRESET_IN                       (reset_i),
         .GTXRXRESET_IN                       (reset_i),

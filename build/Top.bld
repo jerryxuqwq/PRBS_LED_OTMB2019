@@ -8,8 +8,8 @@ Top.ngd
 Reading NGO file "/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/build/Top.ngc"
 ...
 Loading design module "../ipcore_dir/ILA_error.ngc"...
-Loading design module "../ipcore_dir/ICON_2p.ngc"...
 Loading design module "../ipcore_dir/VIO_fp.ngc"...
+Loading design module "../ipcore_dir/ICON_2p.ngc"...
 Gathering constraint information from source properties...
 Done.
 
@@ -17,49 +17,49 @@ Annotating constraints to design from ucf file "../Top.ucf" ...
 Resolving constraint associations...
 Checking Constraint Associations...
 WARNING:ConstraintSystem - Constraint <NET "tmb_clock0"	TNM_NET = "tmb_clock0";>
-   [../Top.ucf(39)] was not distributed to the output pin TXOUTCLK of block
+   [../Top.ucf(41)] was not distributed to the output pin TXOUTCLK of block
    bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i because the signal path to this output
    pin depends upon block attribute settings. Constraint distribution does not
    support attribute dependent distribution.
 
 WARNING:ConstraintSystem - Constraint <NET "tmb_clock0"	TNM_NET = "tmb_clock0";>
-   [../Top.ucf(39)] was not distributed to the output pin TXOUTCLK of block
+   [../Top.ucf(41)] was not distributed to the output pin TXOUTCLK of block
    bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i because the signal path to this output
    pin depends upon block attribute settings. Constraint distribution does not
    support attribute dependent distribution.
 
 WARNING:ConstraintSystem - Constraint <NET "tmb_clock0"	TNM_NET = "tmb_clock0";>
-   [../Top.ucf(39)] was not distributed to the output pin TXOUTCLK of block
+   [../Top.ucf(41)] was not distributed to the output pin TXOUTCLK of block
    bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i because the signal path to this output
    pin depends upon block attribute settings. Constraint distribution does not
    support attribute dependent distribution.
 
 WARNING:ConstraintSystem - Constraint <NET "tmb_clock0"	TNM_NET = "tmb_clock0";>
-   [../Top.ucf(39)] was not distributed to the output pin TXOUTCLK of block
+   [../Top.ucf(41)] was not distributed to the output pin TXOUTCLK of block
    bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i because the signal path to this output
    pin depends upon block attribute settings. Constraint distribution does not
    support attribute dependent distribution.
 
 WARNING:ConstraintSystem - Constraint <NET "drp_clk_in_i" TNM_NET =
-   "drp_clk_in_i";> [../Top.ucf(43)] was not distributed to the output pin
+   "drp_clk_in_i";> [../Top.ucf(45)] was not distributed to the output pin
    TXOUTCLK of block bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i because the signal
    path to this output pin depends upon block attribute settings. Constraint
    distribution does not support attribute dependent distribution.
 
 WARNING:ConstraintSystem - Constraint <NET "drp_clk_in_i" TNM_NET =
-   "drp_clk_in_i";> [../Top.ucf(43)] was not distributed to the output pin
+   "drp_clk_in_i";> [../Top.ucf(45)] was not distributed to the output pin
    TXOUTCLK of block bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i because the signal
    path to this output pin depends upon block attribute settings. Constraint
    distribution does not support attribute dependent distribution.
 
 WARNING:ConstraintSystem - Constraint <NET "drp_clk_in_i" TNM_NET =
-   "drp_clk_in_i";> [../Top.ucf(43)] was not distributed to the output pin
+   "drp_clk_in_i";> [../Top.ucf(45)] was not distributed to the output pin
    TXOUTCLK of block bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i because the signal
    path to this output pin depends upon block attribute settings. Constraint
    distribution does not support attribute dependent distribution.
 
 WARNING:ConstraintSystem - Constraint <NET "drp_clk_in_i" TNM_NET =
-   "drp_clk_in_i";> [../Top.ucf(43)] was not distributed to the output pin
+   "drp_clk_in_i";> [../Top.ucf(45)] was not distributed to the output pin
    TXOUTCLK of block bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i because the signal
    path to this output pin depends upon block attribute settings. Constraint
    distribution does not support attribute dependent distribution.
@@ -79,10 +79,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   8
 
-Total memory usage is 607976 kilobytes
+Total memory usage is 618432 kilobytes
 
 Writing NGD file "Top.ngd" ...
-Total REAL time to NGDBUILD completion:  3 sec
-Total CPU time to NGDBUILD completion:   3 sec
+Total REAL time to NGDBUILD completion:  4 sec
+Total CPU time to NGDBUILD completion:   4 sec
 
 Writing NGDBUILD log file "Top.bld"...

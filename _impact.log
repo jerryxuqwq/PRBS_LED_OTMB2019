@@ -1,11 +1,9 @@
 iMPACT Version: 14.7
 
-iMPACT log file Started on Fri Dec 19 14:15:34 2025
+iMPACT log file Started on Wed Jan 14 10:29:40 2026
 
 Welcome to iMPACT
 iMPACT Version: 14.7
-Project: '/home/cscdev//auto_project.ipf' already exists.
-Original project has been renamed to '/home/cscdev//auto_project_1.ipf'.
 Project: /home/cscdev//auto_project.ipf created.
 // *** BATCH CMD : setMode -bs
 GUI --- Auto connect to cable...
@@ -32,11 +30,11 @@ Firmware hex file version = 2401.
 PLD file version = 200Dh.
  PLD version = 200Dh.
 PROGRESS_END - End Operation.
-Elapsed time =      1 sec.
+Elapsed time =      0 sec.
 Type = 0x0005.
 ESN option: 000018110F0F01.
 Attempting to identify devices in the boundary-scan chain configuration...
-INFO:iMPACT - Current time: 12/19/25 2:15 PM
+INFO:iMPACT - Current time: 1/14/26 10:29 AM
 // *** BATCH CMD : Identify -inferir 
 PROGRESS_START - Starting Operation.
 Identifying chain contents...'0': : Manufacturer's ID = Xilinx xc6vlx240t, Version : 8
@@ -48,22 +46,109 @@ done.
 PROGRESS_END - End Operation.
 Elapsed time =      0 sec.
 // *** BATCH CMD : identifyMPM 
-// *** BATCH CMD : assignFile -p 1 -file"/home/cscdev/JerryX/OTMB2019/OTMB2019_IBERT_ALLGTX_4.0Gbps.bit"
-'1': Loading file'/home/cscdev/JerryX/OTMB2019/OTMB2019_IBERT_ALLGTX_4.0Gbps.bit' ...
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addConfigDevice  -name "onsitetesting" -path"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/build"
+// *** BATCH CMD : setSubmode -pffserial
+// *** BATCH CMD : setAttribute -configdevice -attr multibootBpiType -value ""
+// *** BATCH CMD : addDesign -version 0 -name "0"
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+Override chain at index 0.
+Overriding chain at index 0.
+// *** BATCH CMD : setAttribute -configdevice -attr compressed -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr autoSize -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr fileFormat -value "mcs"
+// *** BATCH CMD : setAttribute -configdevice -attr fillValue -value "FF"
+// *** BATCH CMD : setAttribute -configdevice -attr swapBit -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr dir -value "UP"
+// *** BATCH CMD : setAttribute -configdevice -attr flashDataWidth -value "16"
+// *** BATCH CMD : setAttribute -configdevice -attr flashTopology -value "8"
+// *** BATCH CMD : setAttribute -configdevice -attr multiboot -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr spiSelected -value "FALSE"
+// *** BATCH CMD : addPromDevice -p 1 -size 0 -name xcf128x
+'1': Added Device xcf128x successfully.
+----------------------------------------------------------------------
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+Override chain at index 0.
+Overriding chain at index 0.
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+Override chain at index 0.
+Overriding chain at index 0.
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setSubmode -pffbpi
+// *** BATCH CMD : setSubmode -pffserial
+// *** BATCH CMD : setMode -pff
+------------------------  GUI: Wizard Data Report  ---------------------------
+      Compression : false
+      Fill Value : FF
+      Output Format : mcs
+      Swap Bits : false
+      LoadDirection : UP
+      PROM Basename : onsitetesting
+      File Location : /home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/build/
+      Auto Selcet : false
+      Number of Revisions : 1
+      Number of PROMs : 1
+      PROM Name : xcf128x,   PROM Size : 16777216 Bytes
+-------------------------- END of Report ----------------------------
+// *** BATCH CMD : setAttribute -design -attr RSPin -value "00"
+// *** BATCH CMD : addDevice -p 1 -file"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/build/Top.bit"
+'1': Loading file '/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/build/Top.bit'...
+INFO:iMPACT - Elapsed time =      1 sec.
 done.
-UserID read from the bitstream file = 0xFFFFFFFF.
 INFO:iMPACT:501 - '1': Added Device xc6vlx240t successfully.
 ----------------------------------------------------------------------
-INFO:iMPACT - Current time: 12/19/25 2:16 PM
-// *** BATCH CMD : Program -p 1 
+file : /home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/build/Top.bit  used size :73859552
+Add one device.// *** BATCH CMD : setAttribute -design -attr RSPinMsb -value ""
+// *** BATCH CMD : setAttribute -design -attr name -value "0"
+// *** BATCH CMD : setAttribute -design -attr RSPin -value "00"
+// *** BATCH CMD : setAttribute -design -attr endAddress -value "8ce03b"
+INFO:iMPACT - Current time: 1/14/26 10:33 AM
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setSubmode -pffbpi
+// *** BATCH CMD : setAttribute -configdevice -attr multibootBpiType -value"TYPE_MB_BPI"
+// *** BATCH CMD : setAttribute -configdevice -attr multibootBpichainType -value"PARALLEL"
+// *** BATCH CMD : setSubmode -pffserial
+Total configuration bit size = 73859552  bits.
+Total configuration byte size = 9232444 bytes.
+// *** BATCH CMD : generate
+INFO:Bitstream:181 - The start address provided has been multiplied by a factor   of 2 due to the use of the x16 data width
+0x8ce03c (9232444) bytes loaded up from 0x0
+Using user-specified prom size of 16384K
+Writing file"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/build/onsitetesting.mcs".
+Writing file"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/build/onsitetesting.prm".
+Writing file"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/build/onsitetesting.cfi".
+// *** BATCH CMD : setCurrentDesign -version 0
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : saveProjectFile -file "/home/cscdev//auto_project.ipf"
+// *** BATCH CMD : setMode -bs
+Selected part: XCF128X
+// *** BATCH CMD : attachflash -position 1 -bpi "XCF128X"
+// *** BATCH CMD : assignfiletoattachedflash -position 1 -file"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/build/onsitetesting.mcs"
+INFO:iMPACT - Current time: 1/14/26 11:42 AM
+// *** BATCH CMD : Program -p 1 -dataWidth 16 -rs1 NONE -rs0 NONE -bpionly -e -v-loadfpga 
+PROGRESS_START - Starting Operation.
 Maximum TCK operating frequency for this device chain: 66000000.
 Validating chain...
 Boundary-scan chain validated successfully.
-1: Device Temperature: Current Reading:   42.50 C, Min. Reading:   39.05 C, Max.Reading:   42.50 C
-1: VCCINT Supply: Current Reading:   1.011 V, Min. Reading:   1.011 V, Max.Reading:   1.014 V
-1: VCCAUX Supply: Current Reading:   2.596 V, Min. Reading:   2.593 V, Max.Reading:   2.596 V
-PROGRESS_START - Starting Operation.
-'1': Programming device...
+1: Device Temperature: Current Reading:   45.45 C, Min. Reading:   42.99 C, Max.Reading:   46.93 C
+1: VCCINT Supply: Current Reading:   1.011 V, Min. Reading:   1.008 V, Max.Reading:   1.014 V
+1: VCCAUX Supply: Current Reading:   2.593 V, Min. Reading:   2.590 V, Max.Reading:   2.596 V
+'1': BPI access core not detected. BPI access core will be downloaded to thedevice to enable operations.
+INFO:iMPACT - Downloading core file   /data/Xilinx/14.7/ISE_DS/ISE/virtex6/data/xc6vlx240t_jbpi.cor.
+'1': Downloading core...
  Match_cycle = NoWait.
 Match cycle: NoWait
  LCK_cycle = NoWait.
@@ -71,97 +156,46 @@ LCK cycle: NoWait
 done.
 INFO:iMPACT:2219 - Status register values:
 INFO:iMPACT - 0011 1111 0111 1110 0000 1000 0010 1000 
-INFO:iMPACT:579 - '1': Completed downloading bit file to device.
-INFO:iMPACT:188 - '1': Programming completed successfully.
- Match_cycle = NoWait.
-Match cycle: NoWait
- LCK_cycle = NoWait.
-LCK cycle: NoWait
-INFO:iMPACT - '1': Checking done pin....done.
-'1': Programmed successfully.
-PROGRESS_END - End Operation.
-Elapsed time =     27 sec.
-INFO:iMPACT - Current time: 12/19/25 2:28 PM
-// *** BATCH CMD : ReadUsercode -p 1 
-Maximum TCK operating frequency for this device chain: 66000000.
-Validating chain...
-Boundary-scan chain validated successfully.
-1: Device Temperature: Current Reading:   47.91 C, Min. Reading:   47.42 C, Max.Reading:   57.76 C
-1: VCCINT Supply: Current Reading:   1.011 V, Min. Reading:   1.008 V, Max.Reading:   1.011 V
-1: VCCAUX Supply: Current Reading:   2.593 V, Min. Reading:   2.593 V, Max.Reading:   2.596 V
-'1': Usercode is 'deadbeef'
-INFO:iMPACT - Current time: 12/19/25 3:35 PM
-// *** BATCH CMD : Program -p 1 
-Maximum TCK operating frequency for this device chain: 66000000.
-Validating chain...
-Boundary-scan chain validated successfully.
-1: Device Temperature: Current Reading:   41.52 C, Min. Reading:   39.05 C, Max.Reading:   42.01 C
-1: VCCINT Supply: Current Reading:   1.011 V, Min. Reading:   1.011 V, Max.Reading:   1.014 V
-1: VCCAUX Supply: Current Reading:   2.593 V, Min. Reading:   2.593 V, Max.Reading:   2.596 V
-PROGRESS_START - Starting Operation.
-'1': Programming device...
- Match_cycle = NoWait.
-Match cycle: NoWait
- LCK_cycle = NoWait.
-LCK cycle: NoWait
+INFO:iMPACT:2492 - '1': Completed downloading core to device.
+Current cable speed is set to 6.000 Mhz.
+Cable speed is default to 3Mhz or lower for BPI operations.
+Current cable speed is set to 3.000 Mhz.
+Setting Flash Control Pins ...
+Setting Configuration Register ...
+Populating BPI common flash interface ...
+Common Flash Interface Information Query completed successfully.
+INFO:iMPACT - Common Flash Interface Information from Device:
+INFO:iMPACT - Verification string:	 51 52 59
+INFO:iMPACT - Manufacturer ID:    	 49 
+INFO:iMPACT - Vendor ID:          	 01 
+INFO:iMPACT - Device Code:        	 18 
+Setting Flash Control Pins ...
+Using x16 mode ...
+Setting Flash Control Pins ...
+Setting Configuration Register ...
+'1': Erasing device...
+'1': Start address = 0x00000000, End address = 0x008CE03B.
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -bs
 done.
-INFO:iMPACT:2219 - Status register values:
-INFO:iMPACT - 0011 1111 0111 1110 0000 1000 0010 1000 
-INFO:iMPACT:579 - '1': Completed downloading bit file to device.
-INFO:iMPACT:188 - '1': Programming completed successfully.
- Match_cycle = NoWait.
-Match cycle: NoWait
- LCK_cycle = NoWait.
-LCK cycle: NoWait
-INFO:iMPACT - '1': Checking done pin....done.
-'1': Programmed successfully.
-PROGRESS_END - End Operation.
-Elapsed time =     27 sec.
-INFO:iMPACT - Current time: 12/19/25 5:22 PM
-// *** BATCH CMD : Program -p 1 
-Maximum TCK operating frequency for this device chain: 66000000.
-Validating chain...
-Boundary-scan chain validated successfully.
-1: Device Temperature: Current Reading:   42.01 C, Min. Reading:   39.55 C, Max.Reading:   42.50 C
-1: VCCINT Supply: Current Reading:   1.011 V, Min. Reading:   1.011 V, Max.Reading:   1.014 V
-1: VCCAUX Supply: Current Reading:   2.596 V, Min. Reading:   2.593 V, Max.Reading:   2.596 V
-PROGRESS_START - Starting Operation.
-'1': Programming device...
- Match_cycle = NoWait.
-Match cycle: NoWait
- LCK_cycle = NoWait.
-LCK cycle: NoWait
+'1': Erasure completed successfully.
+Setting Flash Control Pins ...
+Using x16 mode ...
+Setting Flash Control Pins ...
+Setting Configuration Register ...
+INFO:iMPACT - Using Word Programming.
+'1': Programming Flash.
 done.
-INFO:iMPACT:2219 - Status register values:
-INFO:iMPACT - 0011 1111 0111 1110 0000 1000 0010 1000 
-INFO:iMPACT:579 - '1': Completed downloading bit file to device.
-INFO:iMPACT:188 - '1': Programming completed successfully.
- Match_cycle = NoWait.
-Match cycle: NoWait
- LCK_cycle = NoWait.
-LCK cycle: NoWait
-INFO:iMPACT - '1': Checking done pin....done.
-'1': Programmed successfully.
-PROGRESS_END - End Operation.
-Elapsed time =     27 sec.
-INFO:iMPACT - Current time: 12/22/25 1:35 PM
-// *** BATCH CMD : Program -p 1 
-Maximum TCK operating frequency for this device chain: 66000000.
-Validating chain...
-Boundary-scan chain validated successfully.
-1: Device Temperature: Current Reading:   40.04 C, Min. Reading:   29.70 C, Max.Reading:   40.04 C
-1: VCCINT Supply: Current Reading:   1.014 V, Min. Reading:   1.011 V, Max.Reading:   1.017 V
-1: VCCAUX Supply: Current Reading:   2.596 V, Min. Reading:   2.593 V, Max.Reading:   2.599 V
-PROGRESS_START - Starting Operation.
-'1': Programming device...
- Match_cycle = NoWait.
-Match cycle: NoWait
- LCK_cycle = NoWait.
-LCK cycle: NoWait
+Setting Flash Control Pins ...
+'1': Flash Programming completed successfully.
+Using x16 mode ...
+Setting Flash Control Pins ...
+Setting Configuration Register ...
+'1': Reading device contents...
 done.
-INFO:iMPACT:2219 - Status register values:
-INFO:iMPACT - 0011 1111 0111 1110 0000 1000 0010 1000 
-INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+'1': Verification completed.
+Setting Flash Control Pins ...
+Current cable speed is resumed to 6.000 Mhz.
 INFO:iMPACT:188 - '1': Programming completed successfully.
  Match_cycle = NoWait.
 Match cycle: NoWait
@@ -169,5 +203,5 @@ Match cycle: NoWait
 LCK cycle: NoWait
 INFO:iMPACT - '1': Checking done pin....done.
 '1': Programmed successfully.
-PROGRESS_END - End Operation.
-Elapsed time =     27 sec.
+ERROR:Portability:90 - Command line error: Argument <pos1> must be specified for   the switch "-position".
+Usage: program [-e|-erase] [-v|-verify] [-w|-writeProtect] [-r|-readProtect][-u|-usercode|-ues <codeString>] [-t|-functest] [-c|-bit2mcs] {-ver<versionOptions> {<versionOptions>}} [-smoke] [-spi [<spiPartName>]] [-spionly][-bpi [<bpiPartName>]] [-bpionly] [-turbo] [-inSystemUpdate][-revisionSelectionOnly] [-word] [-parallel] [-cascadeLowPower][-noncascadeLowPower] [-skipua] [-useD4] [-loadfpga] [-selectMap8][-internalClk] [-clkFreq <freq>] [-master] [-defaultVersion <verNum>][-externalSelect] [-compressed] [-prog] [-noprog] [-s|-secureMode] [-keyonly][-key {<keyfile>}] [-enableEncryptedReconfig] [-p|-position <pos1> {<pos2>}][-target] [-otf] [-noshutdown] [-nojprog] [-corefile <coreFileName>] [-isc][-fuse <type> {<arg>}] [-sectorprotect] [-sectorlockdown] [-otpsecurity][-nobscanreg] [-onlyFpga] [-dataWidth <value>] [-rs1 <pin1>] [-rs0 <pin0>][-buffered] [-dualbpi] [-configbankvoltage CFGBVS|2.5V_or_higher|1.8V] [-image<imageFileName>] [-qspi [single|dual_stacked|dual_parallel]] [-startAddress<hexValue>] [-nand [8|16]] [-nor] [-zynq_fsbl <fsblFileName>] 

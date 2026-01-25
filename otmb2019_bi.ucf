@@ -24,6 +24,8 @@ TIMESPEC "TS_gtx0_txusrclk2_i" = PERIOD "gtx0_txusrclk2_i" 5.0;
 ####################### GTX reference clock constraints #######################
 NET Q3_CLK0_MGTREFCLK_PAD_N_IN  LOC=P5;
 NET Q3_CLK0_MGTREFCLK_PAD_P_IN  LOC=P6;
+NET Q2_CLK1_MGTREFCLK_PAD_N_IN  LOC=AB5;
+NET Q2_CLK1_MGTREFCLK_PAD_P_IN  LOC=AB6;
 ####################### CCB clock##############################################
 
 NET "tmb_clock0"	TNM_NET = "tmb_clock0";	# TMB main Clock  JRG: this is really tmb_clock05p on the baseboard!  *stoppable*

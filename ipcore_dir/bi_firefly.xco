@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.7
-# Date: Fri Jan  2 02:09:52 2026
+# Date: Sun Jan 25 02:53:27 2026
 #
 ##############################################################
 #
@@ -39,7 +39,7 @@ SET vhdlsim = false
 SELECT Virtex-6_FPGA_GTX_Transceiver_Wizard xilinx.com:ip:v6_gtxwizard:1.12
 # END Select
 # BEGIN Parameters
-CSET advanced_clocking=false
+CSET advanced_clocking=true
 CSET bytes_to_reduce_error=8
 CSET cb_seq_1_1=0000000000
 CSET cb_seq_1_1_disp=false
@@ -191,14 +191,14 @@ CSET rx_refclk_x0_y0=REFCLK1_Q0
 CSET rx_refclk_x0_y1=REFCLK1_Q0
 CSET rx_refclk_x0_y10=REFCLK1_Q2
 CSET rx_refclk_x0_y11=REFCLK1_Q2
-CSET rx_refclk_x0_y12=REFCLK0_Q3
+CSET rx_refclk_x0_y12=REFCLK1_Q4
 CSET rx_refclk_x0_y13=REFCLK1_Q3
 CSET rx_refclk_x0_y14=REFCLK1_Q3
-CSET rx_refclk_x0_y15=REFCLK0_Q3
+CSET rx_refclk_x0_y15=REFCLK1_Q4
 CSET rx_refclk_x0_y16=REFCLK1_Q4
-CSET rx_refclk_x0_y17=REFCLK0_Q3
+CSET rx_refclk_x0_y17=REFCLK1_Q4
 CSET rx_refclk_x0_y18=REFCLK1_Q4
-CSET rx_refclk_x0_y19=REFCLK0_Q3
+CSET rx_refclk_x0_y19=REFCLK1_Q4
 CSET rx_refclk_x0_y2=REFCLK1_Q0
 CSET rx_refclk_x0_y20=REFCLK1_Q5
 CSET rx_refclk_x0_y21=REFCLK1_Q5
@@ -408,4 +408,4 @@ CSET wideband_highpass_mix=Use_RXEQMIX_Port
 MISC pkg_timestamp=2011-04-08T05:24:23Z
 # END Extra information
 GENERATE
-# CRC: b6e96611
+# CRC: dd1d8aa4

@@ -5,28 +5,28 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="ConstraintSystem" num="0" >Constraint &lt;NET &quot;tmb_clock0&quot;	TNM_NET = &quot;tmb_clock0&quot;;&gt; [../Top.ucf(39)] was not distributed to the output pin TXOUTCLK of block bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i because the signal path to this output pin depends upon block attribute settings. Constraint distribution does not support attribute dependent distribution.
+<msg type="warning" file="ConstraintSystem" num="0" >Constraint &lt;NET &quot;tmb_clock0&quot;	TNM_NET = &quot;tmb_clock0&quot;;&gt; [../Top.ucf(41)] was not distributed to the output pin TXOUTCLK of block bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i because the signal path to this output pin depends upon block attribute settings. Constraint distribution does not support attribute dependent distribution.
 </msg>
 
-<msg type="warning" file="ConstraintSystem" num="0" >Constraint &lt;NET &quot;tmb_clock0&quot;	TNM_NET = &quot;tmb_clock0&quot;;&gt; [../Top.ucf(39)] was not distributed to the output pin TXOUTCLK of block bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i because the signal path to this output pin depends upon block attribute settings. Constraint distribution does not support attribute dependent distribution.
+<msg type="warning" file="ConstraintSystem" num="0" >Constraint &lt;NET &quot;tmb_clock0&quot;	TNM_NET = &quot;tmb_clock0&quot;;&gt; [../Top.ucf(41)] was not distributed to the output pin TXOUTCLK of block bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i because the signal path to this output pin depends upon block attribute settings. Constraint distribution does not support attribute dependent distribution.
 </msg>
 
-<msg type="warning" file="ConstraintSystem" num="0" >Constraint &lt;NET &quot;tmb_clock0&quot;	TNM_NET = &quot;tmb_clock0&quot;;&gt; [../Top.ucf(39)] was not distributed to the output pin TXOUTCLK of block bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i because the signal path to this output pin depends upon block attribute settings. Constraint distribution does not support attribute dependent distribution.
+<msg type="warning" file="ConstraintSystem" num="0" >Constraint &lt;NET &quot;tmb_clock0&quot;	TNM_NET = &quot;tmb_clock0&quot;;&gt; [../Top.ucf(41)] was not distributed to the output pin TXOUTCLK of block bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i because the signal path to this output pin depends upon block attribute settings. Constraint distribution does not support attribute dependent distribution.
 </msg>
 
-<msg type="warning" file="ConstraintSystem" num="0" >Constraint &lt;NET &quot;tmb_clock0&quot;	TNM_NET = &quot;tmb_clock0&quot;;&gt; [../Top.ucf(39)] was not distributed to the output pin TXOUTCLK of block bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i because the signal path to this output pin depends upon block attribute settings. Constraint distribution does not support attribute dependent distribution.
+<msg type="warning" file="ConstraintSystem" num="0" >Constraint &lt;NET &quot;tmb_clock0&quot;	TNM_NET = &quot;tmb_clock0&quot;;&gt; [../Top.ucf(41)] was not distributed to the output pin TXOUTCLK of block bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i because the signal path to this output pin depends upon block attribute settings. Constraint distribution does not support attribute dependent distribution.
 </msg>
 
-<msg type="warning" file="ConstraintSystem" num="0" >Constraint &lt;NET &quot;drp_clk_in_i&quot; TNM_NET = &quot;drp_clk_in_i&quot;;&gt; [../Top.ucf(43)] was not distributed to the output pin TXOUTCLK of block bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i because the signal path to this output pin depends upon block attribute settings. Constraint distribution does not support attribute dependent distribution.
+<msg type="warning" file="ConstraintSystem" num="0" >Constraint &lt;NET &quot;drp_clk_in_i&quot; TNM_NET = &quot;drp_clk_in_i&quot;;&gt; [../Top.ucf(45)] was not distributed to the output pin TXOUTCLK of block bi_firefly_i/gtx0_bi_firefly_i/gtxe1_i because the signal path to this output pin depends upon block attribute settings. Constraint distribution does not support attribute dependent distribution.
 </msg>
 
-<msg type="warning" file="ConstraintSystem" num="0" >Constraint &lt;NET &quot;drp_clk_in_i&quot; TNM_NET = &quot;drp_clk_in_i&quot;;&gt; [../Top.ucf(43)] was not distributed to the output pin TXOUTCLK of block bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i because the signal path to this output pin depends upon block attribute settings. Constraint distribution does not support attribute dependent distribution.
+<msg type="warning" file="ConstraintSystem" num="0" >Constraint &lt;NET &quot;drp_clk_in_i&quot; TNM_NET = &quot;drp_clk_in_i&quot;;&gt; [../Top.ucf(45)] was not distributed to the output pin TXOUTCLK of block bi_firefly_i/gtx1_bi_firefly_i/gtxe1_i because the signal path to this output pin depends upon block attribute settings. Constraint distribution does not support attribute dependent distribution.
 </msg>
 
-<msg type="warning" file="ConstraintSystem" num="0" >Constraint &lt;NET &quot;drp_clk_in_i&quot; TNM_NET = &quot;drp_clk_in_i&quot;;&gt; [../Top.ucf(43)] was not distributed to the output pin TXOUTCLK of block bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i because the signal path to this output pin depends upon block attribute settings. Constraint distribution does not support attribute dependent distribution.
+<msg type="warning" file="ConstraintSystem" num="0" >Constraint &lt;NET &quot;drp_clk_in_i&quot; TNM_NET = &quot;drp_clk_in_i&quot;;&gt; [../Top.ucf(45)] was not distributed to the output pin TXOUTCLK of block bi_firefly_i/gtx2_bi_firefly_i/gtxe1_i because the signal path to this output pin depends upon block attribute settings. Constraint distribution does not support attribute dependent distribution.
 </msg>
 
-<msg type="warning" file="ConstraintSystem" num="0" >Constraint &lt;NET &quot;drp_clk_in_i&quot; TNM_NET = &quot;drp_clk_in_i&quot;;&gt; [../Top.ucf(43)] was not distributed to the output pin TXOUTCLK of block bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i because the signal path to this output pin depends upon block attribute settings. Constraint distribution does not support attribute dependent distribution.
+<msg type="warning" file="ConstraintSystem" num="0" >Constraint &lt;NET &quot;drp_clk_in_i&quot; TNM_NET = &quot;drp_clk_in_i&quot;;&gt; [../Top.ucf(45)] was not distributed to the output pin TXOUTCLK of block bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i because the signal path to this output pin depends upon block attribute settings. Constraint distribution does not support attribute dependent distribution.
 </msg>
 
 </messages>

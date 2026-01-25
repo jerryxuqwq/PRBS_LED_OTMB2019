@@ -32,8 +32,10 @@ NET "gtx3_txusrclk2_i" TNM_NET = "gtx3_txusrclk2_i";
 TIMESPEC "TS_gtx3_txusrclk2_i" = PERIOD "gtx3_txusrclk2_i" 5.0;
 
 ####################### GTX reference clock constraints #######################
-NET Q3_CLK0_MGTREFCLK_PAD_N_IN  LOC=P5;
-NET Q3_CLK0_MGTREFCLK_PAD_P_IN  LOC=P6;
+NET Q3_CLK0_MGTREFCLK_PAD_N_IN  LOC=F5;
+NET Q3_CLK0_MGTREFCLK_PAD_P_IN  LOC=F6;
+NET Q2_CLK1_MGTREFCLK_PAD_N_IN  LOC=AB5;
+NET Q2_CLK1_MGTREFCLK_PAD_P_IN  LOC=AB6;
 ####################### CCB clock##############################################
 
 NET "tmb_clock0"	TNM_NET = "tmb_clock0";	# TMB main Clock  JRG: this is really tmb_clock05p on the baseboard!  *stoppable*
@@ -93,6 +95,11 @@ NET "TXN_OUT[2]"		LOC = C4 | IOSTANDARD = "LVDS_25";	# MGTTXN1_116
 # FireFly fiber11 mgt: gtx?/rx2
 NET "TXP_OUT[3]"		LOC = A3 | IOSTANDARD = "LVDS_25";	# MGTTXP3_116
 NET "TXN_OUT[3]"		LOC = A4 | IOSTANDARD = "LVDS_25";	# MGTTXN3_116
+
+# Snap & FireFly fiber1 mgt: gtx?/rx0 -OK
+NET "txp"		LOC = AK1 | IOSTANDARD = "LVDS_25";	# MGTTXP3_112, use ck160 as MGTREF
+NET "txn"		LOC = AK2 | IOSTANDARD = "LVDS_25";	# MGTTXN3_112
+
 
 NET "_ccb_rx<0>"	LOC = "AG28";	# I/O_36
 NET "_ccb_rx<1>"	LOC = "AM32";	# I/O_37

@@ -5,100 +5,148 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLCompiler" num="1439" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 494: Multiple packed dimensions are not allowed in this mode of verilog
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1439" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 495: Multiple packed dimensions are not allowed in this mode of verilog
+</msg>
+
 <msg type="warning" file="HDLCompiler" num="568" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/DRP.v" Line 39: Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 482: Assignment to <arg fmt="%s" index="1">tied_to_vcc_i</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 680: Port <arg fmt="%s" index="1">GTX0_GREFCLKRX_IN</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 483: Assignment to <arg fmt="%s" index="1">tied_to_vcc_vec_i</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 489: Assignment to <arg fmt="%s" index="1">tied_to_vcc_i</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 501: Assignment to <arg fmt="%s" index="1">gtx0_tx_system_reset_c</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 490: Assignment to <arg fmt="%s" index="1">tied_to_vcc_vec_i</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 502: Assignment to <arg fmt="%s" index="1">gtx1_tx_system_reset_c</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 508: Assignment to <arg fmt="%s" index="1">gtx0_tx_system_reset_c</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 503: Assignment to <arg fmt="%s" index="1">gtx2_tx_system_reset_c</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 509: Assignment to <arg fmt="%s" index="1">gtx1_tx_system_reset_c</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 504: Assignment to <arg fmt="%s" index="1">gtx3_tx_system_reset_c</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 510: Assignment to <arg fmt="%s" index="1">gtx2_tx_system_reset_c</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 507: Assignment to <arg fmt="%s" index="1">gtx0_rx_system_reset_c</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 511: Assignment to <arg fmt="%s" index="1">gtx3_tx_system_reset_c</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 508: Assignment to <arg fmt="%s" index="1">gtx1_rx_system_reset_c</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 514: Assignment to <arg fmt="%s" index="1">gtx0_rx_system_reset_c</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 509: Assignment to <arg fmt="%s" index="1">gtx2_rx_system_reset_c</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 515: Assignment to <arg fmt="%s" index="1">gtx1_rx_system_reset_c</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 510: Assignment to <arg fmt="%s" index="1">gtx3_rx_system_reset_c</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 516: Assignment to <arg fmt="%s" index="1">gtx2_rx_system_reset_c</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 514: Assignment to <arg fmt="%s" index="1">user_tx_reset_i</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 517: Assignment to <arg fmt="%s" index="1">gtx3_rx_system_reset_c</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 515: Assignment to <arg fmt="%s" index="1">user_rx_reset_i</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 521: Assignment to <arg fmt="%s" index="1">user_tx_reset_i</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 516: Assignment to <arg fmt="%s" index="1">mux_sel_i</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 522: Assignment to <arg fmt="%s" index="1">user_rx_reset_i</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 517: Assignment to <arg fmt="%s" index="1">gtx0_plltxreset_i</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 523: Assignment to <arg fmt="%s" index="1">mux_sel_i</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 527: Assignment to <arg fmt="%s" index="1">gtx1_plltxreset_i</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 524: Assignment to <arg fmt="%s" index="1">gtx0_plltxreset_i</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 537: Assignment to <arg fmt="%s" index="1">gtx2_plltxreset_i</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 534: Assignment to <arg fmt="%s" index="1">gtx1_plltxreset_i</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 547: Assignment to <arg fmt="%s" index="1">gtx3_plltxreset_i</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 544: Assignment to <arg fmt="%s" index="1">gtx2_plltxreset_i</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/ipcore_dir/bi_firefly.v" Line 292: Assignment to <arg fmt="%s" index="1">tied_to_ground_vec_i</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 554: Assignment to <arg fmt="%s" index="1">gtx3_plltxreset_i</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/ipcore_dir/bi_firefly.v" Line 293: Assignment to <arg fmt="%s" index="1">tied_to_vcc_i</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/ipcore_dir/dummy.v" Line 115: Assignment to <arg fmt="%s" index="1">tied_to_ground_vec_i</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/ipcore_dir/bi_firefly.v" Line 294: Assignment to <arg fmt="%s" index="1">tied_to_vcc_vec_i</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/ipcore_dir/dummy.v" Line 116: Assignment to <arg fmt="%s" index="1">tied_to_vcc_i</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/ipcore_dir/bi_firefly_gtx.v" Line 169: Assignment to <arg fmt="%s" index="1">tied_to_vcc_vec_i</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/ipcore_dir/dummy.v" Line 117: Assignment to <arg fmt="%s" index="1">tied_to_vcc_vec_i</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 644: Assignment to <arg fmt="%s" index="1">gtx0_rxdata_i</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/ipcore_dir/dummy_gtx.v" Line 131: Assignment to <arg fmt="%s" index="1">tied_to_vcc_vec_i</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 696: Assignment to <arg fmt="%s" index="1">gtx1_rxdata_i</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/ipcore_dir/bi_firefly.v" Line 332: Assignment to <arg fmt="%s" index="1">tied_to_ground_vec_i</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 748: Assignment to <arg fmt="%s" index="1">gtx2_rxdata_i</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/ipcore_dir/bi_firefly.v" Line 333: Assignment to <arg fmt="%s" index="1">tied_to_vcc_i</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 800: Assignment to <arg fmt="%s" index="1">gtx3_rxdata_i</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/ipcore_dir/bi_firefly.v" Line 334: Assignment to <arg fmt="%s" index="1">tied_to_vcc_vec_i</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 1019: Assignment to <arg fmt="%s" index="1">allreset_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/ipcore_dir/bi_firefly_gtx.v" Line 179: Assignment to <arg fmt="%s" index="1">tied_to_vcc_vec_i</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 1048: Assignment to <arg fmt="%s" index="1">counter_boot</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 699: Assignment to <arg fmt="%s" index="1">gtx0_rxdata_i</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 1057: Assignment to <arg fmt="%s" index="1">reset_counter</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 707: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">GTX0_MGTREFCLKRX_IN</arg>&gt;. Formal port size is <arg fmt="%d" index="2">2</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 1060: Assignment to <arg fmt="%s" index="1">gtxrxreset_i</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 751: Assignment to <arg fmt="%s" index="1">gtx1_rxdata_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 759: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">GTX1_MGTREFCLKRX_IN</arg>&gt;. Formal port size is <arg fmt="%d" index="2">2</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 803: Assignment to <arg fmt="%s" index="1">gtx2_rxdata_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 811: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">GTX2_MGTREFCLKRX_IN</arg>&gt;. Formal port size is <arg fmt="%d" index="2">2</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 855: Assignment to <arg fmt="%s" index="1">gtx3_rxdata_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 863: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">GTX3_MGTREFCLKRX_IN</arg>&gt;. Formal port size is <arg fmt="%d" index="2">2</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 1074: Assignment to <arg fmt="%s" index="1">allreset_r</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 1103: Assignment to <arg fmt="%s" index="1">counter_boot</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 1112: Assignment to <arg fmt="%s" index="1">reset_counter</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 1115: Assignment to <arg fmt="%s" index="1">gtxrxreset_i</arg> ignored, since the identifier is never used
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/prbs_fsm.v" Line 45: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">out</arg>&gt;. Formal port size is <arg fmt="%d" index="2">32</arg>-bit while actual signal size is <arg fmt="%d" index="1">31</arg>-bit.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 1150: Result of <arg fmt="%d" index="1">24</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">23</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 1205: Result of <arg fmt="%d" index="1">24</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">23</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/heartbeat.v" Line 64: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/heartbeat.v" Line 72: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/heartbeat.v" Line 80: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/heartbeat.v" Line 88: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/heartbeat.v" Line 96: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/DRP.v" Line 79: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
@@ -107,73 +155,232 @@
 <msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/DRP.v" Line 41: Assignment to <arg fmt="%s" index="1">timeout</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 1188: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">drp_addr</arg>&gt;. Formal port size is <arg fmt="%d" index="2">10</arg>-bit while actual signal size is <arg fmt="%d" index="1">8</arg>-bit.
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 1249: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">drp_addr</arg>&gt;. Formal port size is <arg fmt="%d" index="2">10</arg>-bit while actual signal size is <arg fmt="%d" index="1">8</arg>-bit.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 1202: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">drp_addr</arg>&gt;. Formal port size is <arg fmt="%d" index="2">10</arg>-bit while actual signal size is <arg fmt="%d" index="1">8</arg>-bit.
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 1263: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">drp_addr</arg>&gt;. Formal port size is <arg fmt="%d" index="2">10</arg>-bit while actual signal size is <arg fmt="%d" index="1">8</arg>-bit.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 1215: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">drp_addr</arg>&gt;. Formal port size is <arg fmt="%d" index="2">10</arg>-bit while actual signal size is <arg fmt="%d" index="1">8</arg>-bit.
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 1276: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">drp_addr</arg>&gt;. Formal port size is <arg fmt="%d" index="2">10</arg>-bit while actual signal size is <arg fmt="%d" index="1">8</arg>-bit.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 1228: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">drp_addr</arg>&gt;. Formal port size is <arg fmt="%d" index="2">10</arg>-bit while actual signal size is <arg fmt="%d" index="1">8</arg>-bit.
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 1289: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">drp_addr</arg>&gt;. Formal port size is <arg fmt="%d" index="2">10</arg>-bit while actual signal size is <arg fmt="%d" index="1">8</arg>-bit.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 1326: Assignment to <arg fmt="%s" index="1">gtxtxreset_i</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 1387: Assignment to <arg fmt="%s" index="1">gtxtxreset_i</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 1334: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">TRIG0</arg>&gt;. Formal port size is <arg fmt="%d" index="2">17</arg>-bit while actual signal size is <arg fmt="%d" index="1">15</arg>-bit.
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 1399: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">TRIG0</arg>&gt;. Formal port size is <arg fmt="%d" index="2">17</arg>-bit while actual signal size is <arg fmt="%d" index="1">20</arg>-bit.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 151: Net &lt;<arg fmt="%s" index="1">gtx0_gtxrxreset_i</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 1404: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">TRIG0</arg>&gt;. Formal port size is <arg fmt="%d" index="2">17</arg>-bit while actual signal size is <arg fmt="%d" index="1">20</arg>-bit.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 164: Net &lt;<arg fmt="%s" index="1">gtx0_txdata_i[19]</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 1409: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">TRIG0</arg>&gt;. Formal port size is <arg fmt="%d" index="2">17</arg>-bit while actual signal size is <arg fmt="%d" index="1">20</arg>-bit.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 172: Net &lt;<arg fmt="%s" index="1">gtx0_gtxtxreset_i</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 1414: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">TRIG0</arg>&gt;. Formal port size is <arg fmt="%d" index="2">17</arg>-bit while actual signal size is <arg fmt="%d" index="1">20</arg>-bit.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 196: Net &lt;<arg fmt="%s" index="1">gtx1_gtxrxreset_i</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 158: Net &lt;<arg fmt="%s" index="1">gtx0_gtxrxreset_i</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 209: Net &lt;<arg fmt="%s" index="1">gtx1_txdata_i[19]</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 171: Net &lt;<arg fmt="%s" index="1">gtx0_txdata_i[19]</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 217: Net &lt;<arg fmt="%s" index="1">gtx1_gtxtxreset_i</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 179: Net &lt;<arg fmt="%s" index="1">gtx0_gtxtxreset_i</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 241: Net &lt;<arg fmt="%s" index="1">gtx2_gtxrxreset_i</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 203: Net &lt;<arg fmt="%s" index="1">gtx1_gtxrxreset_i</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 254: Net &lt;<arg fmt="%s" index="1">gtx2_txdata_i[19]</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 216: Net &lt;<arg fmt="%s" index="1">gtx1_txdata_i[19]</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 262: Net &lt;<arg fmt="%s" index="1">gtx2_gtxtxreset_i</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 224: Net &lt;<arg fmt="%s" index="1">gtx1_gtxtxreset_i</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 286: Net &lt;<arg fmt="%s" index="1">gtx3_gtxrxreset_i</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 248: Net &lt;<arg fmt="%s" index="1">gtx2_gtxrxreset_i</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 299: Net &lt;<arg fmt="%s" index="1">gtx3_txdata_i[19]</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 261: Net &lt;<arg fmt="%s" index="1">gtx2_txdata_i[19]</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 307: Net &lt;<arg fmt="%s" index="1">gtx3_gtxtxreset_i</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 269: Net &lt;<arg fmt="%s" index="1">gtx2_gtxtxreset_i</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 1043: Net &lt;<arg fmt="%s" index="1">counter_boot_rst</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 293: Net &lt;<arg fmt="%s" index="1">gtx3_gtxrxreset_i</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 1044: Net &lt;<arg fmt="%s" index="1">error_inject</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 306: Net &lt;<arg fmt="%s" index="1">gtx3_txdata_i[19]</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 1051: Net &lt;<arg fmt="%s" index="1">reset_counter_rst</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 314: Net &lt;<arg fmt="%s" index="1">gtx3_gtxtxreset_i</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%d" index="2">1045</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">mycounter</arg>&gt; of block &lt;<arg fmt="%s" index="4">counter</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">Top</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 1098: Net &lt;<arg fmt="%s" index="1">counter_boot_rst</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%d" index="2">1054</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">resetcounter</arg>&gt; of block &lt;<arg fmt="%s" index="4">counter</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">Top</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 1106: Net &lt;<arg fmt="%s" index="1">reset_counter_rst</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="552" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 649: Input port <arg fmt="%s" index="1">GTX0_RXN_IN</arg> is not connected on this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="552" delta="old" >"/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v" Line 684: Input port <arg fmt="%s" index="1">GTX0_GREFCLKRX_IN</arg> is not connected on this instance
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%d" index="2">1100</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">mycounter</arg>&gt; of block &lt;<arg fmt="%s" index="4">counter</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">Top</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%d" index="2">1109</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">resetcounter</arg>&gt; of block &lt;<arg fmt="%s" index="4">counter</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">Top</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX0_TXDATA_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">dummy_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX0_TXDIFFCTRL_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">dummy_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX0_TXPOSTEMPHASIS_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">dummy_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX0_TXPREEMPHASIS_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">dummy_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX0_RXN_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">dummy_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX0_RXP_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">dummy_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX0_TXUSRCLK2_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">dummy_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX0_GTXTXRESET_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">dummy_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX0_PLLTXRESET_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">dummy_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX0_NORTHREFCLKRX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX0_RXPLLREFSELDY_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX0_SOUTHREFCLKRX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX0_NORTHREFCLKTX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX0_SOUTHREFCLKTX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX0_TXPLLREFSELDY_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX1_NORTHREFCLKRX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX1_RXPLLREFSELDY_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX1_SOUTHREFCLKRX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX1_NORTHREFCLKTX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX1_SOUTHREFCLKTX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX1_TXPLLREFSELDY_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX2_NORTHREFCLKRX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX2_RXPLLREFSELDY_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX2_SOUTHREFCLKRX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX2_NORTHREFCLKTX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX2_SOUTHREFCLKTX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX2_TXPLLREFSELDY_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX3_NORTHREFCLKRX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX3_RXPLLREFSELDY_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX3_SOUTHREFCLKRX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX3_NORTHREFCLKTX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX3_SOUTHREFCLKTX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX3_TXPLLREFSELDY_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX0_GREFCLKRX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX0_PERFCLKRX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX0_GREFCLKTX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX0_PERFCLKTX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX1_GREFCLKRX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX1_PERFCLKRX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX1_GREFCLKTX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX1_PERFCLKTX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX2_GREFCLKRX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX2_PERFCLKRX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX2_GREFCLKTX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX2_PERFCLKTX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX3_GREFCLKRX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX3_PERFCLKRX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX3_GREFCLKTX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">GTX3_PERFCLKTX_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">bi_firefly_i</arg>&apos;, is tied to GND.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">_ccb_rx&lt;35:34&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -182,40 +389,34 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">reset_btn</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">629</arg>: Output port &lt;<arg fmt="%s" index="3">GTX0_RXDATA_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">qpll_lock</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">629</arg>: Output port &lt;<arg fmt="%s" index="3">GTX1_RXDATA_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">649</arg>: Output port &lt;<arg fmt="%s" index="3">GTX0_TXOUTCLK_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">dummy_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">629</arg>: Output port &lt;<arg fmt="%s" index="3">GTX2_RXDATA_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">649</arg>: Output port &lt;<arg fmt="%s" index="3">GTX0_TXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">dummy_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">629</arg>: Output port &lt;<arg fmt="%s" index="3">GTX3_RXDATA_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">649</arg>: Output port &lt;<arg fmt="%s" index="3">GTX0_TXRESETDONE_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">dummy_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">1045</arg>: Output port &lt;<arg fmt="%s" index="3">out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">mycounter</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">684</arg>: Output port &lt;<arg fmt="%s" index="3">GTX0_RXDATA_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">1054</arg>: Output port &lt;<arg fmt="%s" index="3">out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">resetcounter</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">684</arg>: Output port &lt;<arg fmt="%s" index="3">GTX1_RXDATA_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">1063</arg>: Output port &lt;<arg fmt="%s" index="3">rx_prbs_mode</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gtx_0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">684</arg>: Output port &lt;<arg fmt="%s" index="3">GTX2_RXDATA_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">1063</arg>: Output port &lt;<arg fmt="%s" index="3">tx_prbs_mode</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gtx_0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">684</arg>: Output port &lt;<arg fmt="%s" index="3">GTX3_RXDATA_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">1093</arg>: Output port &lt;<arg fmt="%s" index="3">rx_prbs_mode</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gtx_2</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">1100</arg>: Output port &lt;<arg fmt="%s" index="3">out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">mycounter</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">1093</arg>: Output port &lt;<arg fmt="%s" index="3">tx_prbs_mode</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gtx_2</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">1108</arg>: Output port &lt;<arg fmt="%s" index="3">rx_prbs_mode</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gtx_3</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">1108</arg>: Output port &lt;<arg fmt="%s" index="3">tx_prbs_mode</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gtx_3</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/Top.v</arg>&quot; line <arg fmt="%s" index="2">1109</arg>: Output port &lt;<arg fmt="%s" index="3">out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">resetcounter</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">gtx0_txdata_i</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
@@ -257,22 +458,19 @@
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">counter_boot_rst</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">error_inject</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
-</msg>
-
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">reset_counter_rst</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/ipcore_dir/bi_firefly.v</arg>&quot; line <arg fmt="%s" index="2">315</arg>: Output port &lt;<arg fmt="%s" index="3">TXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gtx0_bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/ipcore_dir/bi_firefly.v</arg>&quot; line <arg fmt="%s" index="2">355</arg>: Output port &lt;<arg fmt="%s" index="3">TXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gtx0_bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/ipcore_dir/bi_firefly.v</arg>&quot; line <arg fmt="%s" index="2">383</arg>: Output port &lt;<arg fmt="%s" index="3">TXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gtx1_bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/ipcore_dir/bi_firefly.v</arg>&quot; line <arg fmt="%s" index="2">433</arg>: Output port &lt;<arg fmt="%s" index="3">TXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gtx1_bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/ipcore_dir/bi_firefly.v</arg>&quot; line <arg fmt="%s" index="2">451</arg>: Output port &lt;<arg fmt="%s" index="3">TXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gtx2_bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/ipcore_dir/bi_firefly.v</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">TXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gtx2_bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/ipcore_dir/bi_firefly.v</arg>&quot; line <arg fmt="%s" index="2">519</arg>: Output port &lt;<arg fmt="%s" index="3">TXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gtx3_bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/cscdev/JerryX/OTMB2019/PRBS_LED_OTMB2019/ipcore_dir/bi_firefly.v</arg>&quot; line <arg fmt="%s" index="2">589</arg>: Output port &lt;<arg fmt="%s" index="3">TXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gtx3_bi_firefly_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">temp_error</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -443,6 +641,45 @@
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_3/drp_addr_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">heartbeat_mod/tick_cnt_31</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">heartbeat_mod/tick_cnt_30</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">heartbeat_mod/tick_cnt_29</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">heartbeat_mod/tick_cnt_28</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">heartbeat_mod/tick_cnt_27</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">heartbeat_mod/tick_cnt_26</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">heartbeat_mod/tick_cnt_25</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">heartbeat_mod/tick_cnt_24</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">heartbeat_mod/tick_cnt_23</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">heartbeat_mod/tick_cnt_22</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">heartbeat_mod/tick_cnt_21</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">heartbeat_mod/tick_cnt_20</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">heartbeat_mod/tick_cnt_19</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_3/drp_addr_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DRP_read_3/drp_addr_1&gt; </arg>
 </msg>
 
@@ -450,6 +687,9 @@
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_2/drp_addr_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DRP_read_2/drp_addr_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">counter_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;heartbeat_mod/tick_cnt_0&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">DRP_read_0/drp_addr_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DRP_read_0/drp_addr_1&gt; </arg>

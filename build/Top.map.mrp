@@ -9,45 +9,45 @@ Target Device  : xc6vlx240t
 Target Package : ff1156
 Target Speed   : -1
 Mapper Version : virtex6 -- $Revision: 1.55 $
-Mapped Date    : Wed Jan  7 16:08:09 2026
+Mapped Date    : Sun Jan 25 01:26:41 2026
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    7
+Number of warnings:   10
 Slice Logic Utilization:
-  Number of Slice Registers:                   731 out of 301,440    1%
-    Number used as Flip Flops:                 726
-    Number used as Latches:                      5
+  Number of Slice Registers:                 1,512 out of 301,440    1%
+    Number used as Flip Flops:               1,504
+    Number used as Latches:                      8
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        574 out of 150,720    1%
-    Number used as logic:                      483 out of 150,720    1%
-      Number using O6 output only:             158
-      Number using O5 output only:             181
-      Number using O5 and O6:                  144
+  Number of Slice LUTs:                      1,226 out of 150,720    1%
+    Number used as logic:                      908 out of 150,720    1%
+      Number using O6 output only:             368
+      Number using O5 output only:             357
+      Number using O5 and O6:                  183
       Number used as ROM:                        0
-    Number used as Memory:                      55 out of  58,400    1%
+    Number used as Memory:                     220 out of  58,400    1%
       Number used as Dual Port RAM:              0
       Number used as Single Port RAM:            0
-      Number used as Shift Register:            55
-        Number using O6 output only:            54
-        Number using O5 output only:             1
+      Number used as Shift Register:           220
+        Number using O6 output only:           216
+        Number using O5 output only:             4
         Number using O5 and O6:                  0
-    Number used exclusively as route-thrus:     36
-      Number with same-slice register load:     24
-      Number with same-slice carry load:        12
+    Number used exclusively as route-thrus:     98
+      Number with same-slice register load:     67
+      Number with same-slice carry load:        31
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   357 out of  37,680    1%
-  Number of LUT Flip Flop pairs used:          854
-    Number with an unused Flip Flop:           176 out of     854   20%
-    Number with an unused LUT:                 280 out of     854   32%
-    Number of fully used LUT-FF pairs:         398 out of     854   46%
-    Number of unique control sets:             120
+  Number of occupied Slices:                   751 out of  37,680    1%
+  Number of LUT Flip Flop pairs used:        1,825
+    Number with an unused Flip Flop:           421 out of   1,825   23%
+    Number with an unused LUT:                 599 out of   1,825   32%
+    Number of fully used LUT-FF pairs:         805 out of   1,825   44%
+    Number of unique control sets:             256
     Number of slice register sites lost
-      to control set restrictions:             654 out of 301,440    1%
+      to control set restrictions:           1,460 out of 301,440    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -61,17 +61,17 @@ IO Utilization:
   Number of bonded IOBs:                        63 out of     600   10%
     Number of LOCed IOBs:                       63 out of      63  100%
     IOB Flip Flops:                             14
-    Number of bonded IPADs:                     10
-      Number of LOCed IPADs:                    10 out of      10  100%
-    Number of bonded OPADs:                      8
-      Number of LOCed OPADs:                     8 out of       8  100%
+    Number of bonded IPADs:                     12
+      Number of LOCed IPADs:                    12 out of      12  100%
+    Number of bonded OPADs:                     10
+      Number of LOCed OPADs:                    10 out of      10  100%
 
 Specific Feature Utilization:
-  Number of RAMB36E1/FIFO36E1s:                  4 out of     416    1%
-    Number using RAMB36E1 only:                  4
+  Number of RAMB36E1/FIFO36E1s:                 16 out of     416    3%
+    Number using RAMB36E1 only:                 16
     Number using FIFO36E1 only:                  0
-  Number of RAMB18E1/FIFO18E1s:                  1 out of     832    1%
-    Number using RAMB18E1 only:                  1
+  Number of RAMB18E1/FIFO18E1s:                  4 out of     832    1%
+    Number using RAMB18E1 only:                  4
     Number using FIFO18E1 only:                  0
   Number of BUFG/BUFGCTRLs:                      7 out of      32   21%
     Number used as BUFGs:                        7
@@ -90,9 +90,9 @@ Specific Feature Utilization:
   Number of DSP48E1s:                            0 out of     768    0%
   Number of EFUSE_USRs:                          0 out of       1    0%
   Number of FRAME_ECCs:                          0 out of       1    0%
-  Number of GTXE1s:                              4 out of      20   20%
-    Number of LOCed GTXE1s:                      4 out of       4  100%
-  Number of IBUFDS_GTXE1s:                       1 out of      12    8%
+  Number of GTXE1s:                              5 out of      20   25%
+    Number of LOCed GTXE1s:                      4 out of       5   80%
+  Number of IBUFDS_GTXE1s:                       2 out of      12   16%
   Number of ICAPs:                               0 out of       2    0%
   Number of IDELAYCTRLs:                         0 out of      18    0%
   Number of IODELAYE1s:                          0 out of     720    0%
@@ -102,12 +102,12 @@ Specific Feature Utilization:
   Number of SYSMONs:                             0 out of       1    0%
   Number of TEMAC_SINGLEs:                       0 out of       4    0%
 
-  Number of RPM macros:            4
-Average Fanout of Non-Clock Nets:                2.72
+  Number of RPM macros:           16
+Average Fanout of Non-Clock Nets:                3.11
 
-Peak Memory Usage:  1308 MB
-Total REAL time to MAP completion:  34 secs 
-Total CPU time to MAP completion:   34 secs 
+Peak Memory Usage:  1325 MB
+Total REAL time to MAP completion:  39 secs 
+Total CPU time to MAP completion:   38 secs 
 
 Table of Contents
 -----------------
@@ -134,22 +134,31 @@ WARNING:Security:42 - Your software subscription period has lapsed. Your current
 version of Xilinx tools will continue to function, but you no longer qualify for
 Xilinx software updates or new releases.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   gtx_1/current_state[4]_GND_9_o_Select_40_o is sourced by a combinatorial pin.
-   This is not good design practice. Use the CE pin to control the loading of
-   data into the flip-flop.
+   gtx_3/current_state[4]_GND_12_o_Select_40_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   gtx_3/current_state[4]_GND_9_o_Select_40_o is sourced by a combinatorial pin.
-   This is not good design practice. Use the CE pin to control the loading of
-   data into the flip-flop.
+   gtx_2/current_state[4]_GND_12_o_Select_40_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   gtx_2/current_state[4]_GND_9_o_Select_40_o is sourced by a combinatorial pin.
-   This is not good design practice. Use the CE pin to control the loading of
-   data into the flip-flop.
+   gtx_1/current_state[4]_GND_12_o_Select_40_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   gtx_0/current_state[4]_GND_9_o_Select_40_o is sourced by a combinatorial pin.
-   This is not good design practice. Use the CE pin to control the loading of
-   data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net CONTROL0<13> is sourced by
+   gtx_0/current_state[4]_GND_12_o_Select_40_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net CONTROL1<13> is sourced by
+   a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net CONTROL3<13> is sourced by
+   a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net CONTROL4<13> is sourced by
+   a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net CONTROL2<13> is sourced by
    a combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:367 - The signal <VIO_fp/U0/I_VIO/UPDATE<4>> is
@@ -160,14 +169,14 @@ WARNING:PhysDesignRules:367 - The signal <VIO_fp/U0/I_VIO/UPDATE<5>> is
 Section 3 - Informational
 -------------------------
 INFO:Security:56 - Part 'xc6vlx240t' is not a WebPack part.
-INFO:LIT:243 - Logical network CONTROL0<35> has no load.
-INFO:LIT:395 - The above info message is repeated 70 more times for the
+INFO:LIT:243 - Logical network CONTROL1<35> has no load.
+INFO:LIT:395 - The above info message is repeated 143 more times for the
    following (max. 5 shown):
-   CONTROL0<34>,
-   CONTROL0<33>,
-   CONTROL0<32>,
-   CONTROL0<31>,
-   CONTROL0<30>
+   CONTROL1<34>,
+   CONTROL1<33>,
+   CONTROL1<32>,
+   CONTROL1<31>,
+   CONTROL1<30>
    To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
@@ -183,9 +192,9 @@ INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-  79 block(s) removed
-  46 block(s) optimized away
-  66 signal(s) removed
+ 148 block(s) removed
+ 151 block(s) optimized away
+ 138 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -210,12 +219,6 @@ Loadless block "ICON_debug/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[13].U_LUT" (ROM)
 removed.
 Loadless block "ICON_debug/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[14].U_LUT" (ROM)
 removed.
-Loadless block "ICON_debug/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[2].U_LUT" (ROM)
-removed.
-Loadless block "ICON_debug/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[3].U_LUT" (ROM)
-removed.
-Loadless block "ICON_debug/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[4].U_LUT" (ROM)
-removed.
 Loadless block "ICON_debug/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[5].U_LUT" (ROM)
 removed.
 Loadless block "ICON_debug/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[6].U_LUT" (ROM)
@@ -226,82 +229,168 @@ Loadless block "ICON_debug/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[8].U_LUT" (ROM)
 removed.
 Loadless block "ICON_debug/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[9].U_LUT" (ROM)
 removed.
-Loadless block "ILA_error/U0/I_NO_D.U_ILA/U_STAT/U_DSR" (ROM) removed.
-The signal "CONTROL0<35>" is sourceless and has been removed.
-The signal "CONTROL0<34>" is sourceless and has been removed.
-The signal "CONTROL0<33>" is sourceless and has been removed.
-The signal "CONTROL0<32>" is sourceless and has been removed.
-The signal "CONTROL0<31>" is sourceless and has been removed.
-The signal "CONTROL0<30>" is sourceless and has been removed.
-The signal "CONTROL0<29>" is sourceless and has been removed.
-The signal "CONTROL0<28>" is sourceless and has been removed.
-The signal "CONTROL0<27>" is sourceless and has been removed.
-The signal "CONTROL0<26>" is sourceless and has been removed.
-The signal "CONTROL0<25>" is sourceless and has been removed.
-The signal "CONTROL0<24>" is sourceless and has been removed.
-The signal "CONTROL0<23>" is sourceless and has been removed.
-The signal "CONTROL0<22>" is sourceless and has been removed.
-The signal "CONTROL0<21>" is sourceless and has been removed.
-The signal "CONTROL0<19>" is sourceless and has been removed.
-The signal "CONTROL0<18>" is sourceless and has been removed.
-The signal "CONTROL0<17>" is sourceless and has been removed.
-The signal "CONTROL0<16>" is sourceless and has been removed.
-The signal "CONTROL0<15>" is sourceless and has been removed.
-The signal "CONTROL0<11>" is sourceless and has been removed.
-The signal "CONTROL0<10>" is sourceless and has been removed.
-The signal "CONTROL0<7>" is sourceless and has been removed.
+Loadless block "ILA_error_0/U0/I_NO_D.U_ILA/U_STAT/U_DSR" (ROM) removed.
+Loadless block "ILA_error_1/U0/I_NO_D.U_ILA/U_STAT/U_DSR" (ROM) removed.
+Loadless block "ILA_error_2/U0/I_NO_D.U_ILA/U_STAT/U_DSR" (ROM) removed.
+Loadless block "ILA_error_3/U0/I_NO_D.U_ILA/U_STAT/U_DSR" (ROM) removed.
 The signal "CONTROL1<35>" is sourceless and has been removed.
- Sourceless block "VIO_fp/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O28"
-(ROM) removed.
-  The signal "VIO_fp/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O27" is
-sourceless and has been removed.
 The signal "CONTROL1<34>" is sourceless and has been removed.
 The signal "CONTROL1<33>" is sourceless and has been removed.
 The signal "CONTROL1<32>" is sourceless and has been removed.
 The signal "CONTROL1<31>" is sourceless and has been removed.
- Sourceless block "VIO_fp/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O27"
-(ROM) removed.
-  The signal "VIO_fp/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O26" is
-sourceless and has been removed.
 The signal "CONTROL1<30>" is sourceless and has been removed.
 The signal "CONTROL1<29>" is sourceless and has been removed.
 The signal "CONTROL1<28>" is sourceless and has been removed.
 The signal "CONTROL1<27>" is sourceless and has been removed.
 The signal "CONTROL1<26>" is sourceless and has been removed.
 The signal "CONTROL1<25>" is sourceless and has been removed.
- Sourceless block "VIO_fp/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O24"
-(ROM) removed.
-  The signal "VIO_fp/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O23" is
-sourceless and has been removed.
 The signal "CONTROL1<24>" is sourceless and has been removed.
 The signal "CONTROL1<23>" is sourceless and has been removed.
 The signal "CONTROL1<22>" is sourceless and has been removed.
 The signal "CONTROL1<21>" is sourceless and has been removed.
-The signal "CONTROL1<20>" is sourceless and has been removed.
 The signal "CONTROL1<19>" is sourceless and has been removed.
- Sourceless block "VIO_fp/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O23"
-(ROM) removed.
-  The signal "VIO_fp/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O22" is
-sourceless and has been removed.
 The signal "CONTROL1<18>" is sourceless and has been removed.
 The signal "CONTROL1<17>" is sourceless and has been removed.
 The signal "CONTROL1<16>" is sourceless and has been removed.
 The signal "CONTROL1<15>" is sourceless and has been removed.
-The signal "CONTROL1<14>" is sourceless and has been removed.
-The signal "CONTROL1<13>" is sourceless and has been removed.
+The signal "CONTROL1<11>" is sourceless and has been removed.
+The signal "CONTROL1<10>" is sourceless and has been removed.
+The signal "CONTROL1<7>" is sourceless and has been removed.
+The signal "CONTROL2<35>" is sourceless and has been removed.
+The signal "CONTROL2<34>" is sourceless and has been removed.
+The signal "CONTROL2<33>" is sourceless and has been removed.
+The signal "CONTROL2<32>" is sourceless and has been removed.
+The signal "CONTROL2<31>" is sourceless and has been removed.
+The signal "CONTROL2<30>" is sourceless and has been removed.
+The signal "CONTROL2<29>" is sourceless and has been removed.
+The signal "CONTROL2<28>" is sourceless and has been removed.
+The signal "CONTROL2<27>" is sourceless and has been removed.
+The signal "CONTROL2<26>" is sourceless and has been removed.
+The signal "CONTROL2<25>" is sourceless and has been removed.
+The signal "CONTROL2<24>" is sourceless and has been removed.
+The signal "CONTROL2<23>" is sourceless and has been removed.
+The signal "CONTROL2<22>" is sourceless and has been removed.
+The signal "CONTROL2<21>" is sourceless and has been removed.
+The signal "CONTROL2<19>" is sourceless and has been removed.
+The signal "CONTROL2<18>" is sourceless and has been removed.
+The signal "CONTROL2<17>" is sourceless and has been removed.
+The signal "CONTROL2<16>" is sourceless and has been removed.
+The signal "CONTROL2<15>" is sourceless and has been removed.
+The signal "CONTROL2<11>" is sourceless and has been removed.
+The signal "CONTROL2<10>" is sourceless and has been removed.
+The signal "CONTROL2<7>" is sourceless and has been removed.
+The signal "CONTROL3<35>" is sourceless and has been removed.
+The signal "CONTROL3<34>" is sourceless and has been removed.
+The signal "CONTROL3<33>" is sourceless and has been removed.
+The signal "CONTROL3<32>" is sourceless and has been removed.
+The signal "CONTROL3<31>" is sourceless and has been removed.
+The signal "CONTROL3<30>" is sourceless and has been removed.
+The signal "CONTROL3<29>" is sourceless and has been removed.
+The signal "CONTROL3<28>" is sourceless and has been removed.
+The signal "CONTROL3<27>" is sourceless and has been removed.
+The signal "CONTROL3<26>" is sourceless and has been removed.
+The signal "CONTROL3<25>" is sourceless and has been removed.
+The signal "CONTROL3<24>" is sourceless and has been removed.
+The signal "CONTROL3<23>" is sourceless and has been removed.
+The signal "CONTROL3<22>" is sourceless and has been removed.
+The signal "CONTROL3<21>" is sourceless and has been removed.
+The signal "CONTROL3<19>" is sourceless and has been removed.
+The signal "CONTROL3<18>" is sourceless and has been removed.
+The signal "CONTROL3<17>" is sourceless and has been removed.
+The signal "CONTROL3<16>" is sourceless and has been removed.
+The signal "CONTROL3<15>" is sourceless and has been removed.
+The signal "CONTROL3<11>" is sourceless and has been removed.
+The signal "CONTROL3<10>" is sourceless and has been removed.
+The signal "CONTROL3<7>" is sourceless and has been removed.
+The signal "CONTROL4<35>" is sourceless and has been removed.
+The signal "CONTROL4<34>" is sourceless and has been removed.
+The signal "CONTROL4<33>" is sourceless and has been removed.
+The signal "CONTROL4<32>" is sourceless and has been removed.
+The signal "CONTROL4<31>" is sourceless and has been removed.
+The signal "CONTROL4<30>" is sourceless and has been removed.
+The signal "CONTROL4<29>" is sourceless and has been removed.
+The signal "CONTROL4<28>" is sourceless and has been removed.
+The signal "CONTROL4<27>" is sourceless and has been removed.
+The signal "CONTROL4<26>" is sourceless and has been removed.
+The signal "CONTROL4<25>" is sourceless and has been removed.
+The signal "CONTROL4<24>" is sourceless and has been removed.
+The signal "CONTROL4<23>" is sourceless and has been removed.
+The signal "CONTROL4<22>" is sourceless and has been removed.
+The signal "CONTROL4<21>" is sourceless and has been removed.
+The signal "CONTROL4<19>" is sourceless and has been removed.
+The signal "CONTROL4<18>" is sourceless and has been removed.
+The signal "CONTROL4<17>" is sourceless and has been removed.
+The signal "CONTROL4<16>" is sourceless and has been removed.
+The signal "CONTROL4<15>" is sourceless and has been removed.
+The signal "CONTROL4<11>" is sourceless and has been removed.
+The signal "CONTROL4<10>" is sourceless and has been removed.
+The signal "CONTROL4<7>" is sourceless and has been removed.
+The signal "CONTROL0<35>" is sourceless and has been removed.
+ Sourceless block "VIO_fp/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O28"
+(ROM) removed.
+  The signal "VIO_fp/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O27" is
+sourceless and has been removed.
+The signal "CONTROL0<34>" is sourceless and has been removed.
+The signal "CONTROL0<33>" is sourceless and has been removed.
+The signal "CONTROL0<32>" is sourceless and has been removed.
+The signal "CONTROL0<31>" is sourceless and has been removed.
+ Sourceless block "VIO_fp/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O27"
+(ROM) removed.
+  The signal "VIO_fp/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O26" is
+sourceless and has been removed.
+The signal "CONTROL0<30>" is sourceless and has been removed.
+The signal "CONTROL0<29>" is sourceless and has been removed.
+The signal "CONTROL0<28>" is sourceless and has been removed.
+The signal "CONTROL0<27>" is sourceless and has been removed.
+The signal "CONTROL0<26>" is sourceless and has been removed.
+The signal "CONTROL0<25>" is sourceless and has been removed.
+ Sourceless block "VIO_fp/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O24"
+(ROM) removed.
+  The signal "VIO_fp/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O23" is
+sourceless and has been removed.
+The signal "CONTROL0<24>" is sourceless and has been removed.
+The signal "CONTROL0<23>" is sourceless and has been removed.
+The signal "CONTROL0<22>" is sourceless and has been removed.
+The signal "CONTROL0<21>" is sourceless and has been removed.
+The signal "CONTROL0<20>" is sourceless and has been removed.
+The signal "CONTROL0<19>" is sourceless and has been removed.
+ Sourceless block "VIO_fp/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O23"
+(ROM) removed.
+  The signal "VIO_fp/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O22" is
+sourceless and has been removed.
+The signal "CONTROL0<18>" is sourceless and has been removed.
+The signal "CONTROL0<17>" is sourceless and has been removed.
+The signal "CONTROL0<16>" is sourceless and has been removed.
+The signal "CONTROL0<15>" is sourceless and has been removed.
+The signal "CONTROL0<14>" is sourceless and has been removed.
+The signal "CONTROL0<13>" is sourceless and has been removed.
  Sourceless block "VIO_fp/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O26"
 (ROM) removed.
   The signal "VIO_fp/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O25" is
 sourceless and has been removed.
-The signal "CONTROL1<12>" is sourceless and has been removed.
-The signal "CONTROL1<11>" is sourceless and has been removed.
-The signal "CONTROL1<10>" is sourceless and has been removed.
-The signal "CONTROL1<9>" is sourceless and has been removed.
-The signal "CONTROL1<8>" is sourceless and has been removed.
+The signal "CONTROL0<12>" is sourceless and has been removed.
+The signal "CONTROL0<11>" is sourceless and has been removed.
+The signal "CONTROL0<10>" is sourceless and has been removed.
+The signal "CONTROL0<9>" is sourceless and has been removed.
+The signal "CONTROL0<8>" is sourceless and has been removed.
 The signal
-"ILA_error/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_C
-S_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_G
-AND_SRL_SET/SRL_Q_O" is sourceless and has been removed.
+"ILA_error_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U
+_GAND_SRL_SET/SRL_Q_O" is sourceless and has been removed.
+The signal
+"ILA_error_1/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U
+_GAND_SRL_SET/SRL_Q_O" is sourceless and has been removed.
+The signal
+"ILA_error_2/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U
+_GAND_SRL_SET/SRL_Q_O" is sourceless and has been removed.
+The signal
+"ILA_error_3/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U
+_GAND_SRL_SET/SRL_Q_O" is sourceless and has been removed.
+The signal "VIO_fp/ASYNC_OUT<5>" is sourceless and has been removed.
+The signal "VIO_fp/ASYNC_OUT<4>" is sourceless and has been removed.
 The signal "ICON_debug/U0/U_ICON/iCOMMAND_SEL<15>" is sourceless and has been
 removed.
  Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[15].U_HCE"
@@ -311,6 +400,18 @@ removed.
  Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[15].U_HCE"
 (ROM) removed.
  Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[15].U_LCE"
+(ROM) removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[2].F_CMD[15].U_HCE"
+(ROM) removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[2].F_CMD[15].U_LCE"
+(ROM) removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[3].F_CMD[15].U_HCE"
+(ROM) removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[3].F_CMD[15].U_LCE"
+(ROM) removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[4].F_CMD[15].U_HCE"
+(ROM) removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[4].F_CMD[15].U_LCE"
 (ROM) removed.
 The signal "ICON_debug/U0/U_ICON/iCOMMAND_SEL<14>" is sourceless and has been
 removed.
@@ -322,6 +423,18 @@ removed.
 (ROM) removed.
  Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[14].U_LCE"
 (ROM) removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[2].F_CMD[14].U_HCE"
+(ROM) removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[2].F_CMD[14].U_LCE"
+(ROM) removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[3].F_CMD[14].U_HCE"
+(ROM) removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[3].F_CMD[14].U_LCE"
+(ROM) removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[4].F_CMD[14].U_HCE"
+(ROM) removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[4].F_CMD[14].U_LCE"
+(ROM) removed.
 The signal "ICON_debug/U0/U_ICON/iCOMMAND_SEL<13>" is sourceless and has been
 removed.
  Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[13].U_HCE"
@@ -331,6 +444,18 @@ removed.
  Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[13].U_HCE"
 (ROM) removed.
  Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[13].U_LCE"
+(ROM) removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[2].F_CMD[13].U_HCE"
+(ROM) removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[2].F_CMD[13].U_LCE"
+(ROM) removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[3].F_CMD[13].U_HCE"
+(ROM) removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[3].F_CMD[13].U_LCE"
+(ROM) removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[4].F_CMD[13].U_HCE"
+(ROM) removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[4].F_CMD[13].U_LCE"
 (ROM) removed.
 The signal "ICON_debug/U0/U_ICON/iCOMMAND_SEL<12>" is sourceless and has been
 removed.
@@ -342,6 +467,18 @@ removed.
 (ROM) removed.
  Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[12].U_LCE"
 (ROM) removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[2].F_CMD[12].U_HCE"
+(ROM) removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[2].F_CMD[12].U_LCE"
+(ROM) removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[3].F_CMD[12].U_HCE"
+(ROM) removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[3].F_CMD[12].U_LCE"
+(ROM) removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[4].F_CMD[12].U_HCE"
+(ROM) removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[4].F_CMD[12].U_LCE"
+(ROM) removed.
 The signal "ICON_debug/U0/U_ICON/iCOMMAND_SEL<11>" is sourceless and has been
 removed.
  Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[11].U_HCE"
@@ -351,6 +488,18 @@ removed.
  Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[11].U_HCE"
 (ROM) removed.
  Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[11].U_LCE"
+(ROM) removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[2].F_CMD[11].U_HCE"
+(ROM) removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[2].F_CMD[11].U_LCE"
+(ROM) removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[3].F_CMD[11].U_HCE"
+(ROM) removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[3].F_CMD[11].U_LCE"
+(ROM) removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[4].F_CMD[11].U_HCE"
+(ROM) removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[4].F_CMD[11].U_LCE"
 (ROM) removed.
 The signal "ICON_debug/U0/U_ICON/iCOMMAND_SEL<7>" is sourceless and has been
 removed.
@@ -362,6 +511,18 @@ removed.
 removed.
  Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[7].U_LCE" (ROM)
 removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[2].F_CMD[7].U_HCE" (ROM)
+removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[2].F_CMD[7].U_LCE" (ROM)
+removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[3].F_CMD[7].U_HCE" (ROM)
+removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[3].F_CMD[7].U_LCE" (ROM)
+removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[4].F_CMD[7].U_HCE" (ROM)
+removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[4].F_CMD[7].U_LCE" (ROM)
+removed.
 The signal "ICON_debug/U0/U_ICON/iCOMMAND_SEL<6>" is sourceless and has been
 removed.
  Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[6].U_HCE" (ROM)
@@ -372,8 +533,18 @@ removed.
 removed.
  Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[6].U_LCE" (ROM)
 removed.
-The signal "VIO_fp/ASYNC_OUT<5>" is sourceless and has been removed.
-The signal "VIO_fp/ASYNC_OUT<4>" is sourceless and has been removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[2].F_CMD[6].U_HCE" (ROM)
+removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[2].F_CMD[6].U_LCE" (ROM)
+removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[3].F_CMD[6].U_HCE" (ROM)
+removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[3].F_CMD[6].U_LCE" (ROM)
+removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[4].F_CMD[6].U_HCE" (ROM)
+removed.
+ Sourceless block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[4].F_CMD[6].U_LCE" (ROM)
+removed.
 Unused block "ICON_debug/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[11].U_LUT" (ROM)
 removed.
 Unused block "ICON_debug/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[12].U_LUT" (ROM)
@@ -388,7 +559,11 @@ Unused block "ICON_debug/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[6].U_LUT" (ROM)
 removed.
 Unused block "ICON_debug/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[7].U_LUT" (ROM)
 removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[0].U_HCE" (ROM)
+removed.
 Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[10].U_HCE" (ROM)
+removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[10].U_LCE" (ROM)
 removed.
 Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[1].U_HCE" (ROM)
 removed.
@@ -396,21 +571,23 @@ Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[2].U_HCE" (ROM)
 removed.
 Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[3].U_HCE" (ROM)
 removed.
-Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[3].U_LCE" (ROM)
-removed.
 Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[4].U_HCE" (ROM)
+removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[4].U_LCE" (ROM)
 removed.
 Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[5].U_HCE" (ROM)
 removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[5].U_LCE" (ROM)
+removed.
 Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[8].U_HCE" (ROM)
+removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[8].U_LCE" (ROM)
 removed.
 Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_HCE" (ROM)
 removed.
-Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[0].U_HCE" (ROM)
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE" (ROM)
 removed.
 Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[10].U_HCE" (ROM)
-removed.
-Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[10].U_LCE" (ROM)
 removed.
 Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[1].U_HCE" (ROM)
 removed.
@@ -418,21 +595,69 @@ Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[2].U_HCE" (ROM)
 removed.
 Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[3].U_HCE" (ROM)
 removed.
-Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[4].U_HCE" (ROM)
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[3].U_LCE" (ROM)
 removed.
-Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[4].U_LCE" (ROM)
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[4].U_HCE" (ROM)
 removed.
 Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[5].U_HCE" (ROM)
 removed.
-Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[5].U_LCE" (ROM)
-removed.
 Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[8].U_HCE" (ROM)
-removed.
-Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[8].U_LCE" (ROM)
 removed.
 Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[9].U_HCE" (ROM)
 removed.
-Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[9].U_LCE" (ROM)
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[2].F_CMD[10].U_HCE" (ROM)
+removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[2].F_CMD[1].U_HCE" (ROM)
+removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[2].F_CMD[2].U_HCE" (ROM)
+removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[2].F_CMD[3].U_HCE" (ROM)
+removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[2].F_CMD[3].U_LCE" (ROM)
+removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[2].F_CMD[4].U_HCE" (ROM)
+removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[2].F_CMD[5].U_HCE" (ROM)
+removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[2].F_CMD[8].U_HCE" (ROM)
+removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[2].F_CMD[9].U_HCE" (ROM)
+removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[3].F_CMD[10].U_HCE" (ROM)
+removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[3].F_CMD[1].U_HCE" (ROM)
+removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[3].F_CMD[2].U_HCE" (ROM)
+removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[3].F_CMD[3].U_HCE" (ROM)
+removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[3].F_CMD[3].U_LCE" (ROM)
+removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[3].F_CMD[4].U_HCE" (ROM)
+removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[3].F_CMD[5].U_HCE" (ROM)
+removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[3].F_CMD[8].U_HCE" (ROM)
+removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[3].F_CMD[9].U_HCE" (ROM)
+removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[4].F_CMD[10].U_HCE" (ROM)
+removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[4].F_CMD[1].U_HCE" (ROM)
+removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[4].F_CMD[2].U_HCE" (ROM)
+removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[4].F_CMD[3].U_HCE" (ROM)
+removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[4].F_CMD[3].U_LCE" (ROM)
+removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[4].F_CMD[4].U_HCE" (ROM)
+removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[4].F_CMD[5].U_HCE" (ROM)
+removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[4].F_CMD[8].U_HCE" (ROM)
+removed.
+Unused block "ICON_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[4].F_CMD[9].U_HCE" (ROM)
 removed.
 Unused block "VIO_fp/U0/I_VIO/GEN_ASYNC_OUT[4].ASYNC_OUT_CELL/USER_REG" (FF)
 removed.
@@ -444,64 +669,241 @@ TYPE 		BLOCK
 GND 		ICON_debug/XST_GND
 VCC 		ICON_debug/XST_VCC
 GND
-		ILA_error/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.U_
-CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLICE.U
-_GAND_SRL_SLICE/XST_GND
+		ILA_error_0/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.
+U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLICE
+.U_GAND_SRL_SLICE/XST_GND
 VCC
-		ILA_error/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.U_
-CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLICE.U
-_GAND_SRL_SLICE/XST_VCC
+		ILA_error_0/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.
+U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLICE
+.U_GAND_SRL_SLICE/XST_VCC
 VCC
-		ILA_error/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.U_
-CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/XST_VCC
+		ILA_error_0/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.
+U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/XST_VCC
 GND
-		ILA_error/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAND.U
-_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLICE.
-U_GAND_SRL_SLICE/XST_GND
+		ILA_error_0/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAND
+.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLIC
+E.U_GAND_SRL_SLICE/XST_GND
 VCC
-		ILA_error/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAND.U
-_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLICE.
-U_GAND_SRL_SLICE/XST_VCC
+		ILA_error_0/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAND
+.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLIC
+E.U_GAND_SRL_SLICE/XST_VCC
 VCC
-		ILA_error/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAND.U
-_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/XST_VCC
+		ILA_error_0/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAND
+.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/XST_VCC
 GND
-		ILA_error/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAND.U
-_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLICE.
-U_GAND_SRL_SLICE/XST_GND
+		ILA_error_0/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAND
+.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLIC
+E.U_GAND_SRL_SLICE/XST_GND
 VCC
-		ILA_error/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAND.U
-_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLICE.
-U_GAND_SRL_SLICE/XST_VCC
+		ILA_error_0/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAND
+.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLIC
+E.U_GAND_SRL_SLICE/XST_VCC
 VCC
-		ILA_error/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAND.U
-_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/XST_VCC
-LUT4 		ILA_error/U0/I_NO_D.U_ILA/U_STAT/F_SSTAT[6].I_STAT.U_STAT
+		ILA_error_0/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAND
+.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/XST_VCC
+LUT4 		ILA_error_0/U0/I_NO_D.U_ILA/U_STAT/F_SSTAT[6].I_STAT.U_STAT
    optimized to 0
-LUT4 		ILA_error/U0/I_NO_D.U_ILA/U_STAT/F_SSTAT[7].I_STAT.U_STAT
+LUT4 		ILA_error_0/U0/I_NO_D.U_ILA/U_STAT/F_SSTAT[7].I_STAT.U_STAT
    optimized to 0
 GND
-		ILA_error/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_
-CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_
-GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_GND
+		ILA_error_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_GND
 VCC
-		ILA_error/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_
-CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_
-GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_VCC
+		ILA_error_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_VCC
 GND
-		ILA_error/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_
-CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_
-GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[1].U_GAND_SRL_SLICE/XST_GND
+		ILA_error_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[1].U_GAND_SRL_SLICE/XST_GND
 GND
-		ILA_error/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_
-CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_
-GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[2].U_GAND_SRL_SLICE/XST_GND
+		ILA_error_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[2].U_GAND_SRL_SLICE/XST_GND
 VCC
-		ILA_error/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_
-CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_
-GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[2].U_GAND_SRL_SLICE/XST_VCC
-GND 		ILA_error/XST_GND
-VCC 		ILA_error/XST_VCC
+		ILA_error_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[2].U_GAND_SRL_SLICE/XST_VCC
+GND 		ILA_error_0/XST_GND
+VCC 		ILA_error_0/XST_VCC
+GND
+		ILA_error_1/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.
+U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLICE
+.U_GAND_SRL_SLICE/XST_GND
+VCC
+		ILA_error_1/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.
+U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLICE
+.U_GAND_SRL_SLICE/XST_VCC
+VCC
+		ILA_error_1/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.
+U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/XST_VCC
+GND
+		ILA_error_1/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAND
+.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLIC
+E.U_GAND_SRL_SLICE/XST_GND
+VCC
+		ILA_error_1/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAND
+.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLIC
+E.U_GAND_SRL_SLICE/XST_VCC
+VCC
+		ILA_error_1/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAND
+.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/XST_VCC
+GND
+		ILA_error_1/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAND
+.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLIC
+E.U_GAND_SRL_SLICE/XST_GND
+VCC
+		ILA_error_1/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAND
+.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLIC
+E.U_GAND_SRL_SLICE/XST_VCC
+VCC
+		ILA_error_1/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAND
+.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/XST_VCC
+LUT4 		ILA_error_1/U0/I_NO_D.U_ILA/U_STAT/F_SSTAT[6].I_STAT.U_STAT
+   optimized to 0
+LUT4 		ILA_error_1/U0/I_NO_D.U_ILA/U_STAT/F_SSTAT[7].I_STAT.U_STAT
+   optimized to 0
+GND
+		ILA_error_1/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_GND
+VCC
+		ILA_error_1/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_VCC
+GND
+		ILA_error_1/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[1].U_GAND_SRL_SLICE/XST_GND
+GND
+		ILA_error_1/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[2].U_GAND_SRL_SLICE/XST_GND
+VCC
+		ILA_error_1/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[2].U_GAND_SRL_SLICE/XST_VCC
+GND 		ILA_error_1/XST_GND
+VCC 		ILA_error_1/XST_VCC
+GND
+		ILA_error_2/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.
+U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLICE
+.U_GAND_SRL_SLICE/XST_GND
+VCC
+		ILA_error_2/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.
+U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLICE
+.U_GAND_SRL_SLICE/XST_VCC
+VCC
+		ILA_error_2/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.
+U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/XST_VCC
+GND
+		ILA_error_2/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAND
+.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLIC
+E.U_GAND_SRL_SLICE/XST_GND
+VCC
+		ILA_error_2/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAND
+.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLIC
+E.U_GAND_SRL_SLICE/XST_VCC
+VCC
+		ILA_error_2/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAND
+.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/XST_VCC
+GND
+		ILA_error_2/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAND
+.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLIC
+E.U_GAND_SRL_SLICE/XST_GND
+VCC
+		ILA_error_2/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAND
+.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLIC
+E.U_GAND_SRL_SLICE/XST_VCC
+VCC
+		ILA_error_2/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAND
+.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/XST_VCC
+LUT4 		ILA_error_2/U0/I_NO_D.U_ILA/U_STAT/F_SSTAT[6].I_STAT.U_STAT
+   optimized to 0
+LUT4 		ILA_error_2/U0/I_NO_D.U_ILA/U_STAT/F_SSTAT[7].I_STAT.U_STAT
+   optimized to 0
+GND
+		ILA_error_2/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_GND
+VCC
+		ILA_error_2/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_VCC
+GND
+		ILA_error_2/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[1].U_GAND_SRL_SLICE/XST_GND
+GND
+		ILA_error_2/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[2].U_GAND_SRL_SLICE/XST_GND
+VCC
+		ILA_error_2/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[2].U_GAND_SRL_SLICE/XST_VCC
+GND 		ILA_error_2/XST_GND
+VCC 		ILA_error_2/XST_VCC
+GND
+		ILA_error_3/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.
+U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLICE
+.U_GAND_SRL_SLICE/XST_GND
+VCC
+		ILA_error_3/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.
+U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLICE
+.U_GAND_SRL_SLICE/XST_VCC
+VCC
+		ILA_error_3/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.
+U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/XST_VCC
+GND
+		ILA_error_3/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAND
+.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLIC
+E.U_GAND_SRL_SLICE/XST_GND
+VCC
+		ILA_error_3/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAND
+.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLIC
+E.U_GAND_SRL_SLICE/XST_VCC
+VCC
+		ILA_error_3/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAND
+.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/XST_VCC
+GND
+		ILA_error_3/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAND
+.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLIC
+E.U_GAND_SRL_SLICE/XST_GND
+VCC
+		ILA_error_3/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAND
+.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLIC
+E.U_GAND_SRL_SLICE/XST_VCC
+VCC
+		ILA_error_3/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAND
+.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/XST_VCC
+LUT4 		ILA_error_3/U0/I_NO_D.U_ILA/U_STAT/F_SSTAT[6].I_STAT.U_STAT
+   optimized to 0
+LUT4 		ILA_error_3/U0/I_NO_D.U_ILA/U_STAT/F_SSTAT[7].I_STAT.U_STAT
+   optimized to 0
+GND
+		ILA_error_3/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_GND
+VCC
+		ILA_error_3/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_VCC
+GND
+		ILA_error_3/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[1].U_GAND_SRL_SLICE/XST_GND
+GND
+		ILA_error_3/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[2].U_GAND_SRL_SLICE/XST_GND
+VCC
+		ILA_error_3/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[2].U_GAND_SRL_SLICE/XST_VCC
+GND 		ILA_error_3/XST_GND
+VCC 		ILA_error_3/XST_VCC
 LUT4 		VIO_fp/U0/I_VIO/U_STATUS/F_STAT[4].I_STAT.U_STAT
    optimized to 0
 LUT4 		VIO_fp/U0/I_VIO/U_STATUS/F_STAT[6].I_STAT.U_STAT
@@ -527,6 +929,8 @@ Section 6 - IOB Properties
 | IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
 |                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Q2_CLK1_MGTREFCLK_PAD_N_IN         | IPAD             | INPUT     |                      |       |          |      |              |          |          |
+| Q2_CLK1_MGTREFCLK_PAD_P_IN         | IPAD             | INPUT     |                      |       |          |      |              |          |          |
 | Q3_CLK0_MGTREFCLK_PAD_N_IN         | IPAD             | INPUT     |                      |       |          |      |              |          |          |
 | Q3_CLK0_MGTREFCLK_PAD_P_IN         | IPAD             | INPUT     |                      |       |          |      |              |          |          |
 | RXN_IN<0>                          | IPAD             | INPUT     |                      |       |          |      |              |          |          |
@@ -608,19 +1012,48 @@ Section 6 - IOB Properties
 | qpll_nrst                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | reset_btn                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | tmb_clock0                         | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| txn                                | OPAD             | OUTPUT    |                      |       |          |      |              |          |          |
+| txp                                | OPAD             | OUTPUT    |                      |       |          |      |              |          |          |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs
 ----------------
-ILA_error/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.U_CS
-_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/MSET
-ILA_error/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAND.U_C
-S_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/MSET
-ILA_error/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAND.U_C
-S_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/MSET
-ILA_error/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS
-_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GA
-ND_SRL_SET/MSET
+ILA_error_0/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.U_
+CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/MSET
+ILA_error_0/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAND.U
+_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/MSET
+ILA_error_0/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAND.U
+_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/MSET
+ILA_error_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_
+CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_
+GAND_SRL_SET/MSET
+ILA_error_1/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.U_
+CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/MSET
+ILA_error_1/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAND.U
+_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/MSET
+ILA_error_1/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAND.U
+_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/MSET
+ILA_error_1/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_
+CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_
+GAND_SRL_SET/MSET
+ILA_error_2/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.U_
+CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/MSET
+ILA_error_2/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAND.U
+_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/MSET
+ILA_error_2/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAND.U
+_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/MSET
+ILA_error_2/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_
+CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_
+GAND_SRL_SET/MSET
+ILA_error_3/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.U_
+CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/MSET
+ILA_error_3/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAND.U
+_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/MSET
+ILA_error_3/U0/I_NO_D.U_ILA/U_G2.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAND.U
+_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/MSET
+ILA_error_3/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_
+CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_
+GAND_SRL_SET/MSET
 
 Section 8 - Guide Report
 ------------------------

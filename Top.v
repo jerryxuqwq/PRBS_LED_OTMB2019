@@ -29,11 +29,15 @@ module Top#(
 
 	      input wire 	Q3_CLK0_MGTREFCLK_PAD_N_IN,
 	      input wire 	Q3_CLK0_MGTREFCLK_PAD_P_IN,
+        input wire 	Q2_CLK1_MGTREFCLK_PAD_N_IN,
+	      input wire 	Q2_CLK1_MGTREFCLK_PAD_P_IN,
 	      input wire [3:0] 	RXN_IN,
 	      input wire [3:0] 	RXP_IN,
 	      output wire [7:0] led_fp,
 	      output wire [3:0] TXN_OUT,
 	      output wire [3:0] TXP_OUT,
+        output wire txp,
+        output wire txn,
         
         input wire   [50:0] _ccb_rx,
 	      input wire 	qpll_lock,
@@ -86,6 +90,9 @@ module Top#(
    // chipscope wire
    wire [35:0] 			CONTROL0;
    wire [35:0] 			CONTROL1;
+   wire [35:0] 			CONTROL2;
+   wire [35:0] 			CONTROL3;
+   wire [35:0] 			CONTROL4;
    wire [15:0] 			ila_i;
    reg [7:0] 			v_led;
    wire [7:0] 			v_button;
@@ -484,8 +491,8 @@ module Top#(
 
 
    // Project related singal
-   wire [2:0] 			rx_prbs_mode;
-   wire [2:0] 			tx_prbs_mode;
+   wire [3:0][2:0] 			rx_prbs_mode;
+   wire [3:0][2:0] 			tx_prbs_mode;
 
   //  assign  gtx0_gtxrxreset_i = gtxrxreset_i || gtxtxreset_i;
   //  assign  gtx0_gtxtxreset_i = gtxrxreset_i || gtxtxreset_i;
@@ -519,41 +526,41 @@ module Top#(
    assign  gtx0_txdiffctrl_i                    =  4'b1010;
    assign  gtx0_txpreemphasis_i                 =  tied_to_ground_vec_i[3:0];
    assign  gtx0_txpostemphasis_i                =  tied_to_ground_vec_i[4:0];
-   assign  gtx0_txenprbstst_i                   =  tx_prbs_mode;
+   assign  gtx0_txenprbstst_i                   =  tx_prbs_mode[0];
    assign  gtx0_pllrxreset_i                    =  tied_to_ground_i;
    assign  gtx0_rxeqmix_i                       =  tied_to_ground_vec_i[2:0];
    assign  gtx0_prbscntreset_i                  =  prbscntreset[0];
-   assign  gtx0_rxenprbstst_i                   =  rx_prbs_mode;
+   assign  gtx0_rxenprbstst_i                   =  rx_prbs_mode[0];
    assign  gtx1_plltxreset_i                    =  tied_to_ground_i;
    assign  gtx1_loopback_i                      =  tied_to_ground_vec_i[2:0];
    assign  gtx1_txdiffctrl_i                    =  4'b1010;
    assign  gtx1_txpreemphasis_i                 =  tied_to_ground_vec_i[3:0];
    assign  gtx1_txpostemphasis_i                =  tied_to_ground_vec_i[4:0];
-   assign  gtx1_txenprbstst_i                   =  tx_prbs_mode;
+   assign  gtx1_txenprbstst_i                   =  tx_prbs_mode[1];
    assign  gtx1_pllrxreset_i                    =  tied_to_ground_i;
    assign  gtx1_rxeqmix_i                       =  tied_to_ground_vec_i[2:0];
    assign  gtx1_prbscntreset_i                  =  prbscntreset[1];
-   assign  gtx1_rxenprbstst_i                   =  rx_prbs_mode;
+   assign  gtx1_rxenprbstst_i                   =  rx_prbs_mode[1];
    assign  gtx2_plltxreset_i                    =  tied_to_ground_i;
    assign  gtx2_loopback_i                      =  tied_to_ground_vec_i[2:0];
    assign  gtx2_txdiffctrl_i                    =  4'b1010;
    assign  gtx2_txpreemphasis_i                 =  tied_to_ground_vec_i[3:0];
    assign  gtx2_txpostemphasis_i                =  tied_to_ground_vec_i[4:0];
-   assign  gtx2_txenprbstst_i                   =  tx_prbs_mode;
+   assign  gtx2_txenprbstst_i                   =  tx_prbs_mode[2];
    assign  gtx2_pllrxreset_i                    =  tied_to_ground_i;
    assign  gtx2_rxeqmix_i                       =  tied_to_ground_vec_i[2:0];
    assign  gtx2_prbscntreset_i                  =  prbscntreset[2];
-   assign  gtx2_rxenprbstst_i                   =  rx_prbs_mode;
+   assign  gtx2_rxenprbstst_i                   =  rx_prbs_mode[2];
    assign  gtx3_plltxreset_i                    =  tied_to_ground_i;
    assign  gtx3_loopback_i                      =  tied_to_ground_vec_i[2:0];
    assign  gtx3_txdiffctrl_i                    =  4'b1010;
    assign  gtx3_txpreemphasis_i                 =  tied_to_ground_vec_i[3:0];
    assign  gtx3_txpostemphasis_i                =  tied_to_ground_vec_i[4:0];
-   assign  gtx3_txenprbstst_i                   =  tx_prbs_mode;
+   assign  gtx3_txenprbstst_i                   =  tx_prbs_mode[3];
    assign  gtx3_pllrxreset_i                    =  tied_to_ground_i;
    assign  gtx3_rxeqmix_i                       =  tied_to_ground_vec_i[2:0];
    assign  gtx3_prbscntreset_i                  =  prbscntreset[3];
-   assign  gtx3_rxenprbstst_i                   =  rx_prbs_mode;
+   assign  gtx3_rxenprbstst_i                   =  rx_prbs_mode[3];
 
    //---------------------------- DRP Clock ----------------------------------
    // The DRP interface requires an independent clock which can run up to about ___ MHz.
@@ -582,6 +589,15 @@ module Top#(
       .CEB                            (tied_to_ground_i),
       .I                              (Q3_CLK0_MGTREFCLK_PAD_P_IN),
       .IB                             (Q3_CLK0_MGTREFCLK_PAD_N_IN)
+      );
+    (* keep = "true" *) wire q2_refclk;
+    (* dont_touch  = "true" *)IBUFDS_GTXE1 q2_clk1_refclk_ibufds_i
+     (
+      .O                              (q2_refclk),
+      .ODIV2                          (),
+      .CEB                            (tied_to_ground_i),
+      .I                              (Q2_CLK1_MGTREFCLK_PAD_P_IN),
+      .IB                             (Q2_CLK1_MGTREFCLK_PAD_N_IN)
       );
    // wire 			mmcm_locked;
    
@@ -622,6 +638,45 @@ module Top#(
       .I                              (gtx3_txoutclk_i),
       .O                              (gtx3_txusrclk2_i)
       );
+
+  
+
+
+    dummy #
+    (
+        .WRAPPER_SIM_GTXRESET_SPEEDUP   (0)      // Set this to 1 for simulation
+    )
+    dummy_i
+    (
+        //_____________________________________________________________________
+        //_____________________________________________________________________
+        //GTX0  (X0Y0)
+
+        //----- Receive Ports - RX Driver,OOB signalling,Coupling and Eq.,CDR ------
+        .GTX0_RXN_IN                    (),
+        .GTX0_RXP_IN                    (),
+        //---------------- Transmit Ports - TX Data Path interface -----------------
+        .GTX0_TXDATA_IN                 (),
+        .GTX0_TXOUTCLK_OUT              (),
+        .GTX0_TXUSRCLK2_IN              (),
+        //-------------- Transmit Ports - TX Driver and OOB signaling --------------
+        .GTX0_TXDIFFCTRL_IN             (),
+        .GTX0_TXN_OUT                   (txn),
+        .GTX0_TXP_OUT                   (txp),
+        .GTX0_TXPOSTEMPHASIS_IN         (),
+        //------------- Transmit Ports - TX Driver and OOB signalling --------------
+        .GTX0_TXPREEMPHASIS_IN          (),
+        //--------------------- Transmit Ports - TX PLL Ports ----------------------
+        .GTX0_GTXTXRESET_IN             (),
+        .GTX0_MGTREFCLKTX_IN            (q2_refclk),
+        .GTX0_PLLTXRESET_IN             (),
+        .GTX0_TXPLLLKDET_OUT            (),
+        .GTX0_TXRESETDONE_OUT           ()
+
+
+    );
+
+
    bi_firefly #
      (
       .WRAPPER_SIM_GTXRESET_SPEEDUP   (0)
@@ -1066,8 +1121,8 @@ prbs_fsm gtx_0 (
     .reset(reset),            // async reset
     .alldone(gtx0_rxresetdone_r3 && gtx0_txresetdone_r2),
     .rx_prbs_err(gtx0_rxprbserr_i),       // single-channel PRBS error
-    .rx_prbs_mode(),
-    .tx_prbs_mode(),
+    .rx_prbs_mode(rx_prbs_mode[0]),
+    .tx_prbs_mode(tx_prbs_mode[0]),
     .prbscntreset_ext(v_button[6]),
     .prbscntreset(prbscntreset[0]),
     .checker_status(gtx_0_error),
@@ -1081,8 +1136,8 @@ prbs_fsm gtx_1 (
     .reset(reset),            // async reset
     .alldone(gtx1_rxresetdone_r3 && gtx1_txresetdone_r2),
     .rx_prbs_err(gtx1_rxprbserr_i),       // single-channel PRBS error
-    .rx_prbs_mode(rx_prbs_mode),
-    .tx_prbs_mode(tx_prbs_mode),
+    .rx_prbs_mode(rx_prbs_mode[1]),
+    .tx_prbs_mode(tx_prbs_mode[1]),
     .prbscntreset_ext(v_button[6]),
     .prbscntreset(prbscntreset[1]),
     .checker_status(gtx_1_error),
@@ -1096,8 +1151,8 @@ prbs_fsm gtx_2 (
     .reset(reset),            // async reset
     .alldone(gtx2_rxresetdone_r3 && gtx2_txresetdone_r2),
     .rx_prbs_err(gtx2_rxprbserr_i),       // single-channel PRBS error
-    .rx_prbs_mode(),
-    .tx_prbs_mode(),
+    .rx_prbs_mode(rx_prbs_mode[2]),
+    .tx_prbs_mode(tx_prbs_mode[2]),
     .prbscntreset_ext(v_button[6]),
     .prbscntreset(prbscntreset[2]),
     .checker_status(gtx_2_error),
@@ -1111,8 +1166,8 @@ prbs_fsm gtx_3 (
     .reset(reset),            // async reset
     .alldone(gtx3_rxresetdone_r3 && gtx3_txresetdone_r2),
     .rx_prbs_err(gtx3_rxprbserr_i),       // single-channel PRBS error
-    .rx_prbs_mode(),
-    .tx_prbs_mode(),
+    .rx_prbs_mode(rx_prbs_mode[3]),
+    .tx_prbs_mode(tx_prbs_mode[3]),
     .prbscntreset_ext(v_button[6]),
     .prbscntreset(prbscntreset[3]),
     .checker_status(gtx_3_error),
@@ -1157,6 +1212,12 @@ prbs_fsm gtx_3 (
 	else if (counter == 0)
 	  blink <= ~blink;
      end
+  wire heart_beat;
+    heartbeat heartbeat_mod(
+    .tmb_clock0(tmb_clock0),   // 40 MHz
+    .reset(reset),
+    .heart_beat(heart_beat)
+);
 
    always @(posedge gtx0_txusrclk2_i or posedge reset)
      begin
@@ -1173,7 +1234,7 @@ prbs_fsm gtx_3 (
 	     v_led[4] <= &prbs_test_pass;
 	     v_led[5] <= alldone_r;
 	     v_led[6] <= allreset;
-	     v_led[7] <= blink;
+	     v_led[7] <= heart_beat;
 	  end
      end
 
@@ -1309,37 +1370,51 @@ prbs_fsm gtx_3 (
       v_button[0],
       v_button_sync[0]);
    one_shot button_one_shot_1
-     (gtx0_txusrclk2_i,
+     (gtx1_txusrclk2_i,
       reset,
       v_button[1],
       v_button_sync[1]);
    one_shot button_one_shot_2
-     (gtx0_txusrclk2_i,
+     (gtx2_txusrclk2_i,
       reset,
       v_button[2],
       v_button_sync[2]);
    one_shot button_one_shot_3
-     (gtx0_txusrclk2_i,
+     (gtx3_txusrclk2_i,
       reset,
       v_button[3],
       v_button_sync[3]);
    assign   gtxtxreset_i = 0;
    ICON_2p ICON_debug (
 		       .CONTROL0(CONTROL0), // INOUT BUS [35:0]
-		       .CONTROL1(CONTROL1) // INOUT BUS [35:0]
+		       .CONTROL1(CONTROL1), // INOUT BUS [35:0]
+           .CONTROL2(CONTROL2), // INOUT BUS [35:0]
+           .CONTROL3(CONTROL3), // INOUT BUS [35:0]
+           .CONTROL4(CONTROL4) // INOUT BUS [35:0]
+
 		       );
-   ILA_error ILA_error (
-			.CONTROL(CONTROL0), // INOUT BUS [35:0]
+   ILA_error ILA_error_0 (
+			.CONTROL(CONTROL1), // INOUT BUS [35:0]
 			.CLK(gtx0_txusrclk2_i), // IN
-			.TRIG0({
-				qpll_lock,error_inject,
-				gtx1_txresetdone_r2,gtx1_rxresetdone_r3,gtx1_rxprbserr_i,gtx1_rxplllkdet_i,
-				gtx0_txresetdone_r2,gtx0_rxresetdone_r3,gtx0_rxprbserr_i,gtx0_rxplllkdet_i,
-				tx_prbs_mode[0],rx_prbs_mode[0],prbscntreset[2:0]
-				})
+			.TRIG0({gtx_0_data_out,gtx_0_data_valid,prbscntreset[0],gtx0_txprbsforceerr_i,gtx0_rxprbserr_i})
 			);
+    ILA_error ILA_error_1 (
+      .CONTROL(CONTROL2), // INOUT BUS [35:0]
+      .CLK(gtx1_txusrclk2_i), // IN
+      .TRIG0({gtx_1_data_out,gtx_1_data_valid,prbscntreset[1],gtx1_txprbsforceerr_i,gtx1_rxprbserr_i})
+      );
+    ILA_error ILA_error_2 (
+      .CONTROL(CONTROL3), // INOUT BUS [35:0]
+      .CLK(gtx2_txusrclk2_i), // IN
+      .TRIG0({gtx_2_data_out,gtx_2_data_valid,prbscntreset[2],gtx2_txprbsforceerr_i,gtx2_rxprbserr_i})
+      );
+    ILA_error ILA_error_3 (
+      .CONTROL(CONTROL4), // INOUT BUS [35:0]
+      .CLK(gtx3_txusrclk2_i), // IN
+      .TRIG0({gtx_3_data_out,gtx_3_data_valid,prbscntreset[3],gtx3_txprbsforceerr_i,gtx3_rxprbserr_i})
+      );
    VIO_fp VIO_fp (
-		  .CONTROL(CONTROL1), // INOUT BUS [35:0]
+		  .CONTROL(CONTROL0), // INOUT BUS [35:0]
 		  .ASYNC_IN(v_led), // IN BUS [7:0]
 		  .ASYNC_OUT(v_button) // OUT BUS [7:0]
 		  );

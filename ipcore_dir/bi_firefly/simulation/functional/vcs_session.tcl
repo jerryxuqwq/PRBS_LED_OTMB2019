@@ -108,11 +108,16 @@
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.RXN_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.RXP_IN}
   gui_sg_addsignal -group bi_firefly_Group {{Receive Ports - RX PLL Ports}} -divider
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.GREFCLKRX_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.GTXRXRESET_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.MGTREFCLKRX_IN}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.NORTHREFCLKRX_IN}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.PERFCLKRX_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.PLLRXRESET_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.RXPLLLKDET_OUT}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.RXPLLREFSELDY_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.RXRESETDONE_OUT}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.SOUTHREFCLKRX_IN}
   gui_sg_addsignal -group bi_firefly_Group {{Shared Ports - Dynamic Reconfiguration Port (DRP)}} -divider
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.DADDR_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.DCLK_IN}
@@ -133,7 +138,12 @@
   gui_sg_addsignal -group bi_firefly_Group {{Transmit Ports - TX Driver and OOB signalling}} -divider
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.TXPREEMPHASIS_IN}
   gui_sg_addsignal -group bi_firefly_Group {{Transmit Ports - TX PLL Ports}} -divider
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.GREFCLKTX_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.GTXTXRESET_IN}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.NORTHREFCLKTX_IN}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.PERFCLKTX_IN}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.SOUTHREFCLKTX_IN}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.TXPLLREFSELDY_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.TXRESETDONE_OUT}
   gui_sg_addsignal -group bi_firefly_Group {{Transmit Ports - TX PRBS Generator}} -divider
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx0_bi_firefly_i.TXENPRBSTST_IN}
@@ -154,11 +164,16 @@
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.RXN_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.RXP_IN}
   gui_sg_addsignal -group bi_firefly_Group {{Receive Ports - RX PLL Ports}} -divider
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.GREFCLKRX_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.GTXRXRESET_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.MGTREFCLKRX_IN}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.NORTHREFCLKRX_IN}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.PERFCLKRX_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.PLLRXRESET_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.RXPLLLKDET_OUT}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.RXPLLREFSELDY_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.RXRESETDONE_OUT}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.SOUTHREFCLKRX_IN}
   gui_sg_addsignal -group bi_firefly_Group {{Shared Ports - Dynamic Reconfiguration Port (DRP)}} -divider
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.DADDR_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.DCLK_IN}
@@ -179,7 +194,12 @@
   gui_sg_addsignal -group bi_firefly_Group {{Transmit Ports - TX Driver and OOB signalling}} -divider
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.TXPREEMPHASIS_IN}
   gui_sg_addsignal -group bi_firefly_Group {{Transmit Ports - TX PLL Ports}} -divider
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.GREFCLKTX_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.GTXTXRESET_IN}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.NORTHREFCLKTX_IN}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.PERFCLKTX_IN}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.SOUTHREFCLKTX_IN}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.TXPLLREFSELDY_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.TXRESETDONE_OUT}
   gui_sg_addsignal -group bi_firefly_Group {{Transmit Ports - TX PRBS Generator}} -divider
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx1_bi_firefly_i.TXENPRBSTST_IN}
@@ -200,11 +220,16 @@
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.RXN_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.RXP_IN}
   gui_sg_addsignal -group bi_firefly_Group {{Receive Ports - RX PLL Ports}} -divider
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.GREFCLKRX_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.GTXRXRESET_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.MGTREFCLKRX_IN}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.NORTHREFCLKRX_IN}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.PERFCLKRX_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.PLLRXRESET_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.RXPLLLKDET_OUT}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.RXPLLREFSELDY_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.RXRESETDONE_OUT}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.SOUTHREFCLKRX_IN}
   gui_sg_addsignal -group bi_firefly_Group {{Shared Ports - Dynamic Reconfiguration Port (DRP)}} -divider
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.DADDR_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.DCLK_IN}
@@ -225,7 +250,12 @@
   gui_sg_addsignal -group bi_firefly_Group {{Transmit Ports - TX Driver and OOB signalling}} -divider
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.TXPREEMPHASIS_IN}
   gui_sg_addsignal -group bi_firefly_Group {{Transmit Ports - TX PLL Ports}} -divider
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.GREFCLKTX_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.GTXTXRESET_IN}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.NORTHREFCLKTX_IN}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.PERFCLKTX_IN}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.SOUTHREFCLKTX_IN}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.TXPLLREFSELDY_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.TXRESETDONE_OUT}
   gui_sg_addsignal -group bi_firefly_Group {{Transmit Ports - TX PRBS Generator}} -divider
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx2_bi_firefly_i.TXENPRBSTST_IN}
@@ -246,11 +276,16 @@
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.RXN_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.RXP_IN}
   gui_sg_addsignal -group bi_firefly_Group {{Receive Ports - RX PLL Ports}} -divider
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.GREFCLKRX_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.GTXRXRESET_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.MGTREFCLKRX_IN}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.NORTHREFCLKRX_IN}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.PERFCLKRX_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.PLLRXRESET_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.RXPLLLKDET_OUT}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.RXPLLREFSELDY_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.RXRESETDONE_OUT}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.SOUTHREFCLKRX_IN}
   gui_sg_addsignal -group bi_firefly_Group {{Shared Ports - Dynamic Reconfiguration Port (DRP)}} -divider
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.DADDR_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.DCLK_IN}
@@ -271,7 +306,12 @@
   gui_sg_addsignal -group bi_firefly_Group {{Transmit Ports - TX Driver and OOB signalling}} -divider
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.TXPREEMPHASIS_IN}
   gui_sg_addsignal -group bi_firefly_Group {{Transmit Ports - TX PLL Ports}} -divider
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.GREFCLKTX_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.GTXTXRESET_IN}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.NORTHREFCLKTX_IN}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.PERFCLKTX_IN}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.SOUTHREFCLKTX_IN}
+  gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.TXPLLREFSELDY_IN}
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.TXRESETDONE_OUT}
   gui_sg_addsignal -group bi_firefly_Group {{Transmit Ports - TX PRBS Generator}} -divider
   gui_sg_addsignal -group bi_firefly_Group {DEMO_TB.bi_firefly_top_i.bi_firefly_i.gtx3_bi_firefly_i.TXENPRBSTST_IN}

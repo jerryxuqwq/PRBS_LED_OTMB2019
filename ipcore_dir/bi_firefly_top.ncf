@@ -984,8 +984,8 @@ INST bi_firefly_i/gtx3_bi_firefly_i/gtxe1_i TRANS_TIME_TO_P2                    
 
 ################################## Clock Constraints ##########################
 
-NET "q3_clk0_refclk_i" TNM_NET = "q3_clk0_refclk_i";
-TIMESPEC "TS_q3_clk0_refclk_i" = PERIOD "q3_clk0_refclk_i" 6.25;
+NET "q4_clk1_refclk_i" TNM_NET = "q4_clk1_refclk_i";
+TIMESPEC "TS_q4_clk1_refclk_i" = PERIOD "q4_clk1_refclk_i" 6.25;
 
 
 # DRP Clock Constraint
@@ -1004,8 +1004,8 @@ NET DRP_CLK_IN   LOC=K24;
 
 
 ####################### GTX reference clock constraints #######################
-NET Q3_CLK0_MGTREFCLK_PAD_N_IN  LOC=P5;
-NET Q3_CLK0_MGTREFCLK_PAD_P_IN  LOC=P6;
+NET Q4_CLK1_MGTREFCLK_PAD_N_IN  LOC=F5;
+NET Q4_CLK1_MGTREFCLK_PAD_P_IN  LOC=F6;
 
 ################## Track Data LED constraint (ML623 Board) ####################
 
